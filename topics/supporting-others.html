@@ -3,323 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Supporting others with illness or health challenges">
-    <title>Supporting Others With Illness - Rural Health Education</title>
+    <meta name="description" content="How to support loved ones with health challenges">
+    <title>Supporting Others - Rural Health Education</title>
 
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f7f7f7;
-        }
-
-        /* Navigation Bar */
-        nav {
-            background: #0066cc;
-            padding: 0.75rem 1rem;
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            align-items: center;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-size: 1rem;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        /* Dropdown Menu */
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-
-        .dropdown-button {
-            background: none;
-            border: none;
-            color: white;
-            font-size: 1rem;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .dropdown-button:hover {
-            text-decoration: underline;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: white;
-            min-width: 220px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-            z-index: 1;
-            border-radius: 4px;
-            padding: 0.5rem 0;
-        }
-
-        .dropdown-content a {
-            color: #0066cc;
-            padding: 0.5rem 1rem;
-            text-decoration: none;
-            display: block;
-            font-weight: normal;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #f0f4ff;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        header {
-            text-align: center;
-            padding: 2rem 1rem;
-            background: #e9f2ff;
-        }
-
-        main {
-            max-width: 900px;
-            margin: 2rem auto;
-            background: white;
-            padding: 2rem;
-            border-radius: 8px;
-        }
-
-        h2 {
-            margin-top: 2rem;
-        }
-
-        ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        li {
-            margin: 0.5rem 0;
-        }
-
-        a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        footer {
-            text-align: center;
-            padding: 1.5rem;
-            margin-top: 2rem;
-            background: #e9f2ff;
-        }
+        body { margin: 0; font-family: Arial, sans-serif; background: #f7f7f7; }
+        nav { background: #0066cc; padding: 0.75rem 1rem; display: flex; justify-content: center; gap: 2rem; align-items: center; }
+        nav a { color: white; text-decoration: none; font-size: 1rem; font-weight: bold; }
+        nav a:hover { text-decoration: underline; }
+        .dropdown { position: relative; display: inline-block; }
+        .dropdown-button { background: none; border: none; color: white; font-size: 1rem; font-weight: bold; cursor: pointer; }
+        .dropdown-button:hover { text-decoration: underline; }
+        .dropdown-content { display: none; position: absolute; background-color: white; min-width: 220px; box-shadow: 0 4px 8px rgba(0,0,0,0.15); z-index: 1; border-radius: 4px; padding: 0.5rem 0; }
+        .dropdown-content a { color: #0066cc; padding: 0.5rem 1rem; text-decoration: none; display: block; }
+        .dropdown-content a:hover { background-color: #f0f4ff; }
+        .dropdown:hover .dropdown-content { display: block; }
+        header { text-align: center; padding: 2rem 1rem; background: #e9f2ff; }
+        main { max-width: 900px; margin: 2rem auto; background: white; padding: 2rem; border-radius: 8px; }
+        h2 { margin-top: 2rem; }
+        ul { list-style: none; padding-left: 0; }
+        li { margin: 0.5rem 0; }
+        a { color: #0066cc; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        footer { text-align: center; padding: 1.5rem; margin-top: 2rem; background: #e9f2ff; }
     </style>
 </head>
 
 <body>
 
-<a href="#main" class="skip-link">Skip to main content</a>
-
-<!-- Navigation Bar -->
 <nav>
-    <a href="../index.html">Home</a>
+    <a href="/index.html">Home</a>
 
     <div class="dropdown">
         <button class="dropdown-button">Topics ▾</button>
         <div class="dropdown-content">
-            <a href="chronic-disease.html">Chronic Disease</a>
-            <a href="exercise.html">Exercise</a>
-            <a href="fall-risk.html">Fall Risk</a>
-            <a href="healthy-eating.html">Healthy Eating</a>
-            <a href="obesity.html">Obesity</a>
-            <a href="supporting-others.html">Supporting Others</a>
-            <a href="tracking-vitals.html">Tracking Vitals</a>
-            <a href="when-to-seek-care.html">When to Seek Care</a>
+            <a href="/topics/chronic-disease/">Chronic Disease</a>
+            <a href="/topics/exercise/">Exercise</a>
+            <a href="/topics/fall-risk/">Fall Risk</a>
+            <a href="/topics/healthy-eating/">Healthy Eating</a>
+            <a href="/topics/obesity/">Obesity</a>
+            <a href="/topics/supporting-others/">Supporting Others</a>
+            <a href="/topics/tracking-vitals/">Tracking Vitals</a>
+            <a href="/topics/when-to-seek-care/">When to Seek Care</a>
         </div>
     </div>
 
-    <a href="../feedback.html">Feedback</a>
-    <a href="../qr/README.md">QR Codes</a>
-    <a href="../README.md">About.html</a>
+    <a href="/feedback/">Feedback</a>
+    <a href="/qr/About.html">QR Codes</a>
+    <a href="/about/">About</a>
 </nav>
 
 <header>
-    <h1>Supporting Others With Illness</h1>
+    <h1>Supporting Others</h1>
 </header>
 
-<main id="main" class="container">
+<main>
 
     <section>
-        <h2>Why Supporting Others Matters</h2>
-        <p>When someone you care About.html is ill or struggling with a health challenge, your support can make a real difference in their recovery and well-being.</p>
-        <p>Social connection and emotional support are important for health.</p>
+        <h2>Why Support Matters</h2>
+        <p>Many people in rural communities care for loved ones with chronic conditions, disabilities, or age‑related challenges. Your support makes a real difference.</p>
     </section>
 
     <section>
-        <h2>How to Listen Effectively</h2>
+        <h2>Ways to Support Loved Ones</h2>
         <ul>
-            <li><strong>Really listen:</strong> Put away phones and distractions</li>
-            <li><strong>Don't interrupt:</strong> Let them finish speaking</li>
-            <li><strong>Validate feelings:</strong> “That sounds really hard”</li>
-            <li><strong>Don't minimize:</strong> Avoid “at least…” statements</li>
-            <li><strong>Ask open-ended questions:</strong> “How are you feeling?”</li>
-            <li><strong>Avoid giving advice unless asked</strong></li>
-            <li><strong>Be present:</strong> Silence is okay</li>
+            <li>Listen without judgment</li>
+            <li>Help with daily tasks (shopping, cleaning, cooking)</li>
+            <li>Attend doctor appointments with them</li>
+            <li>Encourage healthy habits</li>
+            <li>Check in regularly</li>
         </ul>
     </section>
 
     <section>
-        <h2>Practical Ways to Help</h2>
-
-        <div class="resource-card">
-            <h3>Daily Needs</h3>
-            <ul>
-                <li>Provide meals or groceries</li>
-                <li>Help with cleaning or laundry</li>
-                <li>Run errands</li>
-                <li>Drive them to appointments</li>
-                <li>Help with childcare or pets</li>
-            </ul>
-        </div>
-
-        <div class="resource-card">
-            <h3>Emotional Support</h3>
-            <ul>
-                <li>Visit or call regularly</li>
-                <li>Send messages or cards</li>
-                <li>Attend appointments if invited</li>
-                <li>Include them in activities</li>
-                <li>Sit with them during difficult moments</li>
-            </ul>
-        </div>
-
-        <div class="resource-card">
-            <h3>Information & Advocacy</h3>
-            <ul>
-                <li>Help research their condition (if they want)</li>
-                <li>Organize medical records</li>
-                <li>Help them communicate with doctors</li>
-                <li>Support their treatment decisions</li>
-                <li>Connect them with support groups</li>
-            </ul>
-        </div>
-    </section>
-
-    <section>
-        <h2>What Not to Do</h2>
+        <h2>Emotional Support</h2>
+        <p>People dealing with health issues often feel:</p>
         <ul>
-            <li>Don't take over — support independence</li>
-            <li>Don't force positivity</li>
-            <li>Don't compare to others’ illnesses</li>
-            <li>Don't disappear when things get hard</li>
-            <li>Don't assume — ask what they need</li>
-            <li>Don't gossip About.html their condition</li>
-            <li>Don't take it personally if they need space</li>
+            <li>Worried</li>
+            <li>Frustrated</li>
+            <li>Lonely</li>
+            <li>Overwhelmed</li>
         </ul>
+        <p>Your presence and understanding can help them feel less alone.</p>
     </section>
 
     <section>
-        <h2>Supporting Someone with Chronic Illness</h2>
+        <h2>Helping with Medical Care</h2>
         <ul>
-            <li>Understand that symptoms vary day to day</li>
-            <li>Don’t expect them to “look sick”</li>
-            <li>Help manage appointments</li>
-            <li>Celebrate small victories</li>
-            <li>Be patient with limitations</li>
-            <li>Stay consistently present</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>Supporting Someone with Mental Illness</h2>
-        <ul>
-            <li>Don’t dismiss their symptoms</li>
-            <li>Encourage professional help</li>
-            <li>Let them know you care</li>
-            <li>Don’t blame them for their illness</li>
-            <li>Be alert to signs of crisis</li>
-            <li>Know crisis resources</li>
-            <li>Take self-harm statements seriously</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>Supporting Someone in Grief</h2>
-        <ul>
-            <li>Let them grieve at their own pace</li>
-            <li>Don’t rush or pressure them</li>
-            <li>Share memories of their loved one</li>
-            <li>Check in often</li>
-            <li>Help with practical tasks</li>
-            <li>Acknowledge that grief lasts</li>
-            <li>Suggest support groups if wanted</li>
+            <li>Keep track of medications</li>
+            <li>Help schedule appointments</li>
+            <li>Take notes during doctor visits</li>
+            <li>Watch for changes in symptoms</li>
         </ul>
     </section>
 
     <section>
         <h2>Taking Care of Yourself</h2>
-        <p>Supporting others is meaningful, but you must care for yourself too:</p>
+        <p>Caring for others can be stressful. Make sure you:</p>
         <ul>
-            <li>Set healthy boundaries</li>
+            <li>Get enough rest</li>
+            <li>Ask for help when needed</li>
             <li>Take breaks</li>
-            <li>Ask others for help</li>
-            <li>Maintain your own health</li>
-            <li>Seek support if overwhelmed</li>
-            <li>Remember you can’t fix everything</li>
+            <li>Talk to someone you trust</li>
         </ul>
     </section>
 
     <section>
-        <h2>When to Seek Professional Help</h2>
-        <p>Encourage professional support if someone is:</p>
+        <h2>When to Seek Help</h2>
         <ul>
-            <li>Thinking About.html harming themselves</li>
-            <li>Expressing suicidal thoughts</li>
-            <li>Unable to care for themselves</li>
-            <li>Completely isolating</li>
-            <li>In crisis</li>
+            <li>You feel overwhelmed or burned out</li>
+            <li>Your loved one’s needs are increasing</li>
+            <li>You notice signs of depression or anxiety</li>
+            <li>You need support managing caregiving tasks</li>
         </ul>
-        <p><strong>Crisis Resources:</strong></p>
-        <ul>
-            <li>988 Suicide & Crisis Lifeline</li>
-            <li>Crisis Text Line: Text HOME to 741741</li>
-            <li>Call 911 for immediate danger</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>Resources for Caregivers</h2>
-        <ul>
-            <li><a href="https://www.caregiver.org" target="_blank">Family Caregiver Alliance</a></li>
-            <li><a href="https://www.aarp.org/caregiving" target="_blank">AARP Caregiving Resources</a></li>
-            <li>Local caregiver support groups</li>
-            <li><a href="../resources.html">Local mental health and support services</a></li>
-        </ul>
-    </section>
-
-    <section class="alert alert-info">
-        <strong>Remember:</strong> Supporting someone means showing up, listening, and caring — not having all the answers.
     </section>
 
     <section class="feedback-section">
         <h2>Have Questions or Feedback?</h2>
-        <p><a href="../feedback.html">Tell us how we can improve this page</a></p>
+        <p><a href="/feedback/">Tell us how we can improve this page</a></p>
     </section>
 
 </main>
 
 <footer>
     <p>&copy; 2026 JSU Alabama Rural Health Association</p>
-    <p><a href="../feedback.html">Give Feedback</a> | <a href="../index.html">Home</a></p>
+    <p><a href="/index.html">Home</a> | <a href="/about/">About</a></p>
 </footer>
 
 </body>
