@@ -7,147 +7,48 @@
     <title>About This Platform - Rural Health Education</title>
 
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f7f7f7;
-        }
-
-        /* Navigation Bar */
-        nav {
-            background: #0066cc;
-            padding: 0.75rem 1rem;
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            align-items: center;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-size: 1rem;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        /* Dropdown Menu */
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-
-        .dropdown-button {
-            background: none;
-            border: none;
-            color: white;
-            font-size: 1rem;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .dropdown-button:hover {
-            text-decoration: underline;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: white;
-            min-width: 220px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-            z-index: 1;
-            border-radius: 4px;
-            padding: 0.5rem 0;
-        }
-
-        .dropdown-content a {
-            color: #0066cc;
-            padding: 0.5rem 1rem;
-            text-decoration: none;
-            display: block;
-            font-weight: normal;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #f0f4ff;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        header {
-            text-align: center;
-            padding: 2rem 1rem;
-            background: #e9f2ff;
-        }
-
-        main {
-            max-width: 900px;
-            margin: 2rem auto;
-            background: white;
-            padding: 2rem;
-            border-radius: 8px;
-        }
-
-        h2 {
-            margin-top: 2rem;
-        }
-
-        .resource-card {
-            background: #f0f4ff;
-            padding: 1rem;
-            border-radius: 6px;
-            margin: 1rem 0;
-        }
-
-        footer {
-            text-align: center;
-            padding: 1.5rem;
-            margin-top: 2rem;
-            background: #e9f2ff;
-        }
-
-        a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
+        body { margin: 0; font-family: Arial, sans-serif; background: #f7f7f7; }
+        nav { background: #0066cc; padding: 0.75rem 1rem; display: flex; justify-content: center; gap: 2rem; align-items: center; }
+        nav a { color: white; text-decoration: none; font-size: 1rem; font-weight: bold; }
+        nav a:hover { text-decoration: underline; }
+        .dropdown { position: relative; display: inline-block; }
+        .dropdown-button { background: none; border: none; color: white; font-size: 1rem; font-weight: bold; cursor: pointer; }
+        .dropdown-button:hover { text-decoration: underline; }
+        .dropdown-content { display: none; position: absolute; background-color: white; min-width: 220px; box-shadow: 0 4px 8px rgba(0,0,0,0.15); z-index: 1; border-radius: 4px; padding: 0.5rem 0; }
+        .dropdown-content a { color: #0066cc; padding: 0.5rem 1rem; text-decoration: none; display: block; }
+        .dropdown-content a:hover { background-color: #f0f4ff; }
+        .dropdown:hover .dropdown-content { display: block; }
+        header { text-align: center; padding: 2rem 1rem; background: #e9f2ff; }
+        main { max-width: 900px; margin: 2rem auto; background: white; padding: 2rem; border-radius: 8px; }
+        h2 { margin-top: 2rem; }
+        footer { text-align: center; padding: 1.5rem; margin-top: 2rem; background: #e9f2ff; }
+        a { color: #0066cc; text-decoration: none; }
+        a:hover { text-decoration: underline; }
     </style>
 </head>
 
 <body>
 
-<a href="#main" class="skip-link">Skip to main content</a>
-
-<!-- Navigation Bar -->
 <nav>
-    <a href="index.html">Home</a>
+    <a href="/index.html">Home</a>
 
     <div class="dropdown">
         <button class="dropdown-button">Topics ▾</button>
         <div class="dropdown-content">
-            <a href="topics/chronic-disease.html">Chronic Disease</a>
-            <a href="topics/exercise.html">Exercise</a>
-            <a href="topics/fall-risk.html">Fall Risk</a>
-            <a href="topics/healthy-eating.html">Healthy Eating</a>
-            <a href="topics/obesity.html">Obesity</a>
-            <a href="topics/supporting-others.html">Supporting Others</a>
-            <a href="topics/tracking-vitals.html">Tracking Vitals</a>
-            <a href="topics/when-to-seek-care.html">When to Seek Care</a>
+            <a href="/topics/chronic-disease/">Chronic Disease</a>
+            <a href="/topics/exercise/">Exercise</a>
+            <a href="/topics/fall-risk/">Fall Risk</a>
+            <a href="/topics/healthy-eating/">Healthy Eating</a>
+            <a href="/topics/obesity/">Obesity</a>
+            <a href="/topics/supporting-others/">Supporting Others</a>
+            <a href="/topics/tracking-vitals/">Tracking Vitals</a>
+            <a href="/topics/when-to-seek-care/">When to Seek Care</a>
         </div>
     </div>
 
-    <a href="feedback.html">Feedback</a>
-    <a href="qr/About.html">QR Codes</a>
-    <a href="About.html">About</a>
+    <a href="/feedback/">Feedback</a>
+    <a href="/qr/About.html">QR Codes</a>
+    <a href="/about/">About</a>
 </nav>
 
 <header>
@@ -155,7 +56,7 @@
     <p>Improving health education for rural Alabama communities</p>
 </header>
 
-<main id="main" class="container">
+<main>
 
     <section>
         <h2>Our Mission</h2>
@@ -168,9 +69,6 @@
 
     <section>
         <h2>Who We Serve</h2>
-        <p>
-            This project is designed for:
-        </p>
         <ul>
             <li>Older adults</li>
             <li>People managing chronic conditions</li>
@@ -182,13 +80,11 @@
 
     <section>
         <h2>Why This Matters</h2>
-        <div class="resource-card">
-            <p>
-                Rural communities often face higher rates of chronic disease, fewer healthcare providers, and limited 
-                access to health education. By providing easy‑to‑understand information, we empower individuals to make 
-                informed decisions about their health.
-            </p>
-        </div>
+        <p>
+            Rural communities often face higher rates of chronic disease, fewer healthcare providers, and limited 
+            access to health education. By providing easy‑to‑understand information, we empower individuals to make 
+            informed decisions about their health.
+        </p>
     </section>
 
     <section>
@@ -204,32 +100,18 @@
 
     <section>
         <h2>Who Created This?</h2>
-        <p>
-            This platform was developed in partnership with:
-        </p>
         <ul>
             <li><strong>Jacksonville State University (JSU)</strong></li>
             <li><strong>Alabama Rural Health Association</strong></li>
             <li>Local clinics, senior centers, and community organizations</li>
         </ul>
-        <p>
-            The goal is to support healthier communities through education, prevention, and empowerment.
-        </p>
-    </section>
-
-    <section>
-        <h2>How You Can Help</h2>
-        <p>
-            Your feedback helps us improve. Please visit the 
-            <a href="feedback.html">Feedback Page</a> to share your thoughts or suggest new topics.
-        </p>
     </section>
 
 </main>
 
 <footer>
     <p>&copy; 2026 JSU Alabama Rural Health Association</p>
-    <p><a href="index.html">Home</a> | <a href="feedback.html">Feedback</a> | <a href="resources.html">Local Resources</a></p>
+    <p><a href="/index.html">Home</a> | <a href="/feedback/">Feedback</a></p>
 </footer>
 
 </body>
