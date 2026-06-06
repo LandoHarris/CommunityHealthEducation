@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Community Health Education</title>
-
-    <!-- Insert your existing Google Analytics snippet here -->
+    <meta name="description" content="Rural Health Education Platform">
+    <title>Rural Health Education</title>
 
     <style>
         body {
@@ -14,7 +13,6 @@
             background: #f7f7f7;
         }
 
-        /* Navigation Bar */
         nav {
             background: #0066cc;
             padding: 0.75rem 1rem;
@@ -35,7 +33,6 @@
             text-decoration: underline;
         }
 
-        /* Dropdown Menu */
         .dropdown {
             position: relative;
             display: inline-block;
@@ -70,7 +67,6 @@
             padding: 0.5rem 1rem;
             text-decoration: none;
             display: block;
-            font-weight: normal;
         }
 
         .dropdown-content a:hover {
@@ -81,14 +77,12 @@
             display: block;
         }
 
-        /* Header */
         header {
             text-align: center;
-            padding: 2rem 1rem;
+            padding: 3rem 1rem;
             background: #e9f2ff;
         }
 
-        /* Main Content */
         main {
             max-width: 900px;
             margin: 2rem auto;
@@ -97,90 +91,88 @@
             border-radius: 8px;
         }
 
-        h2 {
-            margin-top: 2rem;
+        .topic-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
         }
 
-        ul {
-            list-style: none;
-            padding-left: 0;
+        .topic-card {
+            background: #f0f4ff;
+            padding: 1rem;
+            border-radius: 6px;
+            text-align: center;
         }
 
-        li {
-            margin: 0.5rem 0;
-        }
-
-        a {
+        .topic-card a {
+            font-weight: bold;
             color: #0066cc;
-            text-decoration: none;
         }
 
-        a:hover {
-            text-decoration: underline;
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+            background: #e9f2ff;
         }
     </style>
 </head>
 
 <body>
 
-<!-- Navigation Bar -->
 <nav>
-    <a href="index.html">Home</a>
+    <a href="/index.html">Home</a>
 
     <div class="dropdown">
         <button class="dropdown-button">Topics ▾</button>
         <div class="dropdown-content">
-            <a href="topics/chronic-disease.html">Chronic Disease</a>
-            <a href="topics/exercise.html">Exercise</a>
-            <a href="topics/fall-risk.html">Fall Risk</a>
-            <a href="topics/healthy-eating.html">Healthy Eating</a>
-            <a href="topics/obesity.html">Obesity</a>
-            <a href="topics/supporting-others.html">Supporting Others</a>
-            <a href="topics/tracking-vitals.html">Tracking Vitals</a>
-            <a href="topics/when-to-seek-care.html">When to Seek Care</a>
+            <a href="/topics/chronic-disease/">Chronic Disease</a>
+            <a href="/topics/exercise/">Exercise</a>
+            <a href="/topics/fall-risk/">Fall Risk</a>
+            <a href="/topics/healthy-eating/">Healthy Eating</a>
+            <a href="/topics/obesity/">Obesity</a>
+            <a href="/topics/supporting-others/">Supporting Others</a>
+            <a href="/topics/tracking-vitals/">Tracking Vitals</a>
+            <a href="/topics/when-to-seek-care/">When to Seek Care</a>
         </div>
     </div>
 
-    <a href="feedback.html">Feedback</a>
-    <a href="SETUP.md">Setup</a>
-    <a href="qr/About.html">QR Codes</a>
-    <a href="About.html">About</a>
+    <a href="/feedback/">Feedback</a>
+    <a href="/qr/About.html">QR Codes</a>
+    <a href="/about/">About</a>
 </nav>
 
-<!-- Header -->
 <header>
-    <h1>Community Health Education</h1>
-    <p>Accessible, evidence‑based health information for our community</p>
+    <h1>Rural Health Education</h1>
+    <p>Clear, simple health information for Alabama communities</p>
 </header>
 
-<!-- Main Content -->
 <main>
-    <h2>Featured Topic</h2>
-    <ul>
-        <li><a href="topics/when-to-seek-care.html">When to Seek Care</a></li>
-    </ul>
+    <h2>Explore Health Topics</h2>
 
-    <h2>Feedback</h2>
-    <ul>
-        <li><a href="feedback.html">Submit Feedback</a></li>
-    </ul>
+    <div class="topic-grid">
+        <div class="topic-card"><a href="/topics/chronic-disease/">Chronic Disease</a></div>
+        <div class="topic-card"><a href="/topics/exercise/">Exercise</a></div>
+        <div class="topic-card"><a href="/topics/fall-risk/">Fall Risk</a></div>
+        <div class="topic-card"><a href="/topics/healthy-eating/">Healthy Eating</a></div>
+        <div class="topic-card"><a href="/topics/obesity/">Obesity</a></div>
+        <div class="topic-card"><a href="/topics/supporting-others/">Supporting Others</a></div>
+        <div class="topic-card"><a href="/topics/tracking-vitals/">Tracking Vitals</a></div>
+        <div class="topic-card"><a href="/topics/when-to-seek-care/">When to Seek Care</a></div>
+    </div>
 
-    <h2>Project Documentation</h2>
-    <ul>
-        <li><a href="SETUP.md">Setup Guide</a></li>
-        <li><a href="qr/About.html">QR Code Deployment</a></li>
-        <li><a href="About.html">Project Overview</a></li>
-    </ul>
+    <section style="margin-top: 2rem;">
+        <h2>Give Feedback</h2>
+        <p>Help us improve this resource for your community.</p>
+        <p><a href="/feedback/">Share your feedback</a></p>
+    </section>
 </main>
+
+<footer>
+    <p>&copy; 2026 JSU Alabama Rural Health Association</p>
+    <p><a href="/about/">About</a> | <a href="/feedback/">Feedback</a></p>
+</footer>
 
 </body>
 </html>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-VX82Y2YY3L"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-VX82Y2YY3L');
-</script>
