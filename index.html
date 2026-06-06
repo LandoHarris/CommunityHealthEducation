@@ -1,9 +1,11 @@
-
+<div id="alert-placeholder"></div>
 <div id="nav-placeholder"></div>
+<div id="sidebar-placeholder"></div>
+<div id="footer-placeholder"></div>
+
 <script>
-fetch("/components/nav.html")
-  .then(res => res.text())
-  .then(html => {
-      document.getElementById("nav-placeholder").innerHTML = html;
-  });
+loadComponent("alert-placeholder", "/components/alert.html");
+loadComponent("nav-placeholder", "/components/nav.html");
+loadComponent("sidebar-placeholder", "/components/sidebar.html");
+loadComponent("footer-placeholder", "/components/footer.html");
 </script>
