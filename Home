@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Health Education</title>
+    <link rel="stylesheet" href="assets/style.css">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8Y0Z0Z0Z0Z"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-8Y0Z0Z0Z0Z');
+    </script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f7f7f7;
+        }
+        header {
+            background: #0066cc;
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+        }
+        h2 {
+            margin-top: 2rem;
+        }
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        li {
+            margin: 0.5rem 0;
+        }
+        a {
+            color: #0066cc;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Community Health Education</h1>
+        <p>Accessible, evidence‑based health information for our community</p>
+    </header>
+
+    <main>
+        <h2>Health Topics</h2>
+        <ul>
+            <li><a href="when-to-seek-care.html">When to Seek Care</a></li>
+        </ul>
+
+        <h2>Feedback</h2>
+        <ul>
+            <li><a href="feedback.html">Submit Feedback</a></li>
+        </ul>
+
+        <h2>Project Documentation</h2>
+        <ul>
+            <li><a href="SETUP.md">Setup Guide</a></li>
+            <li><a href="qr/README.md">QR Code Deployment</a></li>
+            <li><a href="README.md">Project Overview</a></li>
+        </ul>
+    </main>
+</body>
+</html>
