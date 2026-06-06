@@ -3,320 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Exercise recommendations for health">
-    <title>Exercise Recommendations - Rural Health Education</title>
+    <meta name="description" content="Exercise and physical activity guide">
+    <title>Exercise & Physical Activity - Rural Health Education</title>
 
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f7f7f7;
-        }
-
-        /* Navigation Bar */
-        nav {
-            background: #0066cc;
-            padding: 0.75rem 1rem;
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            align-items: center;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-size: 1rem;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        /* Dropdown Menu */
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-
-        .dropdown-button {
-            background: none;
-            border: none;
-            color: white;
-            font-size: 1rem;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .dropdown-button:hover {
-            text-decoration: underline;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: white;
-            min-width: 220px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-            z-index: 1;
-            border-radius: 4px;
-            padding: 0.5rem 0;
-        }
-
-        .dropdown-content a {
-            color: #0066cc;
-            padding: 0.5rem 1rem;
-            text-decoration: none;
-            display: block;
-            font-weight: normal;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #f0f4ff;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        header {
-            text-align: center;
-            padding: 2rem 1rem;
-            background: #e9f2ff;
-        }
-
-        main {
-            max-width: 900px;
-            margin: 2rem auto;
-            background: white;
-            padding: 2rem;
-            border-radius: 8px;
-        }
-
-        h2 {
-            margin-top: 2rem;
-        }
-
-        ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        li {
-            margin: 0.5rem 0;
-        }
-
-        a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        footer {
-            text-align: center;
-            padding: 1.5rem;
-            margin-top: 2rem;
-            background: #e9f2ff;
-        }
+        body { margin: 0; font-family: Arial, sans-serif; background: #f7f7f7; }
+        nav { background: #0066cc; padding: 0.75rem 1rem; display: flex; justify-content: center; gap: 2rem; align-items: center; }
+        nav a { color: white; text-decoration: none; font-size: 1rem; font-weight: bold; }
+        nav a:hover { text-decoration: underline; }
+        .dropdown { position: relative; display: inline-block; }
+        .dropdown-button { background: none; border: none; color: white; font-size: 1rem; font-weight: bold; cursor: pointer; }
+        .dropdown-button:hover { text-decoration: underline; }
+        .dropdown-content { display: none; position: absolute; background-color: white; min-width: 220px; box-shadow: 0 4px 8px rgba(0,0,0,0.15); z-index: 1; border-radius: 4px; padding: 0.5rem 0; }
+        .dropdown-content a { color: #0066cc; padding: 0.5rem 1rem; text-decoration: none; display: block; }
+        .dropdown-content a:hover { background-color: #f0f4ff; }
+        .dropdown:hover .dropdown-content { display: block; }
+        header { text-align: center; padding: 2rem 1rem; background: #e9f2ff; }
+        main { max-width: 900px; margin: 2rem auto; background: white; padding: 2rem; border-radius: 8px; }
+        h2 { margin-top: 2rem; }
+        ul { list-style: none; padding-left: 0; }
+        li { margin: 0.5rem 0; }
+        a { color: #0066cc; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        footer { text-align: center; padding: 1.5rem; margin-top: 2rem; background: #e9f2ff; }
     </style>
 </head>
 
 <body>
 
-<a href="#main" class="skip-link">Skip to main content</a>
-
-<!-- Navigation Bar -->
 <nav>
-    <a href="../index.html">Home</a>
+    <a href="/index.html">Home</a>
 
     <div class="dropdown">
         <button class="dropdown-button">Topics ▾</button>
         <div class="dropdown-content">
-            <a href="chronic-disease.html">Chronic Disease</a>
-            <a href="exercise.html">Exercise</a>
-            <a href="fall-risk.html">Fall Risk</a>
-            <a href="healthy-eating.html">Healthy Eating</a>
-            <a href="obesity.html">Obesity</a>
-            <a href="supporting-others.html">Supporting Others</a>
-            <a href="tracking-vitals.html">Tracking Vitals</a>
-            <a href="when-to-seek-care.html">When to Seek Care</a>
+            <a href="/topics/chronic-disease/">Chronic Disease</a>
+            <a href="/topics/exercise/">Exercise</a>
+            <a href="/topics/fall-risk/">Fall Risk</a>
+            <a href="/topics/healthy-eating/">Healthy Eating</a>
+            <a href="/topics/obesity/">Obesity</a>
+            <a href="/topics/supporting-others/">Supporting Others</a>
+            <a href="/topics/tracking-vitals/">Tracking Vitals</a>
+            <a href="/topics/when-to-seek-care/">When to Seek Care</a>
         </div>
     </div>
 
-    <a href="../feedback.html">Feedback</a>
-    <a href="../qr/About.html">QR Codes</a>
-    <a href="../About.html">About</a>
+    <a href="/feedback/">Feedback</a>
+    <a href="/qr/About.html">QR Codes</a>
+    <a href="/about/">About</a>
 </nav>
 
 <header>
-    <h1>Exercise Recommendations</h1>
+    <h1>Exercise & Physical Activity</h1>
 </header>
 
-<main id="main" class="container">
+<main>
 
     <section>
         <h2>Why Exercise Matters</h2>
-        <p>Regular physical activity:</p>
+        <p>Regular physical activity helps you stay healthy, manage chronic conditions, and feel better every day.</p>
         <ul>
-            <li>Strengthens your heart and lungs</li>
+            <li>Improves heart health</li>
             <li>Helps control weight</li>
-            <li>Lowers blood pressure and blood sugar</li>
-            <li>Improves mood and mental health</li>
-            <li>Reduces risk of disease</li>
-            <li>Improves balance and flexibility</li>
-            <li>Keeps muscles and bones strong</li>
+            <li>Reduces stress and anxiety</li>
+            <li>Strengthens muscles and bones</li>
+            <li>Improves sleep</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Types of Exercise</h2>
+        <ul>
+            <li><strong>Aerobic:</strong> walking, swimming, biking</li>
+            <li><strong>Strength:</strong> light weights, resistance bands</li>
+            <li><strong>Flexibility:</strong> stretching, yoga</li>
+            <li><strong>Balance:</strong> standing on one foot, tai chi</li>
         </ul>
     </section>
 
     <section>
         <h2>How Much Exercise Do You Need?</h2>
-
-        <div class="resource-card">
-            <h3>Adults (18–64 years)</h3>
-            <ul>
-                <li><strong>Aerobic activity:</strong> 150 minutes of moderate activity per week</li>
-                <li><strong>OR:</strong> 75 minutes of vigorous activity per week</li>
-                <li><strong>Strength training:</strong> 2 days per week</li>
-            </ul>
-        </div>
-
-        <div class="resource-card">
-            <h3>Older Adults (65+ years)</h3>
-            <ul>
-                <li><strong>Aerobic activity:</strong> 150 minutes per week</li>
-                <li><strong>Strength training:</strong> 2 days per week</li>
-                <li><strong>Balance exercises:</strong> 3+ days per week</li>
-            </ul>
-        </div>
-    </section>
-
-    <section>
-        <h2>Types of Exercise</h2>
-
-        <div class="resource-card">
-            <h3>Aerobic (Cardio)</h3>
-            <p>Gets your heart pumping:</p>
-            <ul>
-                <li>Brisk walking</li>
-                <li>Jogging or running</li>
-                <li>Dancing</li>
-                <li>Swimming</li>
-                <li>Cycling</li>
-                <li>Sports</li>
-            </ul>
-        </div>
-
-        <div class="resource-card">
-            <h3>Strength Training</h3>
-            <p>Builds and maintains muscle:</p>
-            <ul>
-                <li>Weight lifting</li>
-                <li>Resistance bands</li>
-                <li>Push-ups and sit-ups</li>
-                <li>Yoga</li>
-                <li>Heavy gardening</li>
-            </ul>
-        </div>
-
-        <div class="resource-card">
-            <h3>Flexibility</h3>
-            <p>Improves range of motion:</p>
-            <ul>
-                <li>Stretching</li>
-                <li>Yoga</li>
-                <li>Tai chi</li>
-                <li>Pilates</li>
-            </ul>
-        </div>
-
-        <div class="resource-card">
-            <h3>Balance</h3>
-            <p>Helps prevent falls:</p>
-            <ul>
-                <li>Tai chi</li>
-                <li>Balance exercises</li>
-                <li>Walking on a line</li>
-                <li>Yoga</li>
-            </ul>
-        </div>
-    </section>
-
-    <section>
-        <h2>Getting Started</h2>
         <ul>
-            <li><strong>Talk to your doctor first</strong></li>
-            <li>Start slowly (10–15 minutes per day)</li>
-            <li>Increase activity gradually</li>
+            <li>150 minutes of moderate activity per week</li>
+            <li>OR 75 minutes of vigorous activity</li>
+            <li>Plus 2 days of strength training</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Exercise Tips for Beginners</h2>
+        <ul>
+            <li>Start slow and build up</li>
             <li>Choose activities you enjoy</li>
-            <li>Exercise with a friend</li>
-            <li>Set realistic goals</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>Easy Ways to Add Activity</h2>
-        <ul>
-            <li>Walk instead of driving short distances</li>
-            <li>Garden or do yard work</li>
-            <li>Take stairs instead of elevators</li>
-            <li>Do housework</li>
-            <li>Dance to music</li>
-            <li>Play with grandchildren</li>
-            <li>Walk after meals</li>
-            <li>Join a community class</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>Safe Exercise Tips</h2>
-        <ul>
-            <li>Warm up before exercising</li>
-            <li>Cool down afterwards</li>
-            <li>Wear supportive shoes</li>
             <li>Stay hydrated</li>
-            <li>Stop if you feel pain</li>
-            <li>Exercise in safe, well-lit areas</li>
+            <li>Wear comfortable shoes</li>
+            <li>Listen to your body</li>
         </ul>
     </section>
 
     <section>
-        <h2>When to Stop and Rest</h2>
-        <p>Stop exercising and contact your doctor if you experience:</p>
+        <h2>When to Be Careful</h2>
         <ul>
             <li>Chest pain or pressure</li>
-            <li>Severe shortness of breath</li>
             <li>Dizziness or fainting</li>
-            <li>Severe joint or muscle pain</li>
+            <li>Shortness of breath</li>
+            <li>Joint swelling or severe pain</li>
         </ul>
-    </section>
-
-    <section>
-        <h2>More Resources</h2>
-        <ul>
-            <li><a href="https://www.cdc.gov/physicalactivity/index.html" target="_blank">CDC – Physical Activity</a></li>
-            <li><a href="https://www.nia.nih.gov/health/exercise-physical-activity" target="_blank">NIH – Exercise for Older Adults</a></li>
-            <li><a href="healthy-eating.html">Healthy Eating</a></li>
-        </ul>
-    </section>
-
-    <section class="alert alert-info">
-        <strong>Remember:</strong> Any amount of activity is better than none. Start where you are and build from there.
+        <p>If you have chronic conditions, talk to your doctor before starting a new exercise routine.</p>
     </section>
 
     <section class="feedback-section">
         <h2>Have Questions or Feedback?</h2>
-        <p><a href="../feedback.html">Tell us how we can improve this page</a></p>
+        <p><a href="/feedback/">Tell us how we can improve this page</a></p>
     </section>
 
 </main>
 
 <footer>
     <p>&copy; 2026 JSU Alabama Rural Health Association</p>
-    <p><a href="../feedback.html">Give Feedback</a> | <a href="../index.html">Home</a></p>
+    <p><a href="/index.html">Home</a> | <a href="/about/">About</a></p>
 </footer>
 
 </body>
