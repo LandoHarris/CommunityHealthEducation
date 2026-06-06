@@ -1,68 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Community Health Education</title>
-    <link rel="stylesheet" href="/components/theme.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community Health Education</title>
+  <link rel="stylesheet" href="/components/theme.css">
 </head>
-
 <body>
 
-    <!-- COMPONENTS -->
-    <div id="alert-placeholder"></div>
-    <div id="nav-placeholder"></div>
+<div id="alert-placeholder"></div>
+<div id="nav-placeholder"></div>
 
-    <!-- PAGE LAYOUT -->
-    <main class="homepage-layout">
+<main class="homepage-layout">
+  <!-- your homepage content -->
+   
+</main>
 
-        <!-- SIDEBAR (WRAPPED SO LAYOUT DOESN'T BREAK) -->
-        <div class="sidebar-area">
-            <div id="sidebar-placeholder"></div>
-        </div>
+<div id="sidebar-placeholder"></div>
+<div id="footer-placeholder"></div>
 
-        <!-- MAIN CONTENT -->
-        <section class="homepage-content">
-            <h1>Welcome to Community Health Education</h1>
-            <p>Your trusted source for simple, accurate, and accessible health information.</p>
-
-            <h2>Featured Topics</h2>
-            <div class="topics-grid">
-                <a class="topic-card" href="/topics/when-to-seek-care.html">
-                    <h3>When to Seek Care</h3>
-                    <p>Learn when symptoms require urgent, same‑day, or routine care.</p>
-                </a>
-
-                <a class="topic-card" href="/topics/healthy-eating.html">
-                    <h3>Healthy Eating</h3>
-                    <p>Simple nutrition guidance for families and busy schedules.</p>
-                </a>
-
-                <a class="topic-card" href="/topics/tracking-vitals.html">
-                    <h3>Tracking Vitals</h3>
-                    <p>Understand blood pressure, heart rate, temperature, and more.</p>
-                </a>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- FOOTER -->
-    <div id="footer-placeholder"></div>
-
-    <!-- COMPONENT LOADER -->
-    <script>
-        function loadComponent(id, file) {
-            fetch(file)
-                .then(res => res.text())
-                .then(html => document.getElementById(id).innerHTML = html);
-        }
-
-        loadComponent("alert-placeholder", "/components/alert.html");
-        loadComponent("nav-placeholder", "/components/nav.html");
-        loadComponent("sidebar-placeholder", "/components/sidebar.html");
-        loadComponent("footer-placeholder", "/components/footer.html");
-    </script>
+<script>
+  function loadComponent(id, file) {
+    fetch(file)
+      .then(res => res.text())
+      .then(html => document.getElementById(id).innerHTML = html);
+  }
+  loadComponent("alert-placeholder", "/components/alert.html");
+  loadComponent("nav-placeholder", "/components/nav.html");
+  loadComponent("sidebar-placeholder", "/components/sidebar.html");
+  loadComponent("footer-placeholder", "/components/footer.html");
+</script>
 
 </body>
 </html>
