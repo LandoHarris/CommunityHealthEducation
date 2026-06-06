@@ -1,64 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Community Health Education</title>
-  <link rel="stylesheet" href="/components/theme.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Health Education</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <header>
+        <h1>Community Health Education</h1>
+        <p>Simple, accessible health information for the community.</p>
+    </header>
 
-  <!-- COMPONENT PLACEHOLDERS -->
-  <div id="alert-placeholder"></div>
-  <div id="nav-placeholder"></div>
+    <main>
+        <h2>Welcome</h2>
+        <p>This is a basic GitHub Pages website. You can add pages, links, and content as you grow.</p>
+    </main>
 
-  <main class="homepage-layout">
-    <!-- your homepage content -->
-  </main>
-
-  <div id="sidebar-placeholder"></div>
-  <div id="footer-placeholder"></div>
-
-  <!-- COMPONENT LOADER -->
-  <script>
-    function loadComponent(id, file) {
-      fetch(file)
-        .then(res => res.text())
-        .then(html => {
-          document.getElementById(id).innerHTML = html;
-        });
-    }
-
-    loadComponent("alert-placeholder", "/components/alerts.html");
-    loadComponent("nav-placeholder", "/components/nav.html");
-    loadComponent("sidebar-placeholder", "w/components/sidebar.html");
-    loadComponent("footer-placeholder", "/components/footer.html");
-  </script>
-
-  <!-- GLOBAL SCRIPT: attach hamburger menu AFTER nav loads -->
-  <script>
-    function waitForElement(selector, callback) {
-      const el = document.querySelector(selector);
-      if (el) return callback(el);
-
-      const observer = new MutationObserver(() => {
-        const el = document.querySelector(selector);
-        if (el) {
-          observer.disconnect();
-          callback(el);
-        }
-      });
-
-      observer.observe(document.body, { childList: true, subtree: true });
-    }
-
-    waitForElement("#hamburger", () => {
-      document.getElementById("hamburger").onclick = () => {
-        document.getElementById("nav-links").classList.toggle("open");
-      };
-    });
-  </script>
-
+    <footer>
+        <p>© 2026 Community Health Education</p>
+    </footer>
 </body>
 </html>
