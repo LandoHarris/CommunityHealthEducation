@@ -3,265 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Feedback form for Rural Health Education Platform">
+    <meta name="description" content="Feedback page for Rural Health Education">
     <title>Feedback - Rural Health Education</title>
 
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f7f7f7;
-        }
-
-        /* Navigation Bar */
-        nav {
-            background: #0066cc;
-            padding: 0.75rem 1rem;
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            align-items: center;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-size: 1rem;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        /* Dropdown Menu */
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-
-        .dropdown-button {
-            background: none;
-            border: none;
-            color: white;
-            font-size: 1rem;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .dropdown-button:hover {
-            text-decoration: underline;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: white;
-            min-width: 220px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-            z-index: 1;
-            border-radius: 4px;
-            padding: 0.5rem 0;
-        }
-
-        .dropdown-content a {
-            color: #0066cc;
-            padding: 0.5rem 1rem;
-            text-decoration: none;
-            display: block;
-            font-weight: normal;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #f0f4ff;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        header {
-            text-align: center;
-            padding: 2rem 1rem;
-            background: #e9f2ff;
-        }
-
-        main {
-            max-width: 900px;
-            margin: 2rem auto;
-            background: white;
-            padding: 2rem;
-            border-radius: 8px;
-        }
-
-        h2 {
-            margin-top: 2rem;
-        }
-
-        .resource-card {
-            background: #f0f4ff;
-            padding: 1rem;
-            border-radius: 6px;
-            margin: 1rem 0;
-        }
-
-        .alert-info {
-            background: #e8f4ff;
-            border-left: 6px solid #0077cc;
-            padding: 1rem;
-            border-radius: 6px;
-            margin: 2rem 0;
-        }
-
-        a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        footer {
-            text-align: center;
-            padding: 1.5rem;
-            margin-top: 2rem;
-            background: #e9f2ff;
-        }
-
-        .btn-primary {
-            display: inline-block;
-            background: #0066cc;
-            color: white;
-            padding: 0.75rem 1.25rem;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .btn-primary:hover {
-            background: #004c99;
-        }
+        body { margin: 0; font-family: Arial, sans-serif; background: #f7f7f7; }
+        nav { background: #0066cc; padding: 0.75rem 1rem; display: flex; justify-content: center; gap: 2rem; align-items: center; }
+        nav a { color: white; text-decoration: none; font-size: 1rem; font-weight: bold; }
+        nav a:hover { text-decoration: underline; }
+        .dropdown { position: relative; display: inline-block; }
+        .dropdown-button { background: none; border: none; color: white; font-size: 1rem; font-weight: bold; cursor: pointer; }
+        .dropdown-button:hover { text-decoration: underline; }
+        .dropdown-content { display: none; position: absolute; background-color: white; min-width: 220px; box-shadow: 0 4px 8px rgba(0,0,0,0.15); z-index: 1; border-radius: 4px; padding: 0.5rem 0; }
+        .dropdown-content a { color: #0066cc; padding: 0.5rem 1rem; text-decoration: none; display: block; }
+        .dropdown-content a:hover { background-color: #f0f4ff; }
+        .dropdown:hover .dropdown-content { display: block; }
+        header { text-align: center; padding: 2rem 1rem; background: #e9f2ff; }
+        main { max-width: 900px; margin: 2rem auto; background: white; padding: 2rem; border-radius: 8px; }
+        footer { text-align: center; padding: 1.5rem; margin-top: 2rem; background: #e9f2ff; }
+        a { color: #0066cc; text-decoration: none; }
+        a:hover { text-decoration: underline; }
     </style>
 </head>
 
 <body>
 
-<a href="#main" class="skip-link">Skip to main content</a>
-
-<!-- Navigation Bar -->
 <nav>
-    <a href="index.html">Home</a>
+    <a href="/index.html">Home</a>
 
     <div class="dropdown">
         <button class="dropdown-button">Topics ▾</button>
         <div class="dropdown-content">
-            <a href="topics/chronic-disease.html">Chronic Disease</a>
-            <a href="topics/exercise.html">Exercise</a>
-            <a href="topics/fall-risk.html">Fall Risk</a>
-            <a href="topics/healthy-eating.html">Healthy Eating</a>
-            <a href="topics/obesity.html">Obesity</a>
-            <a href="topics/supporting-others.html">Supporting Others</a>
-            <a href="topics/tracking-vitals.html">Tracking Vitals</a>
-            <a href="topics/when-to-seek-care.html">When to Seek Care</a>
+            <a href="/topics/chronic-disease/">Chronic Disease</a>
+            <a href="/topics/exercise/">Exercise</a>
+            <a href="/topics/fall-risk/">Fall Risk</a>
+            <a href="/topics/healthy-eating/">Healthy Eating</a>
+            <a href="/topics/obesity/">Obesity</a>
+            <a href="/topics/supporting-others/">Supporting Others</a>
+            <a href="/topics/tracking-vitals/">Tracking Vitals</a>
+            <a href="/topics/when-to-seek-care/">When to Seek Care</a>
         </div>
     </div>
 
-    <a href="feedback.html">Feedback</a>
-    <a href="qr/README.md">QR Codes</a>
-    <a href="README.md">About</a>
+    <a href="/feedback/">Feedback</a>
+    <a href="/qr/About.html">QR Codes</a>
+    <a href="/about/">About</a>
 </nav>
 
 <header>
-    <h1>Feedback & Questions</h1>
-    <p>Help us improve this health education platform</p>
+    <h1>Feedback</h1>
+    <p>Your input helps us improve this resource for Alabama communities.</p>
 </header>
 
-<main id="main" class="container">
+<main>
 
     <section>
-        <h2>We Want to Hear From You</h2>
-        <p>Your feedback helps us create better health information for our community.</p>
-    </section>
+        <h2>Share Your Thoughts</h2>
+        <p>Tell us what you think about this website, the health topics, or anything we can improve.</p>
 
-    <section>
-        <h2>Online Feedback Form</h2>
-        <p>Please fill out the form below. This helps us understand what health topics matter most to you.</p>
+        <form action="https://formspree.io/f/mnqekjzv" method="POST">
+            <label>Your Name (optional)</label><br>
+            <input type="text" name="name" style="width:100%; padding:8px;"><br><br>
 
-        <!-- Google Forms Embed -->
-    <iframe 
-        src="https://docs.google.com/forms/d/e/1FAIpQLSdh7yUoVyMIgab437bB52MHIgR-5sPPjFIwuBUIpPC2tk8PAA/viewform?embedded=true" 
-        width="100%" height="1200" frameborder="0" marginheight="0" marginwidth="0">
-        Loading…
-    </iframe>
-    
-    <p style="margin-top: 1rem;">
-        <strong>Note:</strong> If the form does not load,
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdh7yUoVyMIgab437bB52MHIgR-5sPPjFIwuBUIpPC2tk8PAA/viewform" target="_blank">
-            click here to open it in a new window
-        </a>.
-    </p>
+            <label>Your Feedback</label><br>
+            <textarea name="message" required style="width:100%; height:150px; padding:8px;"></textarea><br><br>
 
-
-    <section>
-        <h2>Other Ways to Give Feedback</h2>
-
-        <div class="resource-card">
-            <h3>By Phone</h3>
-            <p>Contact JSU Alabama Rural Health Association to share suggestions or ask questions.</p>
-        </div>
-
-        <div class="resource-card">
-            <h3>At Community Events</h3>
-            <p>We attend senior centers, health fairs, and community events. Stop by our table to chat.</p>
-        </div>
-
-        <div class="resource-card">
-            <h3>By Email</h3>
-            <p>Send your suggestions to our team — we read every message.</p>
-        </div>
-    </section>
-
-    <section>
-        <h2>Questions We'd Love Your Input On</h2>
-
-        <div class="resource-card">
-            <h3>Which Health Topics Matter Most?</h3>
-            <p>Tell us what information would help you or your family the most.</p>
-        </div>
-
-        <div class="resource-card">
-            <h3>Where Did You Find This Platform?</h3>
-            <p>We use QR codes in many places. Let us know where you saw one.</p>
-        </div>
-
-        <div class="resource-card">
-            <h3>How Can We Improve?</h3>
-            <p>Is the information clear? Too long? Too short? Tell us how to make it better.</p>
-        </div>
-
-        <div class="resource-card">
-            <h3>What Other Resources Do You Need?</h3>
-            <p>Tell us about health information or services that are hard to find in our area.</p>
-        </div>
-    </section>
-
-    <section class="alert-info">
-        <strong>Privacy:</strong> Your feedback is confidential and used only to improve this platform.
-    </section>
-
-    <section>
-        <h2>Thank You</h2>
-        <p>We appreciate you taking the time to help us serve rural Alabama better.</p>
-        <a href="index.html" class="btn-primary">Return to Home</a>
+            <button type="submit" style="padding:10px 20px; background:#0066cc; color:white; border:none; cursor:pointer; border-radius:4px;">
+                Submit Feedback
+            </button>
+        </form>
     </section>
 
 </main>
 
 <footer>
     <p>&copy; 2026 JSU Alabama Rural Health Association</p>
-    <p><a href="about.html">About This Platform</a> | <a href="feedback.html">Feedback</a> | <a href="resources.html">Local Resources</a></p>
-    <p><a href="index.html">Return to Home</a></p>
+    <p><a href="/index.html">Home</a> | <a href="/about/">About</a></p>
 </footer>
 
 </body>
