@@ -411,30 +411,30 @@ img {
   display: block;
 }
 
-/* TODOChange #8 contact button to match other buttons and potential when hovering over all buttons to change to darker green*/
-/* ===== CONTACT ===== */
-.contact-grid {
+/* TODOChange #8 feedback button to match other buttons and potential when hovering over all buttons to change to darker green*/
+/* ===== feedback ===== */
+.feedback-grid {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
   gap: 3rem;
 }
 
 @media (max-width: 768px) {
-  .contact-grid {
+  .feedback-grid {
     grid-template-columns: 1fr;
   }
 }
 
-.contact-info h2,
-.contact-form h2 {
+.feedback-info h2,
+.feedback-form h2 {
   margin-top: 0;
 }
 
-.contact-info p {
+.feedback-info p {
   margin-bottom: 1.25rem;
 }
 
-.contact-form {
+.feedback-form {
   background: var(--color-bg-alt);
   padding: 2rem;
   border-radius: var(--radius);
