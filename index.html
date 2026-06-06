@@ -5,32 +5,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Community Health Education</title>
 
-    <style>
-        body { margin: 0; font-family: Arial, sans-serif; background: #f7f7f7; }
+    <!-- Insert your existing Google Analytics snippet here -->
 
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f7f7f7;
+        }
+
+        /* Navigation Bar */
         nav {
             background: #0066cc;
-            padding: 1rem;
+            padding: 0.75rem 1rem;
             display: flex;
             justify-content: center;
             gap: 2rem;
+            align-items: center;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            font-size: 1.1rem;
+            font-size: 1rem;
             font-weight: bold;
         }
 
-        nav a:hover { text-decoration: underline; }
+        nav a:hover {
+            text-decoration: underline;
+        }
 
+        /* Dropdown Menu */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-button {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .dropdown-button:hover {
+            text-decoration: underline;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 220px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            z-index: 1;
+            border-radius: 4px;
+            padding: 0.5rem 0;
+        }
+
+        .dropdown-content a {
+            color: #0066cc;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            display: block;
+            font-weight: normal;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f0f4ff;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Header */
         header {
             text-align: center;
             padding: 2rem 1rem;
             background: #e9f2ff;
         }
 
+        /* Main Content */
         main {
             max-width: 900px;
             margin: 2rem auto;
@@ -39,34 +97,63 @@
             border-radius: 8px;
         }
 
-        h2 { margin-top: 2rem; }
+        h2 {
+            margin-top: 2rem;
+        }
 
-        ul { list-style: none; padding-left: 0; }
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
 
-        li { margin: 0.5rem 0; }
+        li {
+            margin: 0.5rem 0;
+        }
 
-        a { color: #0066cc; text-decoration: none; }
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
 
-        a:hover { text-decoration: underline; }
+        a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 
 <body>
 
+<!-- Navigation Bar -->
 <nav>
     <a href="index.html">Home</a>
-    <a href="topics.html">Topics</a>
+
+    <div class="dropdown">
+        <button class="dropdown-button">Topics ▾</button>
+        <div class="dropdown-content">
+            <a href="topics/chronic-disease.html">Chronic Disease</a>
+            <a href="topics/exercise.html">Exercise</a>
+            <a href="topics/fall-risk.html">Fall Risk</a>
+            <a href="topics/healthy-eating.html">Healthy Eating</a>
+            <a href="topics/obesity.html">Obesity</a>
+            <a href="topics/supporting-others.html">Supporting Others</a>
+            <a href="topics/tracking-vitals.html">Tracking Vitals</a>
+            <a href="topics/when-to-seek-care.html">When to Seek Care</a>
+        </div>
+    </div>
+
     <a href="feedback.html">Feedback</a>
     <a href="SETUP.md">Setup</a>
     <a href="qr/README.md">QR Codes</a>
     <a href="README.md">About</a>
 </nav>
 
+<!-- Header -->
 <header>
     <h1>Community Health Education</h1>
     <p>Accessible, evidence‑based health information for our community</p>
 </header>
 
+<!-- Main Content -->
 <main>
     <h2>Featured Topic</h2>
     <ul>
