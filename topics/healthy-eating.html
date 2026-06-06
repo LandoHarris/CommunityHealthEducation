@@ -3,322 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="How food affects your body and health">
-    <title>How Food Affects the Body - Rural Health Education</title>
+    <meta name="description" content="Healthy eating guide for rural communities">
+    <title>Healthy Eating - Rural Health Education</title>
 
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f7f7f7;
-        }
-
-        /* Navigation Bar */
-        nav {
-            background: #0066cc;
-            padding: 0.75rem 1rem;
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            align-items: center;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-size: 1rem;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        /* Dropdown Menu */
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-
-        .dropdown-button {
-            background: none;
-            border: none;
-            color: white;
-            font-size: 1rem;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .dropdown-button:hover {
-            text-decoration: underline;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: white;
-            min-width: 220px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-            z-index: 1;
-            border-radius: 4px;
-            padding: 0.5rem 0;
-        }
-
-        .dropdown-content a {
-            color: #0066cc;
-            padding: 0.5rem 1rem;
-            text-decoration: none;
-            display: block;
-            font-weight: normal;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #f0f4ff;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        header {
-            text-align: center;
-            padding: 2rem 1rem;
-            background: #e9f2ff;
-        }
-
-        main {
-            max-width: 900px;
-            margin: 2rem auto;
-            background: white;
-            padding: 2rem;
-            border-radius: 8px;
-        }
-
-        h2 {
-            margin-top: 2rem;
-        }
-
-        ul, ol {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        li {
-            margin: 0.5rem 0;
-        }
-
-        a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        footer {
-            text-align: center;
-            padding: 1.5rem;
-            margin-top: 2rem;
-            background: #e9f2ff;
-        }
+        body { margin: 0; font-family: Arial, sans-serif; background: #f7f7f7; }
+        nav { background: #0066cc; padding: 0.75rem 1rem; display: flex; justify-content: center; gap: 2rem; align-items: center; }
+        nav a { color: white; text-decoration: none; font-size: 1rem; font-weight: bold; }
+        nav a:hover { text-decoration: underline; }
+        .dropdown { position: relative; display: inline-block; }
+        .dropdown-button { background: none; border: none; color: white; font-size: 1rem; font-weight: bold; cursor: pointer; }
+        .dropdown-button:hover { text-decoration: underline; }
+        .dropdown-content { display: none; position: absolute; background-color: white; min-width: 220px; box-shadow: 0 4px 8px rgba(0,0,0,0.15); z-index: 1; border-radius: 4px; padding: 0.5rem 0; }
+        .dropdown-content a { color: #0066cc; padding: 0.5rem 1rem; text-decoration: none; display: block; }
+        .dropdown-content a:hover { background-color: #f0f4ff; }
+        .dropdown:hover .dropdown-content { display: block; }
+        header { text-align: center; padding: 2rem 1rem; background: #e9f2ff; }
+        main { max-width: 900px; margin: 2rem auto; background: white; padding: 2rem; border-radius: 8px; }
+        h2 { margin-top: 2rem; }
+        ul { list-style: none; padding-left: 0; }
+        li { margin: 0.5rem 0; }
+        a { color: #0066cc; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        footer { text-align: center; padding: 1.5rem; margin-top: 2rem; background: #e9f2ff; }
     </style>
 </head>
 
 <body>
 
-<a href="#main" class="skip-link">Skip to main content</a>
-
-<!-- Navigation Bar -->
 <nav>
-    <a href="../index.html">Home</a>
+    <a href="/index.html">Home</a>
 
     <div class="dropdown">
         <button class="dropdown-button">Topics ▾</button>
         <div class="dropdown-content">
-            <a href="chronic-disease.html">Chronic Disease</a>
-            <a href="exercise.html">Exercise</a>
-            <a href="fall-risk.html">Fall Risk</a>
-            <a href="healthy-eating.html">Healthy Eating</a>
-            <a href="obesity.html">Obesity</a>
-            <a href="supporting-others.html">Supporting Others</a>
-            <a href="tracking-vitals.html">Tracking Vitals</a>
-            <a href="when-to-seek-care.html">When to Seek Care</a>
+            <a href="/topics/chronic-disease/">Chronic Disease</a>
+            <a href="/topics/exercise/">Exercise</a>
+            <a href="/topics/fall-risk/">Fall Risk</a>
+            <a href="/topics/healthy-eating/">Healthy Eating</a>
+            <a href="/topics/obesity/">Obesity</a>
+            <a href="/topics/supporting-others/">Supporting Others</a>
+            <a href="/topics/tracking-vitals/">Tracking Vitals</a>
+            <a href="/topics/when-to-seek-care/">When to Seek Care</a>
         </div>
     </div>
 
-    <a href="../feedback.html">Feedback</a>
-    <a href="../qr/About.html">QR Codes</a>
-    <a href="../About.html">About</a>
+    <a href="/feedback/">Feedback</a>
+    <a href="/qr/About.html">QR Codes</a>
+    <a href="/about/">About</a>
 </nav>
 
 <header>
-    <h1>How Food Affects the Body</h1>
+    <h1>Healthy Eating</h1>
 </header>
 
-<main id="main" class="container">
+<main>
 
     <section>
-        <h2>Food is Fuel and Medicine</h2>
-        <p>What you eat affects how you feel, think, and function. Food provides energy and the building blocks your body needs to work properly.</p>
-        <p>Good nutrition can prevent disease and help you recover faster from illness.</p>
-    </section>
-
-    <section>
-        <h2>How Digestion Works</h2>
-        <p>When you eat:</p>
-        <ol>
-            <li><strong>Your mouth:</strong> Saliva breaks down food as you chew</li>
-            <li><strong>Your stomach:</strong> Acid and enzymes continue breaking down food</li>
-            <li><strong>Your small intestine:</strong> Nutrients are absorbed into your bloodstream</li>
-            <li><strong>Your large intestine:</strong> Water is absorbed; waste becomes stool</li>
-            <li><strong>Elimination:</strong> Your body removes what it doesn't need</li>
-        </ol>
-    </section>
-
-    <section>
-        <h2>How Food Becomes Energy</h2>
-        <p>Your body converts food into glucose (blood sugar) and uses it for energy:</p>
+        <h2>Why Healthy Eating Matters</h2>
+        <p>Eating well helps you maintain a healthy weight, manage chronic conditions, and feel your best every day.</p>
         <ul>
-            <li><strong>Carbohydrates:</strong> Quickest energy source</li>
-            <li><strong>Proteins:</strong> Build and repair tissues</li>
-            <li><strong>Fats:</strong> Long-lasting energy and organ protection</li>
-            <li><strong>Vitamins & minerals:</strong> Help your body use energy</li>
-            <li><strong>Fiber:</strong> Helps digestion and blood sugar control</li>
+            <li>Improves energy levels</li>
+            <li>Supports heart health</li>
+            <li>Helps control blood sugar</li>
+            <li>Strengthens your immune system</li>
         </ul>
     </section>
 
     <section>
-        <h2>Blood Sugar and Energy</h2>
-
-        <div class="resource-card">
-            <h3>Fast Carbs = Quick Spike (then crash)</h3>
-            <ul>
-                <li>White bread, pastries, candy, sugary drinks</li>
-                <li>Quick rise in blood sugar</li>
-                <li>Quick drop → tired and hungry</li>
-            </ul>
-        </div>
-
-        <div class="resource-card">
-            <h3>Complex Carbs = Steady Energy</h3>
-            <ul>
-                <li>Whole grains, beans, vegetables, fruits</li>
-                <li>Slow rise in blood sugar</li>
-                <li>Steady energy</li>
-                <li>Stay full longer</li>
-            </ul>
-        </div>
-    </section>
-
-    <section>
-        <h2>How Food Affects Your Mood</h2>
-        <p>Food influences brain chemicals that affect mood:</p>
+        <h2>Healthy Food Choices</h2>
         <ul>
-            <li><strong>Good nutrition:</strong> Improves mood and reduces anxiety</li>
-            <li><strong>Protein & healthy fats:</strong> Support brain health</li>
-            <li><strong>B vitamins:</strong> Boost mood and energy</li>
-            <li><strong>Sugar crashes:</strong> Can worsen mood</li>
-            <li><strong>Regular meals:</strong> Prevent mood swings</li>
+            <li>Fruits and vegetables</li>
+            <li>Whole grains (brown rice, oats, whole wheat bread)</li>
+            <li>Lean proteins (chicken, fish, beans)</li>
+            <li>Low‑fat dairy</li>
+            <li>Healthy fats (olive oil, nuts)</li>
         </ul>
     </section>
 
     <section>
-        <h2>Food and Sleep</h2>
+        <h2>Foods to Limit</h2>
         <ul>
-            <li><strong>Heavy meals:</strong> Eat 2–3 hours before bed</li>
-            <li><strong>Caffeine:</strong> Avoid 6+ hours before sleep</li>
-            <li><strong>Alcohol:</strong> Disrupts sleep quality</li>
-            <li><strong>Water:</strong> Too much before bed interrupts sleep</li>
-            <li><strong>Protein + complex carbs:</strong> Can improve sleep</li>
+            <li>Sugary drinks</li>
+            <li>Fried foods</li>
+            <li>Processed snacks</li>
+            <li>High‑salt foods</li>
+            <li>Excess red meat</li>
         </ul>
     </section>
 
     <section>
-        <h2>Food and Inflammation</h2>
-
-        <div class="resource-card">
-            <h3>Foods That Increase Inflammation</h3>
-            <ul>
-                <li>Processed foods</li>
-                <li>Added sugars</li>
-                <li>Trans fats</li>
-                <li>Excess vegetable oils</li>
-            </ul>
-        </div>
-
-        <div class="resource-card">
-            <h3>Foods That Reduce Inflammation</h3>
-            <ul>
-                <li>Fatty fish</li>
-                <li>Berries</li>
-                <li>Leafy greens</li>
-                <li>Nuts & seeds</li>
-                <li>Olive oil</li>
-                <li>Turmeric & ginger</li>
-            </ul>
-        </div>
-    </section>
-
-    <section>
-        <h2>Food and Chronic Disease Prevention</h2>
-        <p>Good nutrition can prevent or delay:</p>
+        <h2>Tips for Eating Healthy on a Budget</h2>
         <ul>
-            <li>Type 2 diabetes</li>
-            <li>Heart disease</li>
-            <li>High blood pressure</li>
-            <li>Certain cancers</li>
-            <li>Obesity</li>
+            <li>Buy frozen fruits and vegetables</li>
+            <li>Choose store brands</li>
+            <li>Plan meals ahead of time</li>
+            <li>Cook at home instead of eating out</li>
+            <li>Use coupons and weekly sales</li>
         </ul>
     </section>
 
     <section>
-        <h2>Hydration Matters</h2>
-        <p>Water is essential for:</p>
+        <h2>Healthy Plate Method</h2>
+        <p>Use this simple method to build balanced meals:</p>
         <ul>
-            <li>Digestion</li>
-            <li>Temperature control</li>
-            <li>Joint lubrication</li>
-            <li>Brain function</li>
-            <li>Nutrient absorption</li>
-            <li>Waste removal</li>
-        </ul>
-        <p><strong>Goal:</strong> 8–10 glasses per day</p>
-    </section>
-
-    <section>
-        <h2>Practical Tips</h2>
-        <ul>
-            <li>Eat regular meals</li>
-            <li>Choose whole foods</li>
-            <li>Eat colorful fruits & vegetables</li>
-            <li>Include protein at every meal</li>
-            <li>Drink water instead of sugary drinks</li>
-            <li>Notice how foods make you feel</li>
-            <li>Plan meals ahead</li>
+            <li>½ plate fruits and vegetables</li>
+            <li>¼ plate lean protein</li>
+            <li>¼ plate whole grains</li>
         </ul>
     </section>
 
     <section>
-        <h2>Related Resources</h2>
+        <h2>When to Seek Help</h2>
         <ul>
-            <li><a href="healthy-eating.html">Nutrition & Healthy Eating</a></li>
-            <li><a href="reading-labels.html">Reading Nutrition Labels</a></li>
-            <li><a href="blood-glucose.html">Blood Sugar & Diabetes</a></li>
-            <li><a href="mental-health.html">Mental Health</a></li>
+            <li>You’re losing or gaining weight unexpectedly</li>
+            <li>You have trouble affording healthy foods</li>
+            <li>You need help managing diabetes or high blood pressure</li>
+            <li>You want personalized nutrition advice</li>
         </ul>
     </section>
 
     <section class="feedback-section">
         <h2>Have Questions or Feedback?</h2>
-        <p><a href="../feedback.html">Tell us how we can improve this page</a></p>
+        <p><a href="/feedback/">Tell us how we can improve this page</a></p>
     </section>
 
 </main>
 
 <footer>
     <p>&copy; 2026 JSU Alabama Rural Health Association</p>
-    <p><a href="../feedback.html">Give Feedback</a> | <a href="../index.html">Home</a></p>
+    <p><a href="/index.html">Home</a> | <a href="/about/">About</a></p>
 </footer>
 
 </body>
