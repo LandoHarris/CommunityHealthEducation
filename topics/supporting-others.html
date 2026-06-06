@@ -5,198 +5,322 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Supporting others with illness or health challenges">
     <title>Supporting Others With Illness - Rural Health Education</title>
-    <link rel="stylesheet" href="../assets/css/styles.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f7f7f7;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background: #0066cc;
+            padding: 0.75rem 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Dropdown Menu */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-button {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .dropdown-button:hover {
+            text-decoration: underline;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 220px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            z-index: 1;
+            border-radius: 4px;
+            padding: 0.5rem 0;
+        }
+
+        .dropdown-content a {
+            color: #0066cc;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            display: block;
+            font-weight: normal;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f0f4ff;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        header {
+            text-align: center;
+            padding: 2rem 1rem;
+            background: #e9f2ff;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 2rem auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+        }
+
+        h2 {
+            margin-top: 2rem;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        li {
+            margin: 0.5rem 0;
+        }
+
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+            background: #e9f2ff;
+        }
+    </style>
 </head>
+
 <body>
-    <a href="#main" class="skip-link">Skip to main content</a>
-    
-    <header>
-        <h1>Supporting Others With Illness</h1>
-    </header>
 
-    <nav>
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<!-- Navigation Bar -->
+<nav>
+    <a href="../index.html">Home</a>
+
+    <div class="dropdown">
+        <button class="dropdown-button">Topics ▾</button>
+        <div class="dropdown-content">
+            <a href="chronic-disease.html">Chronic Disease</a>
+            <a href="exercise.html">Exercise</a>
+            <a href="fall-risk.html">Fall Risk</a>
+            <a href="healthy-eating.html">Healthy Eating</a>
+            <a href="obesity.html">Obesity</a>
+            <a href="supporting-others.html">Supporting Others</a>
+            <a href="tracking-vitals.html">Tracking Vitals</a>
+            <a href="when-to-seek-care.html">When to Seek Care</a>
+        </div>
+    </div>
+
+    <a href="../feedback.html">Feedback</a>
+    <a href="../qr/README.md">QR Codes</a>
+    <a href="../README.md">About</a>
+</nav>
+
+<header>
+    <h1>Supporting Others With Illness</h1>
+</header>
+
+<main id="main" class="container">
+
+    <section>
+        <h2>Why Supporting Others Matters</h2>
+        <p>When someone you care about is ill or struggling with a health challenge, your support can make a real difference in their recovery and well-being.</p>
+        <p>Social connection and emotional support are important for health.</p>
+    </section>
+
+    <section>
+        <h2>How to Listen Effectively</h2>
         <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../about.html">About</a></li>
-            <li><a href="../resources.html">Local Resources</a></li>
-            <li><a href="../feedback.html">Feedback</a></li>
+            <li><strong>Really listen:</strong> Put away phones and distractions</li>
+            <li><strong>Don't interrupt:</strong> Let them finish speaking</li>
+            <li><strong>Validate feelings:</strong> “That sounds really hard”</li>
+            <li><strong>Don't minimize:</strong> Avoid “at least…” statements</li>
+            <li><strong>Ask open-ended questions:</strong> “How are you feeling?”</li>
+            <li><strong>Avoid giving advice unless asked</strong></li>
+            <li><strong>Be present:</strong> Silence is okay</li>
         </ul>
-    </nav>
+    </section>
 
-    <main id="main" class="container">
-        <section>
-            <h2>Why Supporting Others Matters</h2>
-            <p>When someone you care about is ill or struggling with a health challenge, your support can make a real difference in their recovery and well-being.</p>
-            <p>Social connection and emotional support are important for health.</p>
-        </section>
+    <section>
+        <h2>Practical Ways to Help</h2>
 
-        <section>
-            <h2>How to Listen Effectively</h2>
+        <div class="resource-card">
+            <h3>Daily Needs</h3>
             <ul>
-                <li><strong>Really listen:</strong> Put away phones and distractions</li>
-                <li><strong>Don't interrupt:</strong> Let them finish speaking</li>
-                <li><strong>Validate feelings:</strong> Say things like "That sounds really hard"</li>
-                <li><strong>Don't minimize:</strong> Avoid saying "at least..." or "others have it worse"</li>
-                <li><strong>Ask open-ended questions:</strong> "How are you feeling?" not "Are you okay?"</li>
-                <li><strong>Avoid advice unless asked:</strong> Just listening can be enough</li>
-                <li><strong>Be present:</strong> Sitting together in silence is okay</li>
+                <li>Provide meals or groceries</li>
+                <li>Help with cleaning or laundry</li>
+                <li>Run errands</li>
+                <li>Drive them to appointments</li>
+                <li>Help with childcare or pets</li>
             </ul>
-        </section>
+        </div>
 
-        <section>
-            <h2>Practical Ways to Help</h2>
-            <div class="resource-card">
-                <h3>Daily Needs</h3>
-                <ul>
-                    <li>Provide meals or groceries</li>
-                    <li>Help with household tasks (cleaning, laundry)</li>
-                    <li>Run errands (pharmacy, appointments)</li>
-                    <li>Take them to doctor's appointments</li>
-                    <li>Help with childcare or pet care</li>
-                </ul>
-            </div>
-
-            <div class="resource-card">
-                <h3>Emotional Support</h3>
-                <ul>
-                    <li>Visit or call regularly</li>
-                    <li>Send cards or messages</li>
-                    <li>Attend medical appointments if invited</li>
-                    <li>Include them in activities if they're able</li>
-                    <li>Sit with them during difficult times</li>
-                </ul>
-            </div>
-
-            <div class="resource-card">
-                <h3>Information & Advocacy</h3>
-                <ul>
-                    <li>Help research their condition (if they want)</li>
-                    <li>Help organize medical records</li>
-                    <li>Accompany them to appointments to help listen</li>
-                    <li>Help them advocate for their care</li>
-                    <li>Connect them with support groups or resources</li>
-                </ul>
-            </div>
-        </section>
-
-        <section>
-            <h2>What Not to Do</h2>
+        <div class="resource-card">
+            <h3>Emotional Support</h3>
             <ul>
-                <li>Don't take over - let them maintain independence when possible</li>
-                <li>Don't force optimism - "stay positive" isn't always helpful</li>
-                <li>Don't share your own medical stories unless asked</li>
-                <li>Don't disappear when things get hard</li>
-                <li>Don't assume you know what they need - ask</li>
-                <li>Don't gossip about their illness</li>
-                <li>Don't take it personally if they need space</li>
+                <li>Visit or call regularly</li>
+                <li>Send messages or cards</li>
+                <li>Attend appointments if invited</li>
+                <li>Include them in activities</li>
+                <li>Sit with them during difficult moments</li>
             </ul>
-        </section>
+        </div>
 
-        <section>
-            <h2>Supporting Someone with Chronic Illness</h2>
+        <div class="resource-card">
+            <h3>Information & Advocacy</h3>
             <ul>
-                <li>Understand that some days are harder than others</li>
-                <li>Don't expect them to "look sick"</li>
+                <li>Help research their condition (if they want)</li>
+                <li>Organize medical records</li>
+                <li>Help them communicate with doctors</li>
                 <li>Support their treatment decisions</li>
-                <li>Help them manage multiple appointments</li>
-                <li>Celebrate small victories</li>
-                <li>Be patient with limitations</li>
-                <li>Stay consistently present over time</li>
+                <li>Connect them with support groups</li>
             </ul>
-        </section>
+        </div>
+    </section>
 
-        <section>
-            <h2>Supporting Someone with Mental Illness</h2>
-            <ul>
-                <li>Don't dismiss their symptoms</li>
-                <li>Encourage them to seek professional help</li>
-                <li>Let them know you care, even if they seem distant</li>
-                <li>Don't blame them for their illness</li>
-                <li>Be alert to signs of crisis</li>
-                <li>Know crisis resources (988 Suicide Prevention Lifeline)</li>
-                <li>Take threats of self-harm seriously</li>
-            </ul>
-        </section>
+    <section>
+        <h2>What Not to Do</h2>
+        <ul>
+            <li>Don't take over — support independence</li>
+            <li>Don't force positivity</li>
+            <li>Don't compare to others’ illnesses</li>
+            <li>Don't disappear when things get hard</li>
+            <li>Don't assume — ask what they need</li>
+            <li>Don't gossip about their condition</li>
+            <li>Don't take it personally if they need space</li>
+        </ul>
+    </section>
 
-        <section>
-            <h2>Supporting Someone in Grief</h2>
-            <ul>
-                <li>Let them grieve at their own pace</li>
-                <li>Don't rush them or tell them "they should be over it"</li>
-                <li>Share memories of the person who died</li>
-                <li>Check in often, especially on hard days</li>
-                <li>Help with practical tasks (errands, meals)</li>
-                <li>Acknowledge that grief doesn't end</li>
-                <li>Connect them with grief support groups if wanted</li>
-            </ul>
-        </section>
+    <section>
+        <h2>Supporting Someone with Chronic Illness</h2>
+        <ul>
+            <li>Understand that symptoms vary day to day</li>
+            <li>Don’t expect them to “look sick”</li>
+            <li>Help manage appointments</li>
+            <li>Celebrate small victories</li>
+            <li>Be patient with limitations</li>
+            <li>Stay consistently present</li>
+        </ul>
+    </section>
 
-        <section>
-            <h2>Taking Care of Yourself</h2>
-            <p>While supporting others, remember to care for yourself:</p>
-            <ul>
-                <li>Set boundaries - you can't help if you burn out</li>
-                <li>Take breaks when needed</li>
-                <li>Ask for help from other people</li>
-                <li>Maintain your own health and relationships</li>
-                <li>Seek counseling or support groups for caregivers if needed</li>
-                <li>Know that you can't fix everything - that's okay</li>
-            </ul>
-        </section>
+    <section>
+        <h2>Supporting Someone with Mental Illness</h2>
+        <ul>
+            <li>Don’t dismiss their symptoms</li>
+            <li>Encourage professional help</li>
+            <li>Let them know you care</li>
+            <li>Don’t blame them for their illness</li>
+            <li>Be alert to signs of crisis</li>
+            <li>Know crisis resources</li>
+            <li>Take self-harm statements seriously</li>
+        </ul>
+    </section>
 
-        <section>
-            <h2>When to Seek Professional Help</h2>
-            <p>Encourage professional support if someone is:</p>
-            <ul>
-                <li>Thinking about harming themselves</li>
-                <li>Expressing suicidal thoughts</li>
-                <li>Unable to care for themselves</li>
-                <li>Isolating completely</li>
-                <li>In crisis</li>
-            </ul>
-            <p><strong>Crisis Resources:</strong></p>
-            <ul>
-                <li>National Suicide Prevention Lifeline: 988</li>
-                <li>Crisis Text Line: Text HOME to 741741</li>
-                <li>Call 911 for immediate danger</li>
-            </ul>
-        </section>
+    <section>
+        <h2>Supporting Someone in Grief</h2>
+        <ul>
+            <li>Let them grieve at their own pace</li>
+            <li>Don’t rush or pressure them</li>
+            <li>Share memories of their loved one</li>
+            <li>Check in often</li>
+            <li>Help with practical tasks</li>
+            <li>Acknowledge that grief lasts</li>
+            <li>Suggest support groups if wanted</li>
+        </ul>
+    </section>
 
-        <section>
-            <h2>Resources for Caregivers</h2>
-            <ul>
-                <li><a href="https://www.caregiver.org" target="_blank">Family Caregiver Alliance</a></li>
-                <li><a href="https://www.aarp.org/caregiving" target="_blank">AARP Caregiving Resources</a></li>
-                <li>Local support groups for caregivers</li>
-                <li><a href="../resources.html">Local mental health and support services</a></li>
-            </ul>
-        </section>
+    <section>
+        <h2>Taking Care of Yourself</h2>
+        <p>Supporting others is meaningful, but you must care for yourself too:</p>
+        <ul>
+            <li>Set healthy boundaries</li>
+            <li>Take breaks</li>
+            <li>Ask others for help</li>
+            <li>Maintain your own health</li>
+            <li>Seek support if overwhelmed</li>
+            <li>Remember you can’t fix everything</li>
+        </ul>
+    </section>
 
-        <section class="alert alert-info">
-            <strong>Remember:</strong> Supporting someone means showing up, listening, and caring - not having all the answers. Your presence matters.
-        </section>
+    <section>
+        <h2>When to Seek Professional Help</h2>
+        <p>Encourage professional support if someone is:</p>
+        <ul>
+            <li>Thinking about harming themselves</li>
+            <li>Expressing suicidal thoughts</li>
+            <li>Unable to care for themselves</li>
+            <li>Completely isolating</li>
+            <li>In crisis</li>
+        </ul>
+        <p><strong>Crisis Resources:</strong></p>
+        <ul>
+            <li>988 Suicide & Crisis Lifeline</li>
+            <li>Crisis Text Line: Text HOME to 741741</li>
+            <li>Call 911 for immediate danger</li>
+        </ul>
+    </section>
 
-        <section class="feedback-section">
-            <h2>Have Questions or Feedback?</h2>
-            <p><a href="../feedback.html">Tell us how we can improve this page</a></p>
-        </section>
-    </main>
+    <section>
+        <h2>Resources for Caregivers</h2>
+        <ul>
+            <li><a href="https://www.caregiver.org" target="_blank">Family Caregiver Alliance</a></li>
+            <li><a href="https://www.aarp.org/caregiving" target="_blank">AARP Caregiving Resources</a></li>
+            <li>Local caregiver support groups</li>
+            <li><a href="../resources.html">Local mental health and support services</a></li>
+        </ul>
+    </section>
 
-    <footer>
-        <p>&copy; 2026 JSU Alabama Rural Health Association</p>
-        <p><a href="../feedback.html">Give Feedback</a> | <a href="../resources.html">Local Resources</a> | <a href="../index.html">Home</a></p>
-    </footer>
+    <section class="alert alert-info">
+        <strong>Remember:</strong> Supporting someone means showing up, listening, and caring — not having all the answers.
+    </section>
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VX82Y2YY3L"></script>
-    <script src="../assets/js/analytics.js"></script>
+    <section class="feedback-section">
+        <h2>Have Questions or Feedback?</h2>
+        <p><a href="../feedback.html">Tell us how we can improve this page</a></p>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 JSU Alabama Rural Health Association</p>
+    <p><a href="../feedback.html">Give Feedback</a> | <a href="../index.html">Home</a></p>
+</footer>
+
 </body>
 </html>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-VX82Y2YY3L"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-VX82Y2YY3L');
-</script>
