@@ -122,3 +122,44 @@ body {
     text-align: center;
     font-weight: bold;
 }
+/* HOMEPAGE LAYOUT */
+.homepage-layout {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+/* MAIN CONTENT */
+.homepage-content {
+    flex: 1;
+}
+
+.topics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.topic-card {
+    background: var(--bg-alt);
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--accent);
+    text-decoration: none;
+    color: var(--text);
+    transition: 0.2s;
+}
+
+.topic-card:hover {
+    border-color: var(--primary);
+    transform: translateY(-3px);
+}
+
+/* MOBILE */
+@media (max-width: 800px) {
+    .homepage-layout {
+        flex-direction: column;
+        padding: 1rem;
+    }
+}
