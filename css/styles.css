@@ -18,6 +18,8 @@
   --radius: 8px;
   --max-width: 1100px;
 }
+/*TODO #4 remove unused styling things */
+/*TODO #3 edit styling to reflect ARHA and find a theme to tie everything together */
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, sans-serif;
