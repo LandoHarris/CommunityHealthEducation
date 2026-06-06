@@ -4,335 +4,132 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="When to seek medical care">
-    <title>When to Seek Medical Care - Rural Health Education</title>
+    <title>When to Seek Care - Rural Health Education</title>
 
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f7f7f7;
-        }
-
-        /* Navigation Bar */
-        nav {
-            background: #0066cc;
-            padding: 0.75rem 1rem;
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            align-items: center;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-size: 1rem;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        /* Dropdown Menu */
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-
-        .dropdown-button {
-            background: none;
-            border: none;
-            color: white;
-            font-size: 1rem;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .dropdown-button:hover {
-            text-decoration: underline;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: white;
-            min-width: 220px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-            z-index: 1;
-            border-radius: 4px;
-            padding: 0.5rem 0;
-        }
-
-        .dropdown-content a {
-            color: #0066cc;
-            padding: 0.5rem 1rem;
-            text-decoration: none;
-            display: block;
-            font-weight: normal;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #f0f4ff;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        header {
-            text-align: center;
-            padding: 2rem 1rem;
-            background: #e9f2ff;
-        }
-
-        main {
-            max-width: 900px;
-            margin: 2rem auto;
-            background: white;
-            padding: 2rem;
-            border-radius: 8px;
-        }
-
-        h2 {
-            margin-top: 2rem;
-        }
-
-        ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        li {
-            margin: 0.5rem 0;
-        }
-
-        .alert {
-            padding: 1rem;
-            border-radius: 6px;
-            margin-bottom: 1.5rem;
-        }
-
-        .alert-danger {
-            background: #ffe5e5;
-            border-left: 6px solid #cc0000;
-        }
-
-        .alert-warning {
-            background: #fff8e1;
-            border-left: 6px solid #ff9900;
-        }
-
-        .resource-card {
-            background: #f0f4ff;
-            padding: 1rem;
-            border-radius: 6px;
-            margin: 1rem 0;
-        }
-
-        a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        footer {
-            text-align: center;
-            padding: 1.5rem;
-            margin-top: 2rem;
-            background: #e9f2ff;
-        }
+        body { margin: 0; font-family: Arial, sans-serif; background: #f7f7f7; }
+        nav { background: #0066cc; padding: 0.75rem 1rem; display: flex; justify-content: center; gap: 2rem; align-items: center; }
+        nav a { color: white; text-decoration: none; font-size: 1rem; font-weight: bold; }
+        nav a:hover { text-decoration: underline; }
+        .dropdown { position: relative; display: inline-block; }
+        .dropdown-button { background: none; border: none; color: white; font-size: 1rem; font-weight: bold; cursor: pointer; }
+        .dropdown-button:hover { text-decoration: underline; }
+        .dropdown-content { display: none; position: absolute; background-color: white; min-width: 220px; box-shadow: 0 4px 8px rgba(0,0,0,0.15); z-index: 1; border-radius: 4px; padding: 0.5rem 0; }
+        .dropdown-content a { color: #0066cc; padding: 0.5rem 1rem; text-decoration: none; display: block; }
+        .dropdown-content a:hover { background-color: #f0f4ff; }
+        .dropdown:hover .dropdown-content { display: block; }
+        header { text-align: center; padding: 2rem 1rem; background: #e9f2ff; }
+        main { max-width: 900px; margin: 2rem auto; background: white; padding: 2rem; border-radius: 8px; }
+        h2 { margin-top: 2rem; }
+        ul { list-style: none; padding-left: 0; }
+        li { margin: 0.5rem 0; }
+        a { color: #0066cc; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        footer { text-align: center; padding: 1.5rem; margin-top: 2rem; background: #e9f2ff; }
     </style>
 </head>
 
 <body>
 
-<a href="#main" class="skip-link">Skip to main content</a>
-
-<!-- Navigation Bar -->
 <nav>
-    <a href="../index.html">Home</a>
+    <a href="/index.html">Home</a>
 
     <div class="dropdown">
         <button class="dropdown-button">Topics ▾</button>
         <div class="dropdown-content">
-            <a href="chronic-disease.html">Chronic Disease</a>
-            <a href="exercise.html">Exercise</a>
-            <a href="fall-risk.html">Fall Risk</a>
-            <a href="healthy-eating.html">Healthy Eating</a>
-            <a href="obesity.html">Obesity</a>
-            <a href="supporting-others.html">Supporting Others</a>
-            <a href="tracking-vitals.html">Tracking Vitals</a>
-            <a href="when-to-seek-care.html">When to Seek Care</a>
+            <a href="/topics/chronic-disease/">Chronic Disease</a>
+            <a href="/topics/exercise/">Exercise</a>
+            <a href="/topics/fall-risk/">Fall Risk</a>
+            <a href="/topics/healthy-eating/">Healthy Eating</a>
+            <a href="/topics/obesity/">Obesity</a>
+            <a href="/topics/supporting-others/">Supporting Others</a>
+            <a href="/topics/tracking-vitals/">Tracking Vitals</a>
+            <a href="/topics/when-to-seek-care/">When to Seek Care</a>
         </div>
     </div>
 
-    <a href="../feedback.html">Feedback</a>
-    <a href="../qr/README.md">QR Codes</a>
-    <a href="../README.md">About.html</a>
+    <a href="/feedback/">Feedback</a>
+    <a href="/qr/About.html">QR Codes</a>
+    <a href="/about/">About</a>
 </nav>
 
 <header>
     <h1>When to Seek Medical Care</h1>
 </header>
 
-<main id="main" class="container">
+<main>
 
-    <section class="alert alert-danger">
-        <strong>Call 911 for Emergencies</strong>
-        <p>If symptoms are life-threatening, call 911 immediately.</p>
+    <section>
+        <h2>Knowing When to Get Help</h2>
+        <p>It can be hard to know when a health problem is serious. These guidelines can help you decide when to call your doctor or seek emergency care.</p>
     </section>
 
     <section>
-        <h2>When to Call 911 or Go to the ER</h2>
-
-        <div class="resource-card">
-            <h3>Chest or Breathing Issues</h3>
-            <ul>
-                <li>Chest pain or pressure</li>
-                <li>Severe shortness of breath</li>
-                <li>Difficulty breathing at rest</li>
-            </ul>
-        </div>
-
-        <div class="resource-card">
-            <h3>Stroke Symptoms</h3>
-            <ul>
-                <li>Face drooping</li>
-                <li>Arm weakness</li>
-                <li>Speech difficulty</li>
-                <li>Sudden severe headache</li>
-                <li>Confusion or trouble understanding</li>
-            </ul>
-        </div>
-
-        <div class="resource-card">
-            <h3>Severe Injury or Bleeding</h3>
-            <ul>
-                <li>Heavy bleeding</li>
-                <li>Suspected broken bone</li>
-                <li>Severe burns</li>
-                <li>Major accident or trauma</li>
-            </ul>
-        </div>
-
-        <div class="resource-card">
-            <h3>Other Emergencies</h3>
-            <ul>
-                <li>Thoughts of self-harm</li>
-                <li>Severe allergic reaction</li>
-                <li>Choking</li>
-                <li>Poisoning or overdose</li>
-                <li>Severe abdominal pain</li>
-            </ul>
-        </div>
-    </section>
-
-    <section>
-        <h2>When to Call Your Doctor</h2>
-        <p>Call during office hours or use after-hours line for:</p>
+        <h2>Call 911 or Go to the ER If You Have:</h2>
         <ul>
-            <li>Fever lasting more than 3 days</li>
-            <li>Cough lasting more than 2 weeks</li>
-            <li>Persistent vomiting or diarrhea</li>
-            <li>Severe pain not relieved by medication</li>
-            <li>Painful urination</li>
-            <li>Unexplained rash</li>
-            <li>Signs of infection</li>
-            <li>Severe fatigue</li>
+            <li>Chest pain or pressure</li>
+            <li>Difficulty breathing</li>
+            <li>Severe bleeding</li>
+            <li>Sudden weakness or numbness</li>
+            <li>Confusion or trouble speaking</li>
+            <li>Severe allergic reaction</li>
+            <li>High fever that won’t go down</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Call Your Doctor If You Notice:</h2>
+        <ul>
             <li>New or worsening symptoms</li>
-            <li>Medication questions</li>
+            <li>Side effects from medications</li>
+            <li>Changes in blood pressure or blood sugar</li>
+            <li>Persistent pain</li>
+            <li>Swelling in legs or feet</li>
+            <li>Unexplained weight changes</li>
         </ul>
     </section>
 
     <section>
-        <h2>When to Visit Urgent Care</h2>
-        <p>Urgent care is for non-life-threatening issues:</p>
+        <h2>When to Seek Care for Chronic Conditions</h2>
         <ul>
-            <li>Moderate fever (101–103°F)</li>
-            <li>Sprains or strains</li>
-            <li>Minor cuts needing stitches</li>
-            <li>Ear or sinus pain</li>
-            <li>Sore throat</li>
-            <li>Mild dehydration</li>
-            <li>UTI symptoms</li>
-            <li>Mild allergic reactions</li>
+            <li>Your usual treatments aren’t working</li>
+            <li>You feel dizzy, weak, or faint</li>
+            <li>Your symptoms interfere with daily life</li>
+            <li>You have trouble breathing during normal activities</li>
         </ul>
     </section>
 
     <section>
-        <h2>When to Schedule a Regular Appointment</h2>
+        <h2>Mental Health: When to Reach Out</h2>
         <ul>
-            <li>Routine check-ups</li>
-            <li>Medication refills</li>
-            <li>Chronic condition follow-ups</li>
-            <li>New symptoms lasting several days</li>
-            <li>Mental health concerns</li>
-            <li>Annual physicals</li>
+            <li>Feeling hopeless or overwhelmed</li>
+            <li>Loss of interest in activities</li>
+            <li>Thoughts of self‑harm</li>
+            <li>Severe anxiety or panic attacks</li>
         </ul>
-    </section>
-
-    <section class="alert alert-warning">
-        <strong>Don't Wait When in Doubt</strong>
-        <p>It's better to get checked and be safe than ignore warning signs.</p>
+        <p>Help is available. Talk to a doctor, counselor, or trusted person.</p>
     </section>
 
     <section>
-        <h2>How to Prepare for Medical Visits</h2>
+        <h2>Preparing for a Doctor Visit</h2>
         <ul>
-            <li>List your medications</li>
-            <li>Write down symptoms and when they started</li>
-            <li>Bring questions</li>
-            <li>Bring medical records if available</li>
-            <li>Know your allergies</li>
-            <li>Arrive early</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>Questions to Ask Your Doctor</h2>
-        <ul>
-            <li>What is causing my symptoms?</li>
-            <li>What treatment do you recommend?</li>
-            <li>Are there alternatives?</li>
-            <li>What are the side effects?</li>
-            <li>Do I need tests?</li>
-            <li>When should I follow up?</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>Finding Healthcare</h2>
-        <ul>
-            <li><strong>No doctor?</strong> Call 211 for local clinics</li>
-            <li><strong>Low cost care:</strong> Ask About.html sliding scale fees</li>
-            <li><strong>Need a specialist?</strong> Request a referral</li>
-            <li><strong>Insurance questions?</strong> Contact your insurer</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>Related Resources</h2>
-        <ul>
-            <li><a href="emergency-signs.html">Emergency Signs</a></li>
-            <li><a href="../resources.html">Local Clinics</a></li>
-            <li><a href="chronic-disease.html">Chronic Disease Management</a></li>
+            <li>Write down your symptoms</li>
+            <li>Bring a list of medications</li>
+            <li>Note when symptoms started</li>
+            <li>Bring recent vital sign readings</li>
         </ul>
     </section>
 
     <section class="feedback-section">
         <h2>Have Questions or Feedback?</h2>
-        <p><a href="../feedback.html">Tell us how we can improve this page</a></p>
+        <p><a href="/feedback/">Tell us how we can improve this page</a></p>
     </section>
 
 </main>
 
 <footer>
     <p>&copy; 2026 JSU Alabama Rural Health Association</p>
-    <p><a href="../feedback.html">Give Feedback</a> | <a href="../index.html">Home</a></p>
+    <p><a href="/index.html">Home</a> | <a href="/about/">About</a></p>
 </footer>
 
 </body>
