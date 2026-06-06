@@ -3,382 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Tracking your vital signs at home">
-    <title>Tracking Vitals at Home - Rural Health Education</title>
+    <meta name="description" content="How to track your vital signs at home">
+    <title>Tracking Vitals - Rural Health Education</title>
 
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f7f7f7;
-        }
-
-        /* Navigation Bar */
-        nav {
-            background: #0066cc;
-            padding: 0.75rem 1rem;
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            align-items: center;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-size: 1rem;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        /* Dropdown Menu */
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-
-        .dropdown-button {
-            background: none;
-            border: none;
-            color: white;
-            font-size: 1rem;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .dropdown-button:hover {
-            text-decoration: underline;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: white;
-            min-width: 220px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-            z-index: 1;
-            border-radius: 4px;
-            padding: 0.5rem 0;
-        }
-
-        .dropdown-content a {
-            color: #0066cc;
-            padding: 0.5rem 1rem;
-            text-decoration: none;
-            display: block;
-            font-weight: normal;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #f0f4ff;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        header {
-            text-align: center;
-            padding: 2rem 1rem;
-            background: #e9f2ff;
-        }
-
-        main {
-            max-width: 900px;
-            margin: 2rem auto;
-            background: white;
-            padding: 2rem;
-            border-radius: 8px;
-        }
-
-        h2 {
-            margin-top: 2rem;
-        }
-
-        ul, ol {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        li {
-            margin: 0.5rem 0;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 1rem 0;
-        }
-
-        th, td {
-            border: 1px solid #ccc;
-            padding: 0.75rem;
-            text-align: left;
-        }
-
-        th {
-            background: #f0f4ff;
-        }
-
-        a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        footer {
-            text-align: center;
-            padding: 1.5rem;
-            margin-top: 2rem;
-            background: #e9f2ff;
-        }
+        body { margin: 0; font-family: Arial, sans-serif; background: #f7f7f7; }
+        nav { background: #0066cc; padding: 0.75rem 1rem; display: flex; justify-content: center; gap: 2rem; align-items: center; }
+        nav a { color: white; text-decoration: none; font-size: 1rem; font-weight: bold; }
+        nav a:hover { text-decoration: underline; }
+        .dropdown { position: relative; display: inline-block; }
+        .dropdown-button { background: none; border: none; color: white; font-size: 1rem; font-weight: bold; cursor: pointer; }
+        .dropdown-button:hover { text-decoration: underline; }
+        .dropdown-content { display: none; position: absolute; background-color: white; min-width: 220px; box-shadow: 0 4px 8px rgba(0,0,0,0.15); z-index: 1; border-radius: 4px; padding: 0.5rem 0; }
+        .dropdown-content a { color: #0066cc; padding: 0.5rem 1rem; text-decoration: none; display: block; }
+        .dropdown-content a:hover { background-color: #f0f4ff; }
+        .dropdown:hover .dropdown-content { display: block; }
+        header { text-align: center; padding: 2rem 1rem; background: #e9f2ff; }
+        main { max-width: 900px; margin: 2rem auto; background: white; padding: 2rem; border-radius: 8px; }
+        h2 { margin-top: 2rem; }
+        ul { list-style: none; padding-left: 0; }
+        li { margin: 0.5rem 0; }
+        a { color: #0066cc; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        footer { text-align: center; padding: 1.5rem; margin-top: 2rem; background: #e9f2ff; }
     </style>
 </head>
 
 <body>
 
-<a href="#main" class="skip-link">Skip to main content</a>
-
-<!-- Navigation Bar -->
 <nav>
-    <a href="../index.html">Home</a>
+    <a href="/index.html">Home</a>
 
     <div class="dropdown">
         <button class="dropdown-button">Topics ▾</button>
         <div class="dropdown-content">
-            <a href="chronic-disease.html">Chronic Disease</a>
-            <a href="exercise.html">Exercise</a>
-            <a href="fall-risk.html">Fall Risk</a>
-            <a href="healthy-eating.html">Healthy Eating</a>
-            <a href="obesity.html">Obesity</a>
-            <a href="supporting-others.html">Supporting Others</a>
-            <a href="tracking-vitals.html">Tracking Vitals</a>
-            <a href="when-to-seek-care.html">When to Seek Care</a>
+            <a href="/topics/chronic-disease/">Chronic Disease</a>
+            <a href="/topics/exercise/">Exercise</a>
+            <a href="/topics/fall-risk/">Fall Risk</a>
+            <a href="/topics/healthy-eating/">Healthy Eating</a>
+            <a href="/topics/obesity/">Obesity</a>
+            <a href="/topics/supporting-others/">Supporting Others</a>
+            <a href="/topics/tracking-vitals/">Tracking Vitals</a>
+            <a href="/topics/when-to-seek-care/">When to Seek Care</a>
         </div>
     </div>
 
-    <a href="../feedback.html">Feedback</a>
-    <a href="../qr/README.md">QR Codes</a>
-    <a href="../README.md">About.html</a>
+    <a href="/feedback/">Feedback</a>
+    <a href="/qr/About.html">QR Codes</a>
+    <a href="/about/">About</a>
 </nav>
 
 <header>
-    <h1>Tracking Vitals at Home</h1>
+    <h1>Tracking Your Vitals</h1>
 </header>
 
-<main id="main" class="container">
+<main>
 
     <section>
-        <h2>Why Track Your Vitals?</h2>
-        <p>Tracking vital signs at home helps:</p>
+        <h2>Why Tracking Vitals Matters</h2>
+        <p>Keeping track of your vital signs helps you understand your health, manage chronic conditions, and catch problems early.</p>
         <ul>
-            <li>Monitor your health between doctor visits</li>
-            <li>Catch problems early</li>
-            <li>See if treatments are working</li>
-            <li>Provide information to your doctor</li>
-            <li>Manage chronic conditions</li>
-            <li>Identify patterns and triggers</li>
+            <li>Shows how your body is responding to treatment</li>
+            <li>Helps your doctor make better decisions</li>
+            <li>Can prevent serious complications</li>
         </ul>
     </section>
 
     <section>
-        <h2>What Are Vital Signs?</h2>
-        <p>Vital signs show how your body is working:</p>
+        <h2>Important Vitals to Track</h2>
         <ul>
-            <li>Blood pressure</li>
-            <li>Heart rate (pulse)</li>
-            <li>Temperature</li>
-            <li>Breathing rate</li>
-            <li>Blood sugar (glucose)</li>
-            <li>Weight</li>
+            <li><strong>Blood Pressure</strong> — measures heart and artery health</li>
+            <li><strong>Blood Sugar</strong> — important for diabetes management</li>
+            <li><strong>Heart Rate</strong> — shows how hard your heart is working</li>
+            <li><strong>Weight</strong> — helps track fluid retention and overall health</li>
+            <li><strong>Oxygen Level (SpO₂)</strong> — important for lung conditions</li>
         </ul>
     </section>
 
     <section>
-        <h2>Blood Pressure</h2>
-
-        <div class="resource-card">
-            <h3>How to Check at Home</h3>
-            <ul>
-                <li>Use a home blood pressure monitor</li>
-                <li>Sit quietly for 5 minutes before measuring</li>
-                <li>Rest arm at heart level</li>
-                <li>Place cuff on bare upper arm</li>
-                <li>Check at the same time daily</li>
-                <li>Take 2–3 readings for accuracy</li>
-            </ul>
-        </div>
-
-        <div class="resource-card">
-            <h3>What to Record</h3>
-            <ul>
-                <li>Date and time</li>
-                <li>Systolic/diastolic numbers</li>
-                <li>Arm used</li>
-                <li>How you felt</li>
-            </ul>
-        </div>
-    </section>
-
-    <section>
-        <h2>Heart Rate (Pulse)</h2>
-        <p>Normal resting heart rate: <strong>60–100 bpm</strong></p>
-
-        <div class="resource-card">
-            <h3>How to Check</h3>
-            <ol>
-                <li>Find pulse on wrist or neck</li>
-                <li>Use two fingers</li>
-                <li>Count beats for 60 seconds</li>
-                <li>Or count 15 seconds × 4</li>
-            </ol>
-        </div>
-
-        <div class="resource-card">
-            <h3>What It Means</h3>
-            <ul>
-                <li><strong>Below 60:</strong> Ask your doctor</li>
-                <li><strong>60–100:</strong> Normal</li>
-                <li><strong>Above 100:</strong> May indicate illness or stress</li>
-            </ul>
-        </div>
-    </section>
-
-    <section>
-        <h2>Temperature</h2>
-        <p>Normal: <strong>98.6°F (37°C)</strong></p>
-
-        <div class="resource-card">
-            <h3>How to Check</h3>
-            <ul>
-                <li>Digital thermometer under tongue</li>
-                <li>Ear thermometer</li>
-                <li>Forehead (temporal) scanner</li>
-                <li>Use same method each time</li>
-            </ul>
-        </div>
-
-        <div class="resource-card">
-            <h3>Temperature Guide</h3>
-            <ul>
-                <li><strong>Below 95°F:</strong> Too low — call doctor</li>
-                <li><strong>99–100.4°F:</strong> Mild fever</li>
-                <li><strong>100.4°F+:</strong> Fever — call doctor</li>
-                <li><strong>103°F+:</strong> Emergency</li>
-            </ul>
-        </div>
-    </section>
-
-    <section>
-        <h2>Blood Sugar (Glucose)</h2>
-        <p>If you have diabetes, your doctor will tell you how often to check.</p>
-
-        <div class="resource-card">
-            <h3>How to Check</h3>
-            <ol>
-                <li>Use glucose meter</li>
-                <li>Wash hands</li>
-                <li>Prick finger</li>
-                <li>Apply blood to strip</li>
-                <li>Read result</li>
-            </ol>
-        </div>
-
-        <div class="resource-card">
-            <h3>Target Ranges</h3>
-            <ul>
-                <li><strong>Fasting:</strong> 70–130 mg/dL</li>
-                <li><strong>After meals:</strong> Under 180 mg/dL</li>
-            </ul>
-        </div>
-    </section>
-
-    <section>
-        <h2>Weight</h2>
-
-        <div class="resource-card">
-            <h3>How to Track</h3>
-            <ul>
-                <li>Weigh at same time daily</li>
-                <li>Use same scale</li>
-                <li>Wear similar clothing</li>
-                <li>Track weekly trends</li>
-            </ul>
-        </div>
-    </section>
-
-    <section>
-        <h2>Home Monitoring Devices</h2>
-        <table>
-            <tr>
-                <th>Vital Sign</th>
-                <th>Device</th>
-                <th>Cost</th>
-            </tr>
-            <tr>
-                <td>Blood Pressure</td>
-                <td>Automatic cuff</td>
-                <td>$25–$60</td>
-            </tr>
-            <tr>
-                <td>Heart Rate</td>
-                <td>Pulse oximeter</td>
-                <td>$20–$100</td>
-            </tr>
-            <tr>
-                <td>Temperature</td>
-                <td>Digital thermometer</td>
-                <td>$5–$30</td>
-            </tr>
-            <tr>
-                <td>Blood Sugar</td>
-                <td>Glucose meter</td>
-                <td>Free–$50</td>
-            </tr>
-            <tr>
-                <td>Weight</td>
-                <td>Digital scale</td>
-                <td>$20–$100</td>
-            </tr>
-        </table>
-    </section>
-
-    <section>
-        <h2>When to Contact Your Doctor</h2>
+        <h2>How to Track Blood Pressure</h2>
         <ul>
-            <li>Readings are consistently high or low</li>
-            <li>You see sudden changes</li>
-            <li>You have symptoms with abnormal readings</li>
-            <li>You’re unsure how to use your device</li>
-            <li>You want help understanding your numbers</li>
+            <li>Sit quietly for 5 minutes before measuring</li>
+            <li>Keep feet flat on the floor</li>
+            <li>Place cuff on bare upper arm</li>
+            <li>Measure at the same time each day</li>
+            <li>Record your readings</li>
+        </ul>
+        <p><a href="/topics/blood-pressure/">Learn more about blood pressure</a></p>
+    </section>
+
+    <section>
+        <h2>How to Track Blood Sugar</h2>
+        <ul>
+            <li>Wash hands before testing</li>
+            <li>Use a clean lancet each time</li>
+            <li>Follow your doctor’s testing schedule</li>
+            <li>Record your numbers after each test</li>
+        </ul>
+        <p><a href="/topics/blood-glucose/">Learn more about diabetes management</a></p>
+    </section>
+
+    <section>
+        <h2>Using a Health Log</h2>
+        <p>Write down your vitals daily or use a phone app. Include:</p>
+        <ul>
+            <li>Date and time</li>
+            <li>Your readings</li>
+            <li>How you feel</li>
+            <li>Any symptoms</li>
         </ul>
     </section>
 
     <section>
-        <h2>Related Resources</h2>
+        <h2>When to Call Your Doctor</h2>
         <ul>
-            <li><a href="blood-pressure.html">Blood Pressure</a></li>
-            <li><a href="blood-glucose.html">Blood Sugar & Diabetes</a></li>
-            <li><a href="chronic-disease.html">Chronic Disease Management</a></li>
+            <li>Blood pressure is very high or very low</li>
+            <li>Blood sugar stays above your target range</li>
+            <li>You feel dizzy, weak, or short of breath</li>
+            <li>Your oxygen level drops below 92%</li>
         </ul>
     </section>
 
     <section class="feedback-section">
         <h2>Have Questions or Feedback?</h2>
-        <p><a href="../feedback.html">Tell us how we can improve this page</a></p>
+        <p><a href="/feedback/">Tell us how we can improve this page</a></p>
     </section>
 
 </main>
 
 <footer>
     <p>&copy; 2026 JSU Alabama Rural Health Association</p>
-    <p><a href="../feedback.html">Give Feedback</a> | <a href="../index.html">Home</a></p>
+    <p><a href="/index.html">Home</a> | <a href="/about/">About</a></p>
 </footer>
 
 </body>
