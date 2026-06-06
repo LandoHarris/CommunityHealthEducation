@@ -3,326 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Fall-Risk Assessment and fall prevention">
-    <title>Fall-Risk Assessment - Rural Health Education</title>
+    <meta name="description" content="Fall risk prevention guide">
+    <title>Fall Risk Prevention - Rural Health Education</title>
 
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f7f7f7;
-        }
-
-        /* Navigation Bar */
-        nav {
-            background: #0066cc;
-            padding: 0.75rem 1rem;
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            align-items: center;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-size: 1rem;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        /* Dropdown Menu */
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-
-        .dropdown-button {
-            background: none;
-            border: none;
-            color: white;
-            font-size: 1rem;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .dropdown-button:hover {
-            text-decoration: underline;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: white;
-            min-width: 220px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-            z-index: 1;
-            border-radius: 4px;
-            padding: 0.5rem 0;
-        }
-
-        .dropdown-content a {
-            color: #0066cc;
-            padding: 0.5rem 1rem;
-            text-decoration: none;
-            display: block;
-            font-weight: normal;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #f0f4ff;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        header {
-            text-align: center;
-            padding: 2rem 1rem;
-            background: #e9f2ff;
-        }
-
-        main {
-            max-width: 900px;
-            margin: 2rem auto;
-            background: white;
-            padding: 2rem;
-            border-radius: 8px;
-        }
-
-        h2 {
-            margin-top: 2rem;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 1rem 0;
-        }
-
-        th, td {
-            border: 1px solid #ccc;
-            padding: 0.75rem;
-            text-align: left;
-        }
-
-        th {
-            background: #f0f4ff;
-        }
-
-        ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        li {
-            margin: 0.5rem 0;
-        }
-
-        a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        footer {
-            text-align: center;
-            padding: 1.5rem;
-            margin-top: 2rem;
-            background: #e9f2ff;
-        }
+        body { margin: 0; font-family: Arial, sans-serif; background: #f7f7f7; }
+        nav { background: #0066cc; padding: 0.75rem 1rem; display: flex; justify-content: center; gap: 2rem; align-items: center; }
+        nav a { color: white; text-decoration: none; font-size: 1rem; font-weight: bold; }
+        nav a:hover { text-decoration: underline; }
+        .dropdown { position: relative; display: inline-block; }
+        .dropdown-button { background: none; border: none; color: white; font-size: 1rem; font-weight: bold; cursor: pointer; }
+        .dropdown-button:hover { text-decoration: underline; }
+        .dropdown-content { display: none; position: absolute; background-color: white; min-width: 220px; box-shadow: 0 4px 8px rgba(0,0,0,0.15); z-index: 1; border-radius: 4px; padding: 0.5rem 0; }
+        .dropdown-content a { color: #0066cc; padding: 0.5rem 1rem; text-decoration: none; display: block; }
+        .dropdown-content a:hover { background-color: #f0f4ff; }
+        .dropdown:hover .dropdown-content { display: block; }
+        header { text-align: center; padding: 2rem 1rem; background: #e9f2ff; }
+        main { max-width: 900px; margin: 2rem auto; background: white; padding: 2rem; border-radius: 8px; }
+        h2 { margin-top: 2rem; }
+        ul { list-style: none; padding-left: 0; }
+        li { margin: 0.5rem 0; }
+        a { color: #0066cc; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        footer { text-align: center; padding: 1.5rem; margin-top: 2rem; background: #e9f2ff; }
     </style>
 </head>
 
 <body>
 
-<a href="#main" class="skip-link">Skip to main content</a>
-
-<!-- Navigation Bar -->
 <nav>
-    <a href="../index.html">Home</a>
+    <a href="/index.html">Home</a>
 
     <div class="dropdown">
         <button class="dropdown-button">Topics ▾</button>
         <div class="dropdown-content">
-            <a href="chronic-disease.html">Chronic Disease</a>
-            <a href="exercise.html">Exercise</a>
-            <a href="fall-risk.html">Fall Risk</a>
-            <a href="healthy-eating.html">Healthy Eating</a>
-            <a href="obesity.html">Obesity</a>
-            <a href="supporting-others.html">Supporting Others</a>
-            <a href="tracking-vitals.html">Tracking Vitals</a>
-            <a href="when-to-seek-care.html">When to Seek Care</a>
+            <a href="/topics/chronic-disease/">Chronic Disease</a>
+            <a href="/topics/exercise/">Exercise</a>
+            <a href="/topics/fall-risk/">Fall Risk</a>
+            <a href="/topics/healthy-eating/">Healthy Eating</a>
+            <a href="/topics/obesity/">Obesity</a>
+            <a href="/topics/supporting-others/">Supporting Others</a>
+            <a href="/topics/tracking-vitals/">Tracking Vitals</a>
+            <a href="/topics/when-to-seek-care/">When to Seek Care</a>
         </div>
     </div>
 
-    <a href="../feedback.html">Feedback</a>
-    <a href="../qr/About.html">QR Codes</a>
-    <a href="../About.html">About</a>
+    <a href="/feedback/">Feedback</a>
+    <a href="/qr/About.html">QR Codes</a>
+    <a href="/about/">About</a>
 </nav>
 
 <header>
-    <h1>Fall-Risk Assessment</h1>
+    <h1>Fall Risk Prevention</h1>
 </header>
 
-<main id="main" class="container">
+<main>
 
     <section>
         <h2>Why Falls Matter</h2>
-        <p>Falls are the leading cause of injury for older adults. One fall can change your life. Many seniors never fully recover from a serious fall.</p>
-        <p>The good news: Most falls can be prevented. Understanding your fall risk is the first step.</p>
+        <p>Falls are a major cause of injury for older adults, especially in rural communities. Many falls can be prevented with simple steps.</p>
     </section>
 
     <section>
-        <h2>Are You at Risk for Falls?</h2>
-        <p>You are at higher risk if:</p>
+        <h2>Common Causes of Falls</h2>
         <ul>
-            <li>You have fallen in the past</li>
-            <li>You have balance or walking problems</li>
-            <li>You have weak legs or feet</li>
-            <li>You take multiple medications</li>
-            <li>You have low blood pressure (dizziness when standing)</li>
-            <li>You have vision or hearing problems</li>
-            <li>You have arthritis or joint pain</li>
-            <li>You are over 65</li>
-            <li>You live alone</li>
-            <li>Your home has hazards (loose rugs, poor lighting, no grab bars)</li>
+            <li>Poor lighting</li>
+            <li>Loose rugs or clutter</li>
+            <li>Weak muscles or balance problems</li>
+            <li>Medications that cause dizziness</li>
+            <li>Vision problems</li>
+            <li>Unsafe footwear</li>
         </ul>
     </section>
 
     <section>
-        <h2>Common Fall Hazards at Home</h2>
-        <table>
-            <tr>
-                <th>Hazard</th>
-                <th>How to Fix It</th>
-            </tr>
-            <tr>
-                <td>Loose or curled rugs</td>
-                <td>Tape down or remove them</td>
-            </tr>
-            <tr>
-                <td>Clutter or cords</td>
-                <td>Clear pathways, tape down cords</td>
-            </tr>
-            <tr>
-                <td>Poor lighting</td>
-                <td>Add lights, especially on stairs</td>
-            </tr>
-            <tr>
-                <td>Wet or slippery floors</td>
-                <td>Use non-slip mats, clean spills quickly</td>
-            </tr>
-            <tr>
-                <td>Stairs without handrails</td>
-                <td>Install sturdy handrails on both sides</td>
-            </tr>
-            <tr>
-                <td>Bathrooms without grab bars</td>
-                <td>Install grab bars near toilet and shower</td>
-            </tr>
-            <tr>
-                <td>Shoes without grip</td>
-                <td>Wear slip-resistant shoes</td>
-            </tr>
-        </table>
-    </section>
-
-    <section>
-        <h2>What To Do</h2>
-
-        <h3>Prevent Falls</h3>
+        <h2>How to Prevent Falls at Home</h2>
         <ul>
-            <li><strong>Exercise:</strong> Walking, tai chi, and balance exercises strengthen muscles</li>
-            <li><strong>Wear proper shoes:</strong> Non-slip, flat shoes with good support</li>
-            <li><strong>Use assistive devices:</strong> Cane, walker, or grab bars if needed</li>
-            <li><strong>Have your eyes checked:</strong> Good vision helps prevent falls</li>
-            <li><strong>Review medications:</strong> Some can cause dizziness</li>
-            <li><strong>Check vitamin D:</strong> Low levels weaken bones</li>
-            <li><strong>Make home changes:</strong> See table above</li>
-        </ul>
-
-        <h3>If You Fall</h3>
-        <ul>
-            <li>Don't panic</li>
-            <li>Call for help if possible</li>
-            <li>Move slowly and carefully</li>
-            <li>Roll onto your side, then onto hands and knees</li>
-            <li>Crawl to a sturdy chair and use it to stand</li>
-            <li>Sit and rest before moving</li>
-            <li>Check for injuries</li>
-        </ul>
-
-        <h3>When to Seek Help</h3>
-        <ul>
-            <li>You've had a fall</li>
-            <li>You feel unsteady or fear falling</li>
-            <li>You have pain after a fall</li>
-            <li>You've noticed changes in balance or walking</li>
-            <li>You have frequent near-falls</li>
+            <li>Remove loose rugs and clutter</li>
+            <li>Install grab bars in bathrooms</li>
+            <li>Use non-slip mats</li>
+            <li>Improve lighting in hallways and stairs</li>
+            <li>Keep frequently used items within easy reach</li>
         </ul>
     </section>
 
     <section>
-        <h2>Home Safety Checklist</h2>
-        <div class="resource-card">
-            <h3>Complete This Checklist</h3>
-            <ul>
-                <li>☐ Remove tripping hazards (rugs, cords, clutter)</li>
-                <li>☐ Improve lighting throughout home</li>
-                <li>☐ Install handrails on stairs</li>
-                <li>☐ Add grab bars in bathroom</li>
-                <li>☐ Secure slippery rugs</li>
-                <li>☐ Wear sturdy, non-slip shoes indoors</li>
-                <li>☐ Keep frequently used items at arm level</li>
-                <li>☐ Keep a phone nearby at all times</li>
-                <li>☐ Consider a medical alert system</li>
-            </ul>
-        </div>
-    </section>
-
-    <section>
-        <h2>Medical Alert Systems</h2>
-        <p>If you live alone, consider a medical alert system. You can press a button to call for help if you fall.</p>
+        <h2>Strength & Balance Exercises</h2>
         <ul>
-            <li>Wearable devices (watch, pendant)</li>
-            <li>Home-based systems</li>
-            <li>Mobile phone apps</li>
-            <li>Many are affordable or free for seniors</li>
-        </ul>
-        <p>Ask your doctor or local senior center about options.</p>
-    </section>
-
-    <section>
-        <h2>More Resources</h2>
-        <ul>
-            <li><a href="https://www.cdc.gov/homeandrecreationalsafety/falls/index.html" target="_blank">CDC – Fall Prevention</a></li>
-            <li><a href="https://www.nia.nih.gov/health/falls-and-fractures" target="_blank">NIH – Falls and Fractures</a></li>
-            <li><a href="../feedback.html">Give Feedback</a></li>
+            <li>Standing on one foot</li>
+            <li>Heel-to-toe walking</li>
+            <li>Chair stands</li>
+            <li>Light weight training</li>
+            <li>Tai chi</li>
         </ul>
     </section>
 
-    <section class="alert alert-warning">
-        <strong>Emergency:</strong> If you fall and cannot get up, call 911 immediately.
+    <section>
+        <h2>Medication Safety</h2>
+        <p>Some medications can cause dizziness or drowsiness. Talk to your doctor if you notice:</p>
+        <ul>
+            <li>Feeling lightheaded</li>
+            <li>Unsteady walking</li>
+            <li>New balance problems</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>When to Seek Help</h2>
+        <ul>
+            <li>You fall more than once</li>
+            <li>You feel unsteady when walking</li>
+            <li>You have dizziness or fainting spells</li>
+            <li>You are afraid of falling</li>
+        </ul>
     </section>
 
     <section class="feedback-section">
         <h2>Have Questions or Feedback?</h2>
-        <p><a href="../feedback.html">Tell us how we can improve this page</a></p>
+        <p><a href="/feedback/">Tell us how we can improve this page</a></p>
     </section>
 
 </main>
 
 <footer>
     <p>&copy; 2026 JSU Alabama Rural Health Association</p>
-    <p><a href="../feedback.html">Give Feedback</a> | <a href="../index.html">Home</a></p>
+    <p><a href="/index.html">Home</a> | <a href="/about/">About</a></p>
 </footer>
 
 </body>
