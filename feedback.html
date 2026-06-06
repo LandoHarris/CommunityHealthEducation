@@ -5,102 +5,263 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Feedback form for Rural Health Education Platform">
     <title>Feedback - Rural Health Education</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f7f7f7;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background: #0066cc;
+            padding: 0.75rem 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Dropdown Menu */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-button {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .dropdown-button:hover {
+            text-decoration: underline;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 220px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            z-index: 1;
+            border-radius: 4px;
+            padding: 0.5rem 0;
+        }
+
+        .dropdown-content a {
+            color: #0066cc;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            display: block;
+            font-weight: normal;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f0f4ff;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        header {
+            text-align: center;
+            padding: 2rem 1rem;
+            background: #e9f2ff;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 2rem auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+        }
+
+        h2 {
+            margin-top: 2rem;
+        }
+
+        .resource-card {
+            background: #f0f4ff;
+            padding: 1rem;
+            border-radius: 6px;
+            margin: 1rem 0;
+        }
+
+        .alert-info {
+            background: #e8f4ff;
+            border-left: 6px solid #0077cc;
+            padding: 1rem;
+            border-radius: 6px;
+            margin: 2rem 0;
+        }
+
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+            background: #e9f2ff;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background: #0066cc;
+            color: white;
+            padding: 0.75rem 1.25rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .btn-primary:hover {
+            background: #004c99;
+        }
+    </style>
 </head>
+
 <body>
-    <a href="#main" class="skip-link">Skip to main content</a>
-    
-    <header>
-        <h1>Feedback & Questions</h1>
-        <p>Help us improve this health education platform</p>
-    </header>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="resources.html">Local Resources</a></li>
-            <li><a href="feedback.html">Feedback</a></li>
-        </ul>
-    </nav>
+<a href="#main" class="skip-link">Skip to main content</a>
 
-    <main id="main" class="container">
-        <section>
-            <h2>We Want to Hear From You</h2>
-            <p>Your feedback helps us create better health information for our community. Please take a moment to answer a few questions.</p>
-        </section>
+<!-- Navigation Bar -->
+<nav>
+    <a href="index.html">Home</a>
 
-        <section>
-            <h2>Online Feedback Form</h2>
-            <p>Please fill out the form below. This helps us understand what health topics are most important to you.</p>
-            
-            <!-- Google Forms Embed -->
-            <iframe src="https://docs.google.com/forms/d/e/YOUR-FORM-ID/viewform?embedded=true" width="100%" height="1200" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-            
-            <p style="margin-top: 1rem;"><strong>Note:</strong> If you have trouble with the form above, <a href="https://docs.google.com/forms/d/YOUR-FORM-ID/viewform">click here to open the feedback form in a new window</a>.</p>
-        </section>
+    <div class="dropdown">
+        <button class="dropdown-button">Topics ▾</button>
+        <div class="dropdown-content">
+            <a href="topics/chronic-disease.html">Chronic Disease</a>
+            <a href="topics/exercise.html">Exercise</a>
+            <a href="topics/fall-risk.html">Fall Risk</a>
+            <a href="topics/healthy-eating.html">Healthy Eating</a>
+            <a href="topics/obesity.html">Obesity</a>
+            <a href="topics/supporting-others.html">Supporting Others</a>
+            <a href="topics/tracking-vitals.html">Tracking Vitals</a>
+            <a href="topics/when-to-seek-care.html">When to Seek Care</a>
+        </div>
+    </div>
 
-        <section>
-            <h2>Other Ways to Give Feedback</h2>
-            
-            <div class="resource-card">
-                <h3>By Phone</h3>
-                <p>Contact JSU Alabama Rural Health Association directly to discuss health topics or suggest improvements.</p>
-            </div>
+    <a href="feedback.html">Feedback</a>
+    <a href="qr/README.md">QR Codes</a>
+    <a href="README.md">About</a>
+</nav>
 
-            <div class="resource-card">
-                <h3>At Community Events</h3>
-                <p>We attend senior centers, health fairs, and community events. Stop by our table to chat and share your feedback.</p>
-            </div>
+<header>
+    <h1>Feedback & Questions</h1>
+    <p>Help us improve this health education platform</p>
+</header>
 
-            <div class="resource-card">
-                <h3>By Email</h3>
-                <p>Send your suggestions to the JSU ARHA team. We read every message.</p>
-            </div>
-        </section>
+<main id="main" class="container">
 
-        <section>
-            <h2>Questions We'd Like Your Help With</h2>
-            
-            <div class="resource-card">
-                <h3>Which Health Topics Matter Most to You?</h3>
-                <p>Tell us which topics are most important for your health, your family, or your community.</p>
-            </div>
+    <section>
+        <h2>We Want to Hear From You</h2>
+        <p>Your feedback helps us create better health information for our community.</p>
+    </section>
 
-            <div class="resource-card">
-                <h3>Where Did You Find Out About This Platform?</h3>
-                <p>We use QR codes in many places. Let us know where you saw them so we know what works best.</p>
-            </div>
+    <section>
+        <h2>Online Feedback Form</h2>
+        <p>Please fill out the form below. This helps us understand what health topics matter most to you.</p>
 
-            <div class="resource-card">
-                <h3>How Can We Make This Better?</h3>
-                <p>Is the information too hard to understand? Too long? Tell us how we can improve.</p>
-            </div>
+        <!-- Google Forms Embed -->
+        <iframe src="https://docs.google.com/forms/d/e/YOUR-FORM-ID/viewform?embedded=true"
+                width="100%" height="1200" frameborder="0" marginheight="0" marginwidth="0">
+            Loading…
+        </iframe>
 
-            <div class="resource-card">
-                <h3>What Other Resources Do You Need?</h3>
-                <p>Tell us about health information or services that are hard to find in our area.</p>
-            </div>
-        </section>
+        <p style="margin-top: 1rem;">
+            <strong>Note:</strong> If the form does not load,
+            <a href="https://docs.google.com/forms/d/YOUR-FORM-ID/viewform" target="_blank">
+                click here to open it in a new window.
+            </a>
+        </p>
+    </section>
 
-        <section class="alert alert-info">
-            <strong>Privacy:</strong> Your feedback is important to us. We only use it to improve this platform and better serve our community. Your responses are kept confidential.
-        </section>
+    <section>
+        <h2>Other Ways to Give Feedback</h2>
 
-        <section>
-            <h2>Thank You</h2>
-            <p>We appreciate you taking the time to help us serve rural Alabama better. Your voice matters.</p>
-            <a href="index.html" class="btn btn-primary">Return to Home</a>
-        </section>
-    </main>
+        <div class="resource-card">
+            <h3>By Phone</h3>
+            <p>Contact JSU Alabama Rural Health Association to share suggestions or ask questions.</p>
+        </div>
 
-    <footer>
-        <p>&copy; 2026 JSU Alabama Rural Health Association</p>
-        <p><a href="about.html">About This Platform</a> | <a href="feedback.html">Feedback</a> | <a href="resources.html">Local Resources</a></p>
-        <p><a href="index.html">Return to Home</a></p>
-    </footer>
+        <div class="resource-card">
+            <h3>At Community Events</h3>
+            <p>We attend senior centers, health fairs, and community events. Stop by our table to chat.</p>
+        </div>
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR-GA-ID"></script>
-    <script src="assets/js/analytics.js"></script>
+        <div class="resource-card">
+            <h3>By Email</h3>
+            <p>Send your suggestions to our team — we read every message.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Questions We'd Love Your Input On</h2>
+
+        <div class="resource-card">
+            <h3>Which Health Topics Matter Most?</h3>
+            <p>Tell us what information would help you or your family the most.</p>
+        </div>
+
+        <div class="resource-card">
+            <h3>Where Did You Find This Platform?</h3>
+            <p>We use QR codes in many places. Let us know where you saw one.</p>
+        </div>
+
+        <div class="resource-card">
+            <h3>How Can We Improve?</h3>
+            <p>Is the information clear? Too long? Too short? Tell us how to make it better.</p>
+        </div>
+
+        <div class="resource-card">
+            <h3>What Other Resources Do You Need?</h3>
+            <p>Tell us about health information or services that are hard to find in our area.</p>
+        </div>
+    </section>
+
+    <section class="alert-info">
+        <strong>Privacy:</strong> Your feedback is confidential and used only to improve this platform.
+    </section>
+
+    <section>
+        <h2>Thank You</h2>
+        <p>We appreciate you taking the time to help us serve rural Alabama better.</p>
+        <a href="index.html" class="btn-primary">Return to Home</a>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 JSU Alabama Rural Health Association</p>
+    <p><a href="about.html">About This Platform</a> | <a href="feedback.html">Feedback</a> | <a href="resources.html">Local Resources</a></p>
+    <p><a href="index.html">Return to Home</a></p>
+</footer>
+
 </body>
 </html>
