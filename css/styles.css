@@ -70,14 +70,23 @@ img {
   height: 100%;
 }
 
-.nav-logo {
+.logo-icon {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  font-weight: 700;
-  font-size: 1.25rem;
-  color: var(--color-primary);
-  white-space: nowrap;
+  justify-content: center;
+}
+
+/* Ensure the image doesn't force the navbar to grow */
+.nav-logo img {
+  display: block;
+  height: 32px; /* Adjust this to match your desired icon size */
+  width: auto;
+  transition: transform 0.2s;
+}
+
+/* Optional: Subtle hover effect for the logo */
+.nav-logo:hover img {
+  transform: scale(1.05);
 }
 
 /* Desktop Menu: Flex items evenly across remaining space */
