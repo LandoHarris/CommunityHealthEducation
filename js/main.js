@@ -48,23 +48,24 @@ function highlightCurrentPage() {
   });
 }
 
-
-
 function applyRandomLogoColor() {
     const logoImg = document.querySelector(".nav-logo img");
     
-    // We use a mapping of colors to their specific CSS filter requirements
-    // This is the most reliable way to force-color a white icon
-    const colorFilters = [
-        "sepia(100%) saturate(10000%) hue-rotate(0deg) brightness(50%)",   // Red
-        "sepia(100%) saturate(500%) hue-rotate(100deg) brightness(40%)",    // Green
-        "sepia(100%) saturate(500%) hue-rotate(160deg) brightness(50%)",    // Blue
-        "sepia(0%) saturate(0%) brightness(20%)"                           // Dark Gray
+    // We target white icons specifically:
+    // 1. brightness(0) makes the icon solid black
+    // 2. invert(0) ensures the shape is kept
+    // 3. drop-shadow creates the colored "stamp"
+    const colors = [
+        "drop-shadow(0 0 0 #ff0000)", // Red
+        "drop-shadow(0 0 0 #2a7d4f)", // Green
+        "drop-shadow(0 0 0 #4a90a4)", // Blue
+        "drop-shadow(0 0 0 #333333)"  // Dark Gray
     ];
     
-    const randomFilter = colorFilters[Math.floor(Math.random() * colorFilters.length)];
+    const randomColor = colors[Math.floor(Math.random() * colors.length)];
     
     if (logoImg) {
-        logoImg.style.filter = randomFilter;
+        // We set the base filter to ensure it's a solid silhouette, then apply color
+        logoImg.style.filter = `brightness(0) invert(0) ${randomColor}`;
     }
 }
