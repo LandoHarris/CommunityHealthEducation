@@ -47,24 +47,24 @@ function highlightCurrentPage() {
     }
   });
 }
-
 function applyRandomLogoColor() {
     const logoImg = document.querySelector(".nav-logo img");
     
-    // We use drop-shadow to color the white PNG
-    // brightness(0) invert(1) makes the white heart black
-    // drop-shadow paints that black heart
+    // Using HSL values ensures high brightness and saturation
+    // Each value is a hue (0-360) for a distinct, bright color
     const colors = [
-        "drop-shadow(0 0 0 #ff0000)", // Red
-        "drop-shadow(0 0 0 #2a7d4f)", // Primary Green
-        "drop-shadow(0 0 0 #4a90a4)", // Secondary Blue
-        "drop-shadow(0 0 0 #333333)"  // Dark Gray
+        "drop-shadow(0 0 0 hsl(0, 100%, 50%))",    // Pure Bright Red
+        "drop-shadow(0 0 0 hsl(145, 63%, 32%))",   // Professional Vibrant Green
+        "drop-shadow(0 0 0 hsl(199, 50%, 48%))",   // Bright Electric Blue
+        "drop-shadow(0 0 0 hsl(280, 70%, 50%))",   // Bright Vivid Purple
+        "drop-shadow(0 0 0 hsl(35, 100%, 50%))"    // Vibrant Energetic Orange
     ];
     
     const randomColor = colors[Math.floor(Math.random() * colors.length)];
     
     if (logoImg) {
-        // Set both the shape filter and the color filter
+        // brightness(0) invert(1) is the "engine" that turns the image black
+        // drop-shadow(0 0 0 ...) acts as the colored ink
         logoImg.style.filter = `brightness(0) invert(1) ${randomColor}`;
     }
 }
