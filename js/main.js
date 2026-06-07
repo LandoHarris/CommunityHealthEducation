@@ -9,6 +9,12 @@ document.addEventListener('DOMContentLoaded', function() {
         navbarPlaceholder.innerHTML = html;
         initNavbar();
         highlightCurrentPage();
+        // --- ADD THIS BLOCK ---
+        const gScript = document.createElement('script');
+        gScript.src = "https://cdn.gtranslate.net/widgets/latest/float.js";
+        gScript.defer = true;
+        document.body.appendChild(gScript);
+        // ----------------------
       })
       .catch(err => console.error('Error loading navbar:', err));
   }
