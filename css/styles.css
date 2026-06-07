@@ -76,16 +76,13 @@ img {
   justify-content: center;
 }
 
-/* Ensure the image doesn't force the navbar to grow */
 .nav-logo img {
     height: 32px;
     width: auto;
     display: block;
-    /* Force the image to stay visible */
-    visibility: visible !important;
-    opacity: 1 !important;
-    transition: filter 0.5s ease, transform 0.2s ease;
+    filter: sepia(100%) saturate(500%) hue-rotate(100deg) brightness(40%);
 }
+
 
 
 
