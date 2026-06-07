@@ -56,10 +56,6 @@ function applyRandomLogoColor() {
     // These are high-saturation, bright, "pop" colors
     const colors = [
         "#FF0000", // Bright Red
-        "#2E7D32", // Vibrant Green
-        "#0288D1", // Bright Blue
-        "#7B1FA2", // Vivid Purple
-        "#EF6C00"  // Energetic Orange
     ];
     
     const randomColor = colors[Math.floor(Math.random() * colors.length)];
