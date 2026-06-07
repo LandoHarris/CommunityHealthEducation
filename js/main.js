@@ -21,7 +21,10 @@ function initNavbar() {
   
   if (toggle && menu) {
     toggle.addEventListener('click', function() {
+      // Toggles the menu visibility (slides in/out)
       menu.classList.toggle('active');
+      // Toggles the hamburger to X animation
+      toggle.classList.toggle('active');
     });
   }
 }
