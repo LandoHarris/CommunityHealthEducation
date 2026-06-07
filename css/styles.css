@@ -453,7 +453,7 @@ img {
   position: relative;
   width: 100%;
   height: 0;
-  padding-bottom: 150%; /* tune this to your form's height */
+  padding-bottom: 90%; /* tune this to your form's height */
   overflow: hidden;
 }
 
@@ -462,5 +462,4 @@ img {
   inset: 0;
   width: 100%;
   height: 100%;
-  padding: bottom 90%;
 }
