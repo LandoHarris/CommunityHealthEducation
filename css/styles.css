@@ -80,8 +80,12 @@ img {
     height: 32px;
     width: auto;
     display: block;
-    /* REMOVED: filter: sepia(100%) saturate(500%) hue-rotate(100deg) brightness(40%); */
-    transition: filter 0.5s ease, transform 0.2s ease;
+    /* This forces the icon to be a stencil for the background color */
+    -webkit-mask: url('../assets/ecgHeart.png') no-repeat center / contain;
+    mask: url('../assets/ecgHeart.png') no-repeat center / contain;
+    /* Initial color (will be overridden by JS) */
+    background-color: #ff0000; 
+    transition: background-color 0.5s ease, transform 0.2s ease;
 }
 
 .logo-text {

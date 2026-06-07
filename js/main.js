@@ -47,24 +47,25 @@ function highlightCurrentPage() {
     }
   });
 }
+
+
+
 function applyRandomLogoColor() {
     const logoImg = document.querySelector(".nav-logo img");
     
-    // Using HSL values ensures high brightness and saturation
-    // Each value is a hue (0-360) for a distinct, bright color
+    // These are high-saturation, bright, "pop" colors
     const colors = [
-        "drop-shadow(0 0 0 hsl(0, 100%, 50%))",    // Pure Bright Red
-        "drop-shadow(0 0 0 hsl(145, 63%, 32%))",   // Professional Vibrant Green
-        "drop-shadow(0 0 0 hsl(199, 50%, 48%))",   // Bright Electric Blue
-        "drop-shadow(0 0 0 hsl(280, 70%, 50%))",   // Bright Vivid Purple
-        "drop-shadow(0 0 0 hsl(35, 100%, 50%))"    // Vibrant Energetic Orange
+        "#FF0000", // Bright Red
+        "#2E7D32", // Vibrant Green
+        "#0288D1", // Bright Blue
+        "#7B1FA2", // Vivid Purple
+        "#EF6C00"  // Energetic Orange
     ];
     
     const randomColor = colors[Math.floor(Math.random() * colors.length)];
     
     if (logoImg) {
-        // brightness(0) invert(1) is the "engine" that turns the image black
-        // drop-shadow(0 0 0 ...) acts as the colored ink
-        logoImg.style.filter = `brightness(0) invert(1) ${randomColor}`;
+        // Direct color application - no murkiness
+        logoImg.style.backgroundColor = randomColor;
     }
 }
