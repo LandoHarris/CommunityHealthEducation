@@ -80,13 +80,9 @@ img {
     height: 32px;
     width: auto;
     display: block;
-    /* This forces the icon to be a stencil for the background color */
-    -webkit-mask: url('../assets/ecgHeart.png') no-repeat center / contain;
-    mask: url('../assets/ecgHeart.png') no-repeat center / contain;
     /* Initial color (will be overridden by JS) */
     background-color: #ff0000; 
-    transition: background-color 0.5s ease, transform 0.2s ease;
-}
+  }
 
 .logo-text {
   white-space: nowrap;
@@ -98,7 +94,7 @@ img {
 
 /* Updated hover effect: Keep the filter active, just scale the size */
 .nav-logo:hover img {
-    transform: scale(1.05);
+    transform: scale(1.25);
 }
 
 .nav-logo {
