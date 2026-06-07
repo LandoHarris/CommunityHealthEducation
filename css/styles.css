@@ -357,18 +357,27 @@ img {
 .content-section p {
   margin-bottom: 1rem;
 }
-
 /* ===== TEAM GRID ===== */
 .team-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 3rem;        /* Increased gap */
-  margin-top: 5rem; /* Pushes grid down so icons don't hit the H2 */
+  gap: 3rem;
+  /* 
+     Crucial Fix: 
+     The icon has a top offset of -60px (via .profile-container).
+     We add a large margin-top to the grid so it doesn't overlap the "Our Team" text.
+  */
+  margin-top: 5rem; 
   padding: 0 1rem;
 }
 
 .team-card {
-  padding-top: 80px; /* Space for the icon */
+  /* 
+     Padding-top is key here: 
+     It must be larger than the icon's negative offset (-60px).
+     80px allows the icon to float half-out and half-in.
+  */
+  padding-top: 80px; 
   padding-bottom: 2rem;
   position: relative;
   background: var(--color-bg-alt);
@@ -377,20 +386,6 @@ img {
   transition: transform 0.3s ease;
 }
 
-.team-card:hover {
-  transform: translateY(-5px);
-}
-
-
-.team-avatar {
-  font-size: 3rem;
-  margin-bottom: 0.5rem;
-}
-
-.team-card p {
-  color: var(--color-text-light);
-  font-size: 0.9rem;
-}
 
 /* ===== SERVICES ===== */
 .service-list {
