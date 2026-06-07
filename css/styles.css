@@ -74,6 +74,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: #ff0000;
 }
 
 .nav-logo img {
@@ -449,7 +450,7 @@ img {
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 0 1.5rem;
+  padding: 0 1.0rem;
 }
 
 /* Form container with limited width for readability */

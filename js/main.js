@@ -49,19 +49,3 @@ function highlightCurrentPage() {
 }
 
 
-
-function applyRandomLogoColor() {
-    const logoImg = document.querySelector(".nav-logo img");
-    
-    // These are high-saturation, bright, "pop" colors
-    const colors = [
-        "#FF0000", // Bright Red
-    ];
-    
-    const randomColor = colors[Math.floor(Math.random() * colors.length)];
-    
-    if (logoImg) {
-        // Direct color application - no murkiness
-        logoImg.style.backgroundColor = randomColor;
-    }
-}
