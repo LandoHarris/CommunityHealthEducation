@@ -391,7 +391,7 @@ img {
   display: grid;
   border: #1e5c3a;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 3rem;
+  gap: 5rem;
   /* 
      Crucial Fix: 
      The icon has a top offset of -60px (via .profile-container).
@@ -515,8 +515,9 @@ img {
   display: flex;
   justify-content: center;
   position: absolute; /* This pulls it out of the normal flow */
-  top: -60px;         /* Moves it up into the padded space */
+  top: -2rem;         /* Moves it up into the padded space */
   left: 0;
+  border: 2px solid green;
   right: 0;
 }
 
