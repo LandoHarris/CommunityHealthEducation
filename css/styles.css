@@ -430,6 +430,7 @@ img {
   width: 100%;
   max-width: 600px;
   box-shadow: var(--shadow);
+  text-align: center; /* This centers the h2 and p elements */
 }
 
 .form-group {
