@@ -5,6 +5,10 @@
   padding: 0;
 }
 
+html {
+  font-size: clamp(14px, 1.5vw, 18px);
+}
+
 :root {
   --color-primary: #2a7d4f;
   --color-primary-dark: #1e5c3a;
@@ -18,8 +22,6 @@
   --radius: 8px;
   --max-width: 1100px;
 }
-/*TODO #4 remove unused styling things */
-/*TODO #3 edit styling to reflect ARHA and find a theme to tie everything together */
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, sans-serif;
@@ -48,7 +50,6 @@ img {
   padding: 0 1.5rem;
 }
 
-
 /* ===== NAVBAR ===== */
 .navbar {
   background: var(--color-bg);
@@ -65,7 +66,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 70px;
+  height: 4.5rem;
 }
 
 .nav-logo {
@@ -77,18 +78,10 @@ img {
   color: var(--color-primary);
 }
 
-.nav-logo:hover {
-  text-decoration: none;
-}
-
-.logo-icon {
-  font-size: 1.5rem;
-}
-
 .nav-menu {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.75rem;
   list-style: none;
 }
 
@@ -101,7 +94,6 @@ img {
 
 .nav-link:hover {
   background: var(--color-accent);
-  text-decoration: none;
 }
 
 .nav-link.active {
@@ -118,7 +110,7 @@ img {
   background: var(--color-primary-dark);
 }
 
-/* Mobile toggle */
+/* ===== MOBILE TOGGLE ===== */
 .nav-toggle {
   display: none;
   background: none;
@@ -130,12 +122,11 @@ img {
 /* Hamburger container */
 .hamburger {
   position: relative;
-  width: 30px;
-  height: 22px; /* space for 3 bars */
-  cursor: pointer;
+  width: 2rem;
+  height: 1.4rem;
 }
 
-/* All bars */
+/* Bars */
 .hamburger::before,
 .hamburger::after,
 .hamburger span {
@@ -143,57 +134,61 @@ img {
   position: absolute;
   left: 0;
   width: 100%;
-  height: 4px;
+  height: 0.25rem;
   background: var(--color-text);
   border-radius: 2px;
   transition: 0.3s ease;
 }
 
-/* Top bar */
-.hamburger::before {
-  top: 0;
+.hamburger::before { top: 0; }
+.hamburger span { top: 0.55rem; }
+.hamburger::after { bottom: 0; }
+
+/* Hamburger → X animation */
+.nav-toggle.active .hamburger::before {
+  transform: translateY(0.55rem) rotate(45deg);
 }
 
-/* Middle bar */
-.hamburger span {
-  top: 9px; /* centered between top and bottom */
+.nav-toggle.active .hamburger span {
+  opacity: 0;
 }
 
-/* Bottom bar */
-.hamburger::after {
-  bottom: 0;
+.nav-toggle.active .hamburger::after {
+  transform: translateY(-0.55rem) rotate(-45deg);
 }
 
-
-
+/* ===== MOBILE MENU ===== */
 @media (max-width: 768px) {
   .nav-toggle {
     display: block;
   }
-  
+
   .nav-menu {
-    position: absolute;
-    top: 70px;
+    position: fixed;
+    top: 4.5rem;
     left: 0;
     right: 0;
+    bottom: 0;
     background: var(--color-bg);
     flex-direction: column;
-    padding: 1rem;
-    gap: 0;
-    box-shadow: var(--shadow);
-    display: none;
+    padding: 1.5rem;
+    gap: 0.5rem;
+    overflow-y: auto;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+    z-index: 999;
   }
-  
+
   .nav-menu.active {
-    display: flex;
+    transform: translateY(0);
   }
-  
+
   .nav-link {
     width: 100%;
     padding: 1rem;
+    font-size: 1.2rem;
   }
 }
-
 
 /* ===== BUTTONS ===== */
 .btn {
@@ -208,7 +203,6 @@ img {
 }
 
 .btn:hover {
-  text-decoration: none;
   transform: translateY(-1px);
 }
 
@@ -231,7 +225,6 @@ img {
   background: var(--color-accent);
 }
 
-
 /* ===== HERO ===== */
 .hero {
   background: linear-gradient(135deg, var(--color-accent) 0%, #d4edda 100%);
@@ -240,7 +233,7 @@ img {
 }
 
 .hero h1 {
-  font-size: 2.5rem;
+  font-size: clamp(2rem, 4vw, 3rem);
   margin-bottom: 1rem;
   color: var(--color-primary-dark);
 }
@@ -258,11 +251,9 @@ img {
   flex-wrap: wrap;
 }
 
-
 /* ===== FEATURES ===== */
 .features {
   padding: 4rem 0;
-  background: var(--color-bg);
 }
 
 .features h2 {
@@ -286,7 +277,6 @@ img {
 
 .feature-icon {
   font-size: 2.5rem;
-  display: block;
   margin-bottom: 1rem;
 }
 
@@ -294,7 +284,6 @@ img {
   margin-bottom: 0.5rem;
   color: var(--color-primary-dark);
 }
-
 
 /* ===== CTA SECTION ===== */
 .cta-section {
@@ -322,7 +311,6 @@ img {
   background: var(--color-accent);
 }
 
-
 /* ===== PAGE HEADER ===== */
 .page-header {
   background: var(--color-accent);
@@ -339,7 +327,6 @@ img {
   color: var(--color-text-light);
 }
 
-
 /* ===== CONTENT SECTION ===== */
 .content-section {
   padding: 3rem 0;
@@ -351,15 +338,9 @@ img {
   color: var(--color-primary-dark);
 }
 
-.content-section h2:first-child {
-  margin-top: 0;
-}
-
 .content-section p {
   margin-bottom: 1rem;
-  color: var(--color-text);
 }
-
 
 /* ===== TEAM GRID ===== */
 .team-grid {
@@ -381,15 +362,10 @@ img {
   margin-bottom: 0.5rem;
 }
 
-.team-card h3 {
-  margin-bottom: 0.25rem;
-}
-
 .team-card p {
   color: var(--color-text-light);
   font-size: 0.9rem;
 }
-
 
 /* ===== SERVICES ===== */
 .service-list {
@@ -406,14 +382,9 @@ img {
 }
 
 .service-item h2 {
-  margin: 0 0 0.75rem 0;
+  margin-bottom: 0.75rem;
   font-size: 1.25rem;
 }
-
-.service-item p {
-  margin-bottom: 0.5rem;
-}
-
 
 /* ===== RESOURCES ===== */
 .resource-list {
@@ -426,12 +397,7 @@ img {
   border-bottom: 1px solid #eee;
 }
 
-.resource-list a {
-  display: block;
-}
-
-/* TODOChange #8 feedback button to match other buttons and potential when hovering over all buttons to change to darker green*/
-/* ===== feedback ===== */
+/* ===== FEEDBACK ===== */
 .feedback-grid {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
@@ -442,15 +408,6 @@ img {
   .feedback-grid {
     grid-template-columns: 1fr;
   }
-}
-
-.feedback-info h2,
-.feedback-form h2 {
-  margin-top: 0;
-}
-
-.feedback-info p {
-  margin-bottom: 1.25rem;
 }
 
 .feedback-form {
@@ -476,7 +433,6 @@ img {
   border: 1px solid #ddd;
   border-radius: var(--radius);
   font-size: 1rem;
-  font-family: inherit;
 }
 
 .form-group input:focus,
@@ -484,7 +440,6 @@ img {
   outline: none;
   border-color: var(--color-primary);
 }
-
 
 /* ===== FOOTER ===== */
 .footer {
@@ -494,4 +449,3 @@ img {
   text-align: center;
   margin-top: 3rem;
 }
-/* TODO fix the phone and other aspect ratios that are automatically applied specifically to mobile*/
