@@ -461,7 +461,7 @@ img {
   padding: 2rem;
   border-radius: var(--radius);
   width: 100%;
-  max-width: 600px;
+  max-width: 100%;
   box-shadow: var(--shadow);
   text-align: center; /* This centers the h2 and p elements */
   justify-content: center; /* This centers the .feedback-form child horizontally */
