@@ -449,3 +449,18 @@ img {
   text-align: center;
   margin-top: 3rem;
 }
+.responsive-iframe-container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 150%; /* tune this to your form's height */
+  overflow: hidden;
+}
+
+.responsive-iframe-container iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  padding: bottom 90%;
+}
