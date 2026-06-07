@@ -361,17 +361,24 @@ img {
 /* ===== TEAM GRID ===== */
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;        /* Increased gap */
+  margin-top: 5rem; /* Pushes grid down so icons don't hit the H2 */
+  padding: 0 1rem;
 }
 
 .team-card {
-  padding-top: 60px; /* Gives the profile icon space to "sit" on top */
+  padding-top: 80px; /* Space for the icon */
+  padding-bottom: 2rem;
   position: relative;
   background: var(--color-bg-alt);
   border-radius: var(--radius);
   text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
 }
 
 
