@@ -571,25 +571,3 @@ img {
     padding: 0 1rem;
   }
 }
-.gtranslate_wrapper {
-    display: inline-block;
-    vertical-align: middle;
-    margin-left: auto; /* Forces the switcher to the right */
-    margin-right: 1rem; /* Breathing room */
-}
-.gtranslate_li {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 1rem;
-}
-
-@media (max-width: 768px) {
-    .gtranslate_li {
-        padding: 2rem 0; /* Gives it vertical space in the mobile menu */
-    }
-}
-.gtranslate_wrapper {
-    z-index: 2000;
-    position: relative;
-}

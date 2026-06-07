@@ -25,9 +25,6 @@ async function loadNavbar() {
     initNavbar();
     highlightCurrentPage();
 
-    // Inject GTranslate script after DOM is ready
-    injectGTranslate();
-    
   } catch (err) {
     console.error('Navigation initialization error:', err);
   }
@@ -63,18 +60,4 @@ function highlightCurrentPage() {
       link.classList.add('active');
     }
   });
-}
-
-/**
- * Dynamically injects GTranslate script to ensure DOM presence
- */
-function injectGTranslate() {
-  // Prevent duplicate script loading
-  if (document.getElementById('gtranslate-script')) return;
-
-  const script = document.createElement('script');
-  script.id = 'gtranslate-script';
-  script.src = "https://cdn.gtranslate.net/widgets/latest/float.js";
-  script.defer = true;
-  document.body.appendChild(script);
 }
