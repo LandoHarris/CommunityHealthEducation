@@ -126,26 +126,46 @@ img {
   cursor: pointer;
   padding: 0.5rem;
 }
+.hamburger {
+  position: relative;
+  width: 30px;
+  height: 22px; /* gives room for all 3 bars */
+  cursor: pointer;
+}
 
 .hamburger,
 .hamburger::before,
 .hamburger::after {
   display: block;
-  width: 24px;
-  height: 3px;
   background: var(--color-text);
+  height: 4px;
   border-radius: 2px;
   transition: 0.3s;
 }
 
-.hamburger::before,
-.hamburger::after {
+/* Top bar */
+.hamburger::before {
   content: '';
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
-.hamburger::before { top: -8px; }
-.hamburger::after { top: 5px; }
+/* Middle bar (the actual element) */
+.hamburger {
+  background: var(--color-text);
+}
+
+/* Bottom bar */
+.hamburger::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
 
 @media (max-width: 768px) {
   .nav-toggle {
