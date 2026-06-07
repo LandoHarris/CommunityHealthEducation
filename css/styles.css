@@ -517,7 +517,6 @@ img {
   position: absolute; /* This pulls it out of the normal flow */
   top: -2rem;         /* Moves it up into the padded space */
   left: 0;
-  border: 2px solid green;
   right: 0;
 }
 

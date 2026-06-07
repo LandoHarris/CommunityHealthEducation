@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', function() {
         navbarPlaceholder.innerHTML = html;
         initNavbar();
         highlightCurrentPage();
-        applyRandomLogoColor(); // Added this call
       })
       .catch(err => console.error('Error loading navbar:', err));
   }
