@@ -570,3 +570,16 @@ img {
     padding: 0 1rem;
   }
 }
+/* Add this to your main CSS file */
+.gcse-search {
+    display: inline-block;
+    width: 200px; /* Adjust to fit your navbar */
+    margin-left: 20px;
+}
+
+/* This targets the Google-generated input box */
+.gcse-search .gsc-control-cse {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+}
