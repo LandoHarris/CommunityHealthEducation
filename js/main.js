@@ -48,23 +48,23 @@ function highlightCurrentPage() {
   });
 }
 
-// Randomize logo color on load
+
+
 function applyRandomLogoColor() {
     const logoImg = document.querySelector(".nav-logo img");
     
-    // Define brand colors
-    const colors = [
-        "drop-shadow(0 0 0 #ff0000)", // Red
-        "drop-shadow(0 0 0 #2a7d4f)", // Primary Green
-        "drop-shadow(0 0 0 #4a90a4)", // Secondary Blue
-        "drop-shadow(0 0 0 #333333)"  // Dark Gray
+    // We use a mapping of colors to their specific CSS filter requirements
+    // This is the most reliable way to force-color a white icon
+    const colorFilters = [
+        "sepia(100%) saturate(10000%) hue-rotate(0deg) brightness(50%)",   // Red
+        "sepia(100%) saturate(500%) hue-rotate(100deg) brightness(40%)",    // Green
+        "sepia(100%) saturate(500%) hue-rotate(160deg) brightness(50%)",    // Blue
+        "sepia(0%) saturate(0%) brightness(20%)"                           // Dark Gray
     ];
     
-    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+    const randomFilter = colorFilters[Math.floor(Math.random() * colorFilters.length)];
     
     if (logoImg) {
-        // brightness(0) invert(1) turns the icon silhouette black
-        // drop-shadow projects the color onto that silhouette
-        logoImg.style.filter = `brightness(0) invert(1) ${randomColor}`;
+        logoImg.style.filter = randomFilter;
     }
 }

@@ -81,9 +81,15 @@ img {
     height: 32px;
     width: auto;
     display: block;
-    /* transition is defined once */
-    transition: filter 0.5s ease, transform 0.2s ease; 
+    transition: background-color 0.5s ease, transform 0.2s ease;
+    /* This makes the image a mask */
+    -webkit-mask: url('../assets/image_85c2c9.png') no-repeat center / contain;
+    mask: url('../assets/image_85c2c9.png') no-repeat center / contain;
+    /* Set an initial color */
+    background-color: #2a7d4f; 
 }
+
+
 
 /* Updated hover effect: Keep the filter active, just scale the size */
 .nav-logo:hover img {
