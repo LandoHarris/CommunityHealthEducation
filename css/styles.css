@@ -78,10 +78,11 @@ img {
 
 /* Ensure the image doesn't force the navbar to grow */
 .nav-logo img {
-  display: block;
-  height: 32px; /* Adjust this to match your desired icon size */
-  width: auto;
-  transition: transform 0.2s;
+    height: 32px;
+    width: auto;
+    transition: filter 0.5s ease; /* Adds a nice fade effect on load */
+    display: block;
+    transition: filter 0.5s ease;     
 }
 
 /* Optional: Subtle hover effect for the logo */
