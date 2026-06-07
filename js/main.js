@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
         navbarPlaceholder.innerHTML = html;
         initNavbar();
         highlightCurrentPage();
+        applyRandomLogoColor(); // Added this call
       })
       .catch(err => console.error('Error loading navbar:', err));
   }
@@ -45,4 +46,25 @@ function highlightCurrentPage() {
       link.classList.add('active');
     }
   });
+}
+
+// Randomize logo color on load
+function applyRandomLogoColor() {
+    const logoImg = document.querySelector(".nav-logo img");
+    
+    // Define brand colors
+    const colors = [
+        "drop-shadow(0 0 0 #ff0000)", // Red
+        "drop-shadow(0 0 0 #2a7d4f)", // Primary Green
+        "drop-shadow(0 0 0 #4a90a4)", // Secondary Blue
+        "drop-shadow(0 0 0 #333333)"  // Dark Gray
+    ];
+    
+    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+    
+    if (logoImg) {
+        // brightness(0) invert(1) turns the icon silhouette black
+        // drop-shadow projects the color onto that silhouette
+        logoImg.style.filter = `brightness(0) invert(1) ${randomColor}`;
+    }
 }

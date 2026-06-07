@@ -80,16 +80,15 @@ img {
 .nav-logo img {
     height: 32px;
     width: auto;
-    transition: filter 0.5s ease; /* Adds a nice fade effect on load */
     display: block;
-    transition: filter 0.5s ease;     
+    /* transition is defined once */
+    transition: filter 0.5s ease, transform 0.2s ease; 
 }
 
-/* Optional: Subtle hover effect for the logo */
+/* Updated hover effect: Keep the filter active, just scale the size */
 .nav-logo:hover img {
-  transform: scale(1.05);
+    transform: scale(1.05);
 }
-
 /* Desktop Menu: Flex items evenly across remaining space */
 .nav-menu {
   display: flex;
