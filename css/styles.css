@@ -481,14 +481,19 @@ img {
   display: flex;
   justify-content: center;
   margin: 1rem 0;
+  
 }
 
 .profile-icon {
   width: 120px;
   height: 120px;
   object-fit: cover;
-  border-radius: 49.9%; /* Your specified curvature */
-  border: 2px solid #fff; /* Your specified border */
-  margin: -85px auto 10px; /* Your specified spacing */
+  border-radius: 49.9%; 
+  border: 2px solid #fff;
+  margin: -85px auto 10px;
   box-shadow: inset 0 1.5px 3px 0 rgba(0,0,0,0.15), 0 1.5px 3px 0 rgba(0,0,0,0.15);
+  display: block;      /* Ensures it behaves as a block element */
+  overflow: hidden;    /* Forces the clipping of the image */
+  background-color: green;
+  border-radius: 50% !important;
 }
