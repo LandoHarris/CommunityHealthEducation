@@ -51,21 +51,20 @@ function highlightCurrentPage() {
 function applyRandomLogoColor() {
     const logoImg = document.querySelector(".nav-logo img");
     
-    // We target white icons specifically:
-    // 1. brightness(0) makes the icon solid black
-    // 2. invert(0) ensures the shape is kept
-    // 3. drop-shadow creates the colored "stamp"
+    // We use drop-shadow to color the white PNG
+    // brightness(0) invert(1) makes the white heart black
+    // drop-shadow paints that black heart
     const colors = [
         "drop-shadow(0 0 0 #ff0000)", // Red
-        "drop-shadow(0 0 0 #2a7d4f)", // Green
-        "drop-shadow(0 0 0 #4a90a4)", // Blue
+        "drop-shadow(0 0 0 #2a7d4f)", // Primary Green
+        "drop-shadow(0 0 0 #4a90a4)", // Secondary Blue
         "drop-shadow(0 0 0 #333333)"  // Dark Gray
     ];
     
     const randomColor = colors[Math.floor(Math.random() * colors.length)];
     
     if (logoImg) {
-        // We set the base filter to ensure it's a solid silhouette, then apply color
-        logoImg.style.filter = `brightness(0) invert(0) ${randomColor}`;
+        // Set both the shape filter and the color filter
+        logoImg.style.filter = `brightness(0) invert(1) ${randomColor}`;
     }
 }

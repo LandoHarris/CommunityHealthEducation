@@ -76,34 +76,51 @@ img {
   justify-content: center;
 }
 
-/* Ensure the image doesn't force the navbar to grow */
 .nav-logo img {
     height: 32px;
     width: auto;
     display: block;
-    /* transition is defined once */
-    transition: filter 0.5s ease, transform 0.2s ease; 
+    /* REMOVED: filter: sepia(100%) saturate(500%) hue-rotate(100deg) brightness(40%); */
+    transition: filter 0.5s ease, transform 0.2s ease;
 }
+
+.logo-text {
+  white-space: nowrap;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+
 
 /* Updated hover effect: Keep the filter active, just scale the size */
 .nav-logo:hover img {
     transform: scale(1.05);
 }
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
 /* Desktop Menu: Flex items evenly across remaining space */
 .nav-menu {
   display: flex;
   align-items: center;
   list-style: none;
-  flex: 1; 
-  margin-left: 2rem; 
+  flex: 1;
+  margin-left: 2rem;
   height: 100%;
 }
 
+
 .nav-menu li {
-  flex: 1; 
+  flex: 1;
   height: 100%;
   display: flex;
 }
+
 
 .nav-link {
   width: 100%;
