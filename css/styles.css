@@ -57,6 +57,7 @@ img {
   position: sticky;
   top: 0;
   z-index: 1000;
+  height: 4.5rem;
 }
 
 .nav-container {
@@ -66,7 +67,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 4.5rem;
+  height: 100%;
 }
 
 .nav-logo {
@@ -76,39 +77,49 @@ img {
   font-weight: 700;
   font-size: 1.25rem;
   color: var(--color-primary);
+  white-space: nowrap;
 }
 
+/* Desktop Menu: Flex items evenly across remaining space */
 .nav-menu {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
   list-style: none;
+  flex: 1; 
+  margin-left: 2rem; 
+  height: 100%;
+}
+
+.nav-menu li {
+  flex: 1; 
+  height: 100%;
+  display: flex;
 }
 
 .nav-link {
-  padding: 0.5rem 1rem;
-  border-radius: var(--radius);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
   color: var(--color-text);
   transition: background 0.2s, color 0.2s;
+  white-space: nowrap;
+  font-weight: 500;
 }
 
 .nav-link:hover {
   background: var(--color-accent);
+  text-decoration: none;
 }
 
 .nav-link.active {
   color: var(--color-primary);
-  font-weight: 600;
+  font-weight: 700;
+  background: var(--color-accent);
 }
 
-.nav-cta {
-  background: var(--color-primary);
-  color: #fff !important;
-}
-
-.nav-cta:hover {
-  background: var(--color-primary-dark);
-}
+/* Removed .nav-cta entirely so the Feedback button matches the rest */
 
 /* ===== MOBILE TOGGLE ===== */
 .nav-toggle {
@@ -163,29 +174,72 @@ img {
     display: block;
   }
 
-.nav-menu {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  list-style: none;
-  flex: 1; /* Allows the menu to expand into the remaining navbar space */
-  margin-left: 2rem; /* Creates a buffer between the logo and the stretching menu */
+  .nav-menu {
+    position: fixed;
+    top: 4.5rem; 
+    left: -100%;
+    width: 100vw; 
+    height: calc(100vh - 4.5rem); 
+    background: var(--color-bg);
+    flex-direction: column; 
+    margin: 0;
+    padding: 0;
+    transition: left 0.3s ease;
+    z-index: 999;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-menu li {
+    width: 100%;
+    flex: 1; 
+    border-bottom: 1px solid var(--color-accent);
+  }
+
+  .nav-link {
+    font-size: clamp(1.2rem, 5vw, 2rem); 
+    border-radius: 0; 
+  }
 }
 
-.nav-menu li {
-  flex: 1; /* This makes every list item stretch to take an equal fraction of the space */
-}
-
-.nav-link {
-  display: block; /* Ensures the link tag expands to fill the stretching li tag */
-  text-align: center; /* Keeps the text centered inside the larger buttons */
-  padding: 0.5rem 1rem;
+/* ===== BUTTONS ===== */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
   border-radius: var(--radius);
-  color: var(--color-text);
-  transition: background 0.2s, color 0.2s;
-  white-space: nowrap; /* Prevents the text from wrapping awkwardly on smaller screens */
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  transition: background 0.2s, transform 0.1s;
 }
+
+.btn:hover {
+  transform: translateY(-1px);
+  text-decoration: none;
 }
+
+.btn-primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: var(--color-primary-dark);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.btn-secondary:hover {
+  background: var(--color-accent);
+}
+
 /* ===== HERO ===== */
 .hero {
   background: linear-gradient(135deg, var(--color-accent) 0%, #d4edda 100%);
@@ -270,6 +324,7 @@ img {
 
 .cta-section .btn-primary:hover {
   background: var(--color-accent);
+  color: var(--color-primary-dark);
 }
 
 /* ===== PAGE HEADER ===== */
@@ -410,11 +465,12 @@ img {
   text-align: center;
   margin-top: 3rem;
 }
+
 .responsive-iframe-container {
   position: relative;
   width: 100%;
   height: 0;
-  padding-bottom: 90%; /* tune this to your form's height */
+  padding-bottom: 90%; 
   overflow: hidden;
 }
 

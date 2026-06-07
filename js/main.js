@@ -21,10 +21,15 @@ function initNavbar() {
   
   if (toggle && menu) {
     toggle.addEventListener('click', function() {
-      // Toggles the menu visibility (slides in/out)
       menu.classList.toggle('active');
-      // Toggles the hamburger to X animation
       toggle.classList.toggle('active');
+      
+      // Lock or unlock body scrolling
+      if (menu.classList.contains('active')) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = '';
+      }
     });
   }
 }
