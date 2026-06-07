@@ -484,9 +484,11 @@ img {
 }
 
 .profile-icon {
-  width: 150px;      /* Set the desired size */
-  height: 150px;     /* Must be the same as width to make a perfect circle */
-  object-fit: cover; /* Ensures the image doesn't stretch/distort */
-  border-radius: 50%; /* This is the property that creates the circle */
-  border: 3px solid var(--color-primary); /* Optional: adds a nice border */
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 49.9%; /* Your specified curvature */
+  border: 2px solid #fff; /* Your specified border */
+  margin: -85px auto 10px; /* Your specified spacing */
+  box-shadow: inset 0 1.5px 3px 0 rgba(0,0,0,0.15), 0 1.5px 3px 0 rgba(0,0,0,0.15);
 }
