@@ -493,24 +493,7 @@ img {
   border-color: var(--color-primary);
 }
 
-/* Updated iframe container to fit inside the centered .feedback-form */
-.responsive-iframe-container {
-  position: relative;
-  width: 100%;
-  height: 0;
-  padding-bottom: 90%; 
-  overflow: hidden;
-  justify-content: center; /* This centers the .feedback-form child horizontally */
-  margin-top: 1rem;
-}
 
-.responsive-iframe-container iframe {
-  position: absolute;
-  inset: 0;
-  justify-content: center; /* This centers the .feedback-form child horizontally */
-  width: 100%;
-  height: 100%;
-}
 .profile-container {
   display: flex;
   justify-content: center;
@@ -570,4 +553,64 @@ img {
     grid-template-columns: 1fr; /* Forces a single column on small phones */
     padding: 0 1rem;
   }
+}
+/*
+.responsive-iframe-container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 90%; 
+  overflow: hidden;
+  justify-content: center; /* This centers the .feedback-form child horizontally */
+ /* margin-top: 1rem;
+}
+.responsive-iframe-container iframe {
+  position: absolute;
+  inset: 0;
+  justify-content: center; /* This centers the .feedback-form child horizontally */
+  /*width: 100%;
+  height: 100%;
+}
+*/
+
+.responsive-iframe-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 150%; /* Adjust height ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px; /* matches your card style */
+  background: #ffffff; /* matches your site background */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* optional: matches your cards */
+}
+
+.responsive-iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.feedback-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.feedback-form {
+  background: #f9fafb;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.feedback-form h2 {
+  margin-bottom: 0.5rem;
+  color: #1a4d2e; /* your site’s green */
+}
+
+.feedback-form p {
+  color: #444;
 }

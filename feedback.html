@@ -1,58 +1,76 @@
 <!DOCTYPE html>
- <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-VX82Y2YY3L"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-VX82Y2YY3L');
-</script>
 <html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!--title of page -->
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VX82Y2YY3L"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-VX82Y2YY3L');
+  </script>
+
   <title>Feedback | Community Health Education</title>
   <link rel="stylesheet" href="css/styles.css">
-  <!-- this page should likely be made into the feedback page though we need to update the navbar when changed-->
 </head>
+
 <body>
-  
+
+  <!-- Navbar -->
   <header id="navbar-placeholder"></header>
 
   <main>
+
+    <!-- Page Header -->
     <section class="page-header">
       <div class="container">
-        <!-- TODO #1 when adapting into the feedback page, we need to add the google pages form integration-->
         <h1>Feedback</h1>
         <p>We'd love to hear from you.</p>
       </div>
     </section>
 
-      <section class="content-section">
+    <!-- Feedback Section -->
+    <section class="content-section">
+      <div class="container">
         <div class="feedback-wrapper">
+
           <div class="feedback-form">
-            <h2>We value your feedback</h2>
+            <h2>We Value Your Feedback</h2>
             <p style="margin-bottom: 1rem;">Please let us know how we are doing.</p>
-            
+
+            <!-- Responsive Google Form Embed -->
             <div class="responsive-iframe-container">
               <iframe
                 src="https://docs.google.com/forms/d/e/1FAIpQLSdh7yUoVyMIgab437bB52MHIgR-5sPPjFIwuBUIpPC2tk8PAA/viewform?embedded=true"
                 frameborder="0"
                 marginheight="0"
                 marginwidth="0"
+                loading="lazy"
               >
                 Loading…
               </iframe>
             </div>
+
+            <!-- Fallback link -->
+            <p style="margin-top: 1rem;">
+              If the form does not load,
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSdh7yUoVyMIgab437bB52MHIgR-5sPPjFIwuBUIpPC2tk8PAA/viewform"
+                 target="_blank">
+                click here to open it in a new window.
+              </a>
+            </p>
+
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
   </main>
 
+  <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <p>&copy; 2026 Community Health Education. All rights reserved.</p>
@@ -62,4 +80,3 @@
   <script src="js/main.js"></script>
 </body>
 </html>
-<!--TODO #6 add Google Forms Feedback integration-->
