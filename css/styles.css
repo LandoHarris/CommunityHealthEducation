@@ -554,51 +554,14 @@ img {
     padding: 0 1rem;
   }
 }
-/*
-.responsive-iframe-container {
-  position: relative;
-  width: 100%;
-  height: 0;
-  padding-bottom: 90%; 
-  overflow: hidden;
-  justify-content: center; /* This centers the .feedback-form child horizontally */
- /* margin-top: 1rem;
-}
-.responsive-iframe-container iframe {
-  position: absolute;
-  inset: 0;
-  justify-content: center; /* This centers the .feedback-form child horizontally */
-  /*width: 100%;
-  height: 100%;
-}
-*/
-
-.responsive-iframe-container {
-  position: relative;
-  width: 100%;
-  padding-bottom: 150%; /* Adjust height ratio */
-  height: 0;
-  overflow: hidden;
-  border-radius: 12px; /* matches your card style */
-  background: #ffffff; /* matches your site background */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* optional: matches your cards */
-}
-
-.responsive-iframe-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
-
+/* Wrapper for the feedback page */
 .feedback-wrapper {
   max-width: 900px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 2rem 1rem;
 }
 
+/* Card-style container */
 .feedback-form {
   background: #f9fafb;
   padding: 2rem;
@@ -606,6 +569,7 @@ img {
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
+/* Header styling */
 .feedback-form h2 {
   margin-bottom: 0.5rem;
   color: #1a4d2e; /* your site’s green */
@@ -613,4 +577,39 @@ img {
 
 .feedback-form p {
   color: #444;
+}
+
+/* FormFacade form spacing */
+#ff-compose form {
+  margin-top: 1.5rem;
+}
+
+/* Make FormFacade fields match your site’s input style */
+#ff-compose input[type="text"],
+#ff-compose input[type="email"],
+#ff-compose textarea,
+#ff-compose select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Submit button styling */
+#ff-compose button,
+#ff-compose input[type="submit"] {
+  background-color: #1a4d2e;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+#ff-compose button:hover,
+#ff-compose input[type="submit"]:hover {
+  background-color: #163f26;
 }
