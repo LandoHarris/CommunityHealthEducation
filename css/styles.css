@@ -76,16 +76,15 @@ img {
   justify-content: center;
   color: #ff0000;
   border-radius: var(--radius);
-
 }
 
 .nav-logo img {
-    height: 32px;
-    width: auto;
-    display: block;
-    /* Initial color (will be overridden by JS) */
-    background-color: #ff0000; 
-  }
+  height: 32px;
+  width: auto;
+  display: block;
+  /* Initial color (will be overridden by JS) */
+  background-color: #ff0000; 
+}
 
 .logo-text {
   white-space: nowrap;
@@ -93,11 +92,9 @@ img {
   font-size: 1rem;
 }
 
-
-
 /* Updated hover effect: Keep the filter active, just scale the size */
 .nav-logo:hover img {
-    transform: scale(1.25);
+  transform: scale(1.25);
 }
 
 .nav-logo {
@@ -117,13 +114,11 @@ img {
   height: 100%;
 }
 
-
 .nav-menu li {
   flex: 1;
   height: 100%;
   display: flex;
 }
-
 
 .nav-link {
   width: 100%;
@@ -147,8 +142,6 @@ img {
   font-weight: 700;
   background: var(--color-accent);
 }
-
-/* Removed .nav-cta entirely so the Feedback button matches the rest */
 
 /* ===== MOBILE TOGGLE ===== */
 .nav-toggle {
@@ -386,14 +379,14 @@ img {
 .content-section p {
   margin-bottom: 1rem;
 }
+
 /* ===== TEAM GRID ===== */
 .team-grid {
   display: grid;
   border: #1e5c3a;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 5rem;
-  /* 
-     Crucial Fix: 
+  /* Crucial Fix: 
      The icon has a top offset of -60px (via .profile-container).
      We add a large margin-top to the grid so it doesn't overlap the "Our Team" text.
   */
@@ -402,8 +395,7 @@ img {
 }
 
 .team-card {
-  /* 
-     Padding-top is key here: 
+  /* Padding-top is key here: 
      It must be larger than the icon's negative offset (-60px).
      80px allows the icon to float half-out and half-in.
   */
@@ -415,7 +407,6 @@ img {
   text-align: center;
   transition: transform 0.3s ease;
 }
-
 
 /* ===== SERVICES ===== */
 .service-list {
@@ -448,24 +439,32 @@ img {
 }
 
 /* ===== FEEDBACK ===== */
-/* Centering wrapper that fills the screen width */
 .feedback-wrapper {
   width: 100%;
   display: flex;
   justify-content: center;
   padding: 0 0.5rem;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-/* Form container with limited width for readability */
 .feedback-form {
-  background: var(--color-bg-alt);
+  background: #f9fafb;
   padding: 2rem;
-  border-radius: var(--radius);
+  border-radius: 12px;
   width: 100%;
-  max-width: 100%;
-  box-shadow: var(--shadow);
-  text-align: center; /* This centers the h2 and p elements */
-  justify-content: center; /* This centers the .feedback-form child horizontally */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  text-align: center;
+  justify-content: center;
+}
+
+.feedback-form h2 {
+  margin-bottom: 0.5rem;
+  color: #1a4d2e;
+}
+
+.feedback-form p {
+  color: #444;
 }
 
 .form-group {
@@ -493,12 +492,11 @@ img {
   border-color: var(--color-primary);
 }
 
-
 .profile-container {
   display: flex;
   justify-content: center;
-  position: absolute; /* This pulls it out of the normal flow */
-  top: -2rem;         /* Moves it up into the padded space */
+  position: absolute; 
+  top: -2rem;         
   left: 0;
   right: 0;
 }
@@ -508,23 +506,25 @@ img {
   height: 120px;
   object-fit: cover;
   border-radius: 50% !important;
-  border: 4px solid var(--color-bg-alt); /* Matches background to "cut out" the circle */
+  border: 4px solid var(--color-bg-alt); 
   box-shadow: var(--shadow);
   display: block;
 }
+
 .history-content {
-  max-width: 800px; /* Keeps the text from spanning too wide */
-  margin: 0 auto;   /* Centers the block on the page */
+  max-width: 800px; 
+  margin: 0 auto;   
   padding: 2rem;
   background: var(--color-bg-alt);
   border-radius: var(--radius);
-  border-left: 5px solid var(--color-primary); /* Adds a visual "history" accent */
+  border-left: 5px solid var(--color-primary); 
 }
 
 .history-content p {
   margin-bottom: 1.5rem;
   font-size: 1.1rem;
 }
+
 .mission-content {
   text-align: center;
   max-width: 700px;
@@ -541,51 +541,24 @@ img {
   margin-top: 1rem;
 }
 
-/* Optional: Add a subtle icon above the heading */
 .mission-content h2::before {
   content: '🎯';
   display: block;
   margin-bottom: 0.5rem;
   font-size: 2rem;
 }
+
 @media (max-width: 480px) {
   .team-grid {
-    grid-template-columns: 1fr; /* Forces a single column on small phones */
+    grid-template-columns: 1fr; 
     padding: 0 1rem;
   }
 }
 
-/* Wrapper for the feedback page */
-.feedback-wrapper {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
-}
-
-/* Card-style container */
-.feedback-form {
-  background: #f9fafb;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-}
-
-/* Header styling */
-.feedback-form h2 {
-  margin-bottom: 0.5rem;
-  color: #1a4d2e; /* your site’s green */
-}
-
-.feedback-form p {
-  color: #444;
-}
-
-/* FormFacade form spacing */
 #ff-compose form {
   margin-top: 1.5rem;
 }
 
-/* Make FormFacade fields match your site’s input style */
 #ff-compose input[type="text"],
 #ff-compose input[type="email"],
 #ff-compose textarea,
@@ -598,7 +571,6 @@ img {
   margin-bottom: 1rem;
 }
 
-/* Submit button styling */
 #ff-compose button,
 #ff-compose input[type="submit"] {
   background-color: #1a4d2e;
@@ -614,59 +586,58 @@ img {
 #ff-compose input[type="submit"]:hover {
   background-color: #163f26;
 }
-`/* ===== DROPDOWN ===== */
+
+/* ===== DROPDOWN ===== */
 .dropdown {
-position: relative;
+  position: relative;
 }
 
 .dropdown-menu {
-display: none;
-position: absolute;
-top: 100%;
-left: 0;
-background: var(--color-bg);
-box-shadow: var(--shadow);
-border-radius: var(--radius);
-min-width: 220px;
-z-index: 1000;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--color-bg);
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+  min-width: 220px;
+  z-index: 1000;
 }
 
-.dropdown:hover.dropdown-menu {
-display: block;
+.dropdown:hover .dropdown-menu {
+  display: block;
 }
 
 .dropdown-menu li {
-list-style: none;
+  list-style: none;
 }
 
 .dropdown-menu a {
-display: block;
-padding: 0.75rem 1rem;
-color: var(--color-text);
+  display: block;
+  padding: 0.75rem 1rem;
+  color: var(--color-text);
 }
 
 .dropdown-menu a:hover {
-background: var(--color-accent);
+  background: var(--color-accent);
 }
 
 /* ===== SUBMENU ===== */
 .dropdown-submenu {
-position: relative;
+  position: relative;
 }
 
 .submenu {
-display: none;
-position: absolute;
-top: 0;
-left: 100%;
-background: var(--color-bg);
-box-shadow: var(--shadow);
-border-radius: var(--radius);
-min-width: 220px;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background: var(--color-bg);
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+  min-width: 220px;
 }
 
-.dropdown-submenu:hover.submenu {
-display: block;
+.dropdown-submenu:hover .submenu {
+  display: block;
 }
-`
-
