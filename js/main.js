@@ -61,3 +61,15 @@ function highlightCurrentPage() {
     }
   });
 }
+`// Dropdown support for mobile
+document.addEventListener('click', function (e) {
+const dropdown = e.target.closest('.dropdown > a');
+
+if (dropdown && window.innerWidth < 768) {
+e.preventDefault();
+const menu = dropdown.nextElementSibling;
+menu.classList.toggle('active');
+}
+});
+`
+
