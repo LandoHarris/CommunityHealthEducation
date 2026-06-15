@@ -82,7 +82,6 @@ img {
   height: 32px;
   width: auto;
   display: block;
-  /* Initial color (will be overridden by JS) */
   background-color: #ff0000; 
 }
 
@@ -92,7 +91,6 @@ img {
   font-size: 1rem;
 }
 
-/* Updated hover effect: Keep the filter active, just scale the size */
 .nav-logo:hover img {
   transform: scale(1.25);
 }
@@ -104,7 +102,6 @@ img {
   flex-shrink: 0;
 }
 
-/* Desktop Menu: Flex items evenly across remaining space */
 .nav-menu {
   display: flex;
   align-items: center;
@@ -143,6 +140,66 @@ img {
   background: var(--color-accent);
 }
 
+/* ===== DROPDOWN (DESKTOP BASE) ===== */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--color-bg);
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+  min-width: 220px;
+  z-index: 1000;
+}
+
+.dropdown:hover > .dropdown-menu,
+.dropdown.active > .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li {
+  list-style: none;
+  height: auto;
+  display: block;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+  background: var(--color-accent);
+}
+
+/* ===== SUBMENU (DESKTOP BASE) ===== */
+.dropdown-submenu {
+  position: relative;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background: var(--color-bg);
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+  min-width: 220px;
+}
+
+.dropdown-submenu:hover > .submenu,
+.dropdown-submenu.active > .submenu {
+  display: block;
+}
+
 /* ===== MOBILE TOGGLE ===== */
 .nav-toggle {
   display: none;
@@ -152,14 +209,12 @@ img {
   padding: 0.5rem;
 }
 
-/* Hamburger container */
 .hamburger {
   position: relative;
   width: 2rem;
   height: 1.4rem;
 }
 
-/* Bars */
 .hamburger::before,
 .hamburger::after,
 .hamburger span {
@@ -177,7 +232,6 @@ img {
 .hamburger span { top: 0.55rem; }
 .hamburger::after { bottom: 0; }
 
-/* Hamburger → X animation */
 .nav-toggle.active .hamburger::before {
   transform: translateY(0.55rem) rotate(45deg);
 }
@@ -190,7 +244,7 @@ img {
   transform: translateY(-0.55rem) rotate(-45deg);
 }
 
-/* ===== MOBILE MENU ===== */
+/* ===== MOBILE RESPONSIVE NAVIGATION (DRILL-DOWN) ===== */
 @media (max-width: 768px) {
   .nav-toggle {
     display: block;
@@ -208,6 +262,8 @@ img {
     padding: 0;
     transition: left 0.3s ease;
     z-index: 999;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
 
   .nav-menu.active {
@@ -216,13 +272,73 @@ img {
 
   .nav-menu li {
     width: 100%;
-    flex: 1; 
+    display: block;
     border-bottom: 1px solid var(--color-accent);
   }
 
   .nav-link {
-    font-size: clamp(1.2rem, 5vw, 2rem); 
+    font-size: 1.25rem; 
+    padding: 1.25rem 1.5rem;
+    justify-content: space-between;
     border-radius: 0; 
+  }
+
+  /* --- DRILL-DOWN SUBMENUS --- */
+  .dropdown-menu,
+  .submenu {
+    position: fixed;
+    top: 4.5rem;
+    left: 100vw;
+    width: 100vw;
+    height: calc(100vh - 4.5rem);
+    background: var(--color-bg);
+    box-shadow: none;
+    border-radius: 0;
+    display: block !important;
+    flex-direction: column;
+    z-index: 1001;
+    transition: left 0.3s ease;
+    overflow-y: auto;
+  }
+
+  .dropdown-menu.mobile-active,
+  .submenu.mobile-active {
+    left: 0; 
+  }
+
+  .dropdown-menu a,
+  .submenu a {
+    font-size: 1.25rem;
+    padding: 1.25rem 1.5rem;
+    display: block;
+  }
+
+  /* --- DYNAMIC BACK BUTTON --- */
+  .mobile-back-item {
+    display: block;
+    background: var(--color-bg-alt);
+    border-bottom: 2px solid var(--color-accent) !important;
+  }
+
+  .mobile-back-btn {
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    padding: 1.25rem 1.5rem;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--color-primary-dark);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+}
+
+/* Hide the injected back button entirely on desktop */
+@media (min-width: 769px) {
+  .mobile-back-item {
+    display: none !important;
   }
 }
 
@@ -386,19 +502,11 @@ img {
   border: #1e5c3a;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 5rem;
-  /* Crucial Fix: 
-     The icon has a top offset of -60px (via .profile-container).
-     We add a large margin-top to the grid so it doesn't overlap the "Our Team" text.
-  */
   margin-top: 5rem; 
   padding: 0 1rem;
 }
 
 .team-card {
-  /* Padding-top is key here: 
-     It must be larger than the icon's negative offset (-60px).
-     80px allows the icon to float half-out and half-in.
-  */
   padding-top: 80px; 
   padding-bottom: 2rem;
   position: relative;
@@ -585,59 +693,4 @@ img {
 #ff-compose button:hover,
 #ff-compose input[type="submit"]:hover {
   background-color: #163f26;
-}
-
-/* ===== DROPDOWN ===== */
-.dropdown {
-  position: relative;
-}
-
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: var(--color-bg);
-  box-shadow: var(--shadow);
-  border-radius: var(--radius);
-  min-width: 220px;
-  z-index: 1000;
-}
-
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
-
-.dropdown-menu li {
-  list-style: none;
-}
-
-.dropdown-menu a {
-  display: block;
-  padding: 0.75rem 1rem;
-  color: var(--color-text);
-}
-
-.dropdown-menu a:hover {
-  background: var(--color-accent);
-}
-
-/* ===== SUBMENU ===== */
-.dropdown-submenu {
-  position: relative;
-}
-
-.submenu {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 100%;
-  background: var(--color-bg);
-  box-shadow: var(--shadow);
-  border-radius: var(--radius);
-  min-width: 220px;
-}
-
-.dropdown-submenu:hover .submenu {
-  display: block;
 }
