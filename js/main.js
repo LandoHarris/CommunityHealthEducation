@@ -50,16 +50,17 @@ link.classList.add('active');
 
 // ✅ Fixed dropdown support
 document.addEventListener('click', function (e) {
-const dropdown = e.target.closest('.dropdown');
+  if (window.innerWidth >= 768) return; // Only run on mobile sizes
 
-if (dropdown && window.innerWidth < 768) {
-const link = dropdown.querySelector('a');
+  // Find if the clicked element is a link or inside a link
+  const link = e.target.closest('a');
+  if (!link) return;
 
-if (e.target === link) {
-  e.preventDefault();
-  const menu = dropdown.querySelector('.submenu');
-  if (menu) menu.classList.toggle('active');
-}
-
-}
+  // Check if the link's immediate parent is a dropdown container
+  const dropdownParent = link.parentElement;
+  
+  if (dropdownParent.classList.contains('dropdown') || dropdownParent.classList.contains('dropdown-submenu')) {
+    e.preventDefault(); // Stop the link from navigating
+    dropdownParent.classList.toggle('active'); // Toggle the accordion open/closed
+  }
 });
