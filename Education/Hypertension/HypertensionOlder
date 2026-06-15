@@ -1,1 +1,76 @@
 
+<!-- PAGE HEADER -->
+<section class="page-header">
+  <div class="container">
+    <h1>Hypertension in Older Adults</h1>
+    <p>Ages 65+: Managing blood pressure for healthy aging.</p>
+  </div>
+</section>
+
+<!-- OVERVIEW -->
+<section class="content-section">
+  <div class="container">
+    <h2>Overview</h2>
+    <p>
+      Hypertension is extremely common among older adults. More than two-thirds of people over age 65 have high blood pressure. As we age, our blood vessels naturally become stiffer, making it harder to control blood pressure.
+    </p>
+    <p>
+      Managing hypertension is crucial for reducing the risk of heart attack, stroke, kidney disease, and cognitive decline in later years.
+    </p>
+  </div>
+</section>
+
+<!-- CHALLENGES -->
+<section class="content-section">
+  <div class="container">
+    <h2>Unique Challenges for Older Adults</h2>
+    <ul>
+      <li>Age-related changes in blood vessels and heart function</li>
+      <li>Multiple chronic conditions (diabetes, kidney disease, etc.)</li>
+      <li>Polypharmacy (taking several medications)</li>
+      <li>Increased sensitivity to medication side effects</li>
+      <li>Risk of falls from low blood pressure or medication interactions</li>
+    </ul>
+    <p>
+      Regular communication with healthcare providers is essential to balance blood pressure control with overall well-being.
+    </p>
+  </div>
+</section>
+
+<!-- MANAGEMENT STRATEGIES -->
+<section class="content-section">
+  <div class="container">
+    <h2>Management Strategies</h2>
+    <ul>
+      <li>Monitor blood pressure regularly at home and during doctor visits</li>
+      <li>Take medications exactly as prescribed</li>
+      <li>Eat a heart-healthy diet (low in salt, rich in fruits and vegetables)</li>
+      <li>Stay physically active with safe, appropriate exercises</li>
+      <li>Limit alcohol and avoid tobacco</li>
+      <li>Manage other chronic conditions (diabetes, cholesterol, etc.)</li>
+      <li>Report any side effects or symptoms to your healthcare provider</li>
+    </ul>
+  </div>
+</section>
+
+<!-- WHY IT MATTERS -->
+<section class="content-section">
+  <div class="container">
+    <h2>Why It Matters</h2>
+    <p>
+      Good blood pressure control in older adults can help prevent heart attacks, strokes, kidney failure, and memory problems. It also supports independence and a better quality of life.
+    </p>
+    <p>
+      Even small improvements in blood pressure can make a big difference in long-term health.
+    </p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <h2>Stay Healthy as You Age</h2>
+    <p>Work with your healthcare team to keep your blood pressure in a safe range.</p>
+    <a href="prevention.html" class="btn btn-primary">See Prevention Tips</a>
+  </div>
+</section>
