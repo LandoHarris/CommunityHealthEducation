@@ -614,3 +614,59 @@ img {
 #ff-compose input[type="submit"]:hover {
   background-color: #163f26;
 }
+`/* ===== DROPDOWN ===== */
+.dropdown {
+position: relative;
+}
+
+.dropdown-menu {
+display: none;
+position: absolute;
+top: 100%;
+left: 0;
+background: var(--color-bg);
+box-shadow: var(--shadow);
+border-radius: var(--radius);
+min-width: 220px;
+z-index: 1000;
+}
+
+.dropdown:hover.dropdown-menu {
+display: block;
+}
+
+.dropdown-menu li {
+list-style: none;
+}
+
+.dropdown-menu a {
+display: block;
+padding: 0.75rem 1rem;
+color: var(--color-text);
+}
+
+.dropdown-menu a:hover {
+background: var(--color-accent);
+}
+
+/* ===== SUBMENU ===== */
+.dropdown-submenu {
+position: relative;
+}
+
+.submenu {
+display: none;
+position: absolute;
+top: 0;
+left: 100%;
+background: var(--color-bg);
+box-shadow: var(--shadow);
+border-radius: var(--radius);
+min-width: 220px;
+}
+
+.dropdown-submenu:hover.submenu {
+display: block;
+}
+`
+
