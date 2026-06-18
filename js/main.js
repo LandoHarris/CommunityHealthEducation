@@ -45,7 +45,7 @@ function initNavbar() {
 }
 
 function highlightCurrentPage() {
-  const currentPage = window.location.pathname.split('/').pop() || '/Main/index.html';
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
   const navLinks = document.querySelectorAll('.nav-link');
 
   navLinks.forEach(link => {
