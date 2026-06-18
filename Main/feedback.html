@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-VX82Y2YY3L"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -19,38 +18,34 @@
 
 <body>
 
-  <!-- Navbar -->
   <header id="navbar-placeholder"></header>
 
   <main>
 
-    <!-- Page Header -->
-    <section class="page-header">
+    <section class="page-header" style="padding: 3rem 1rem;">
       <div class="container">
         <h1>Feedback</h1>
         <p>We'd love to hear from you.</p>
       </div>
     </section>
 
-    <!-- Feedback Section -->
-    <section class="content-section">
+    <section class="content-section" style="padding: 2rem 1rem 4rem 1rem;">
       <div class="container">
         <div class="feedback-wrapper">
 
           <div class="feedback-form">
-            <h2>We Value Your Feedback</h2>
-            <p style="margin-bottom: 1rem;">Please let us know how we are doing.</p>
+            <h2 style="color: var(--color-primary-dark);">We Value Your Feedback</h2>
+            <p style="margin-bottom: 2rem; color: var(--color-text-light);">Please let us know how we are doing.</p>
 
-            <!-- FormFacade Embedded Google Form -->
             <div id="ff-compose"></div>
             <script async defer src="https://formfacade.com/include/101867575909889619211/form/1FAIpQLSdh7yUoVyMIgab437bB52MHIgR-5sPPjFIwuBUIpPC2tk8PAA/classic.js?div=ff-compose"></script>
 
-            <!-- Fallback link -->
-            <p style="margin-top: 1rem;">
-              If the form does not load,
+            <p style="margin-top: 2rem; font-size: 0.95rem; color: var(--color-text-light);">
+              If the form does not load, <br>
               <a href="https://docs.google.com/forms/d/e/1FAIpQLSdh7yUoVyMIgab437bB52MHIgR-5sPPjFIwuBUIpPC2tk8PAA/viewform"
-                 target="_blank">
-                click here to open it in a new window.
+                 target="_blank"
+                 style="font-weight: 600; color: var(--color-primary-dark); display: inline-block; padding: 0.5rem 0; text-decoration: underline;">
+                click here to open it in a new window &rarr;
               </a>
             </p>
 
@@ -61,10 +56,9 @@
 
   </main>
 
-  <!-- Footer -->
-  <footer class="footer">
+  <footer class="footer" style="text-align: center; padding: 2rem 1rem; background: var(--color-bg-alt); border-top: 1px solid var(--color-accent);">
     <div class="container">
-      <p>&copy; 2026 Community Health Education. All rights reserved.</p>
+      <p style="color: var(--color-text-light); font-size: 0.9rem;">&copy; 2026 Community Health Education. All rights reserved.</p>
     </div>
   </footer>
 

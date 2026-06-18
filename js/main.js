@@ -15,7 +15,7 @@ async function loadNavbar() {
 
     initNavbar();
     highlightCurrentPage();
-    setupMobileDrillDown(); // Initialize the new mobile menu logic
+    setupMobileDrillDown();
 
   } catch (err) {
     console.error('Navigation initialization error:', err);
@@ -45,7 +45,7 @@ function initNavbar() {
 }
 
 function highlightCurrentPage() {
-  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  const currentPage = window.location.pathname.split('/').pop() || '/Main/index.html';
   const navLinks = document.querySelectorAll('.nav-link');
 
   navLinks.forEach(link => {
@@ -64,37 +64,61 @@ function setupMobileDrillDown() {
 
     const backItem = document.createElement('li');
     backItem.className = 'mobile-back-item';
-    backItem.innerHTML = `<button class="mobile-back-btn">← Back</button>`;
+    // Added an actual arrow character for better UX
+    backItem.innerHTML = `<button class="mobile-back-btn">‹ Back</button>`;
     menu.prepend(backItem);
   });
 
-  // 2. Handle Clicks for Drill-Down
-  document.addEventListener('click', function (e) {
+  // 2. Handle Clicks for Drill-Down (Using Event Delegation on the Nav Menu)
+  const navMenu = document.querySelector('.nav-menu');
+  if (!navMenu) return;
+
+  navMenu.addEventListener('click', function (e) {
     if (window.innerWidth >= 768) return; // Only run on mobile sizes
 
     // --- GO FORWARD ---
     const link = e.target.closest('a');
     if (link) {
       const dropdownParent = link.parentElement;
-      if (dropdownParent.classList.contains('dropdown') || dropdownParent.classList.contains('dropdown-submenu')) {
+      const submenu = dropdownParent.querySelector('.dropdown-menu, .submenu');
+      
+      // Only prevent navigation if there is actually a submenu to slide in
+      if (submenu) {
         e.preventDefault(); 
+        submenu.classList.add('mobile-active');
         
-        // Find the specific submenu related to this link and slide it in
-        const submenu = dropdownParent.querySelector('.dropdown-menu, .submenu');
-        if (submenu) {
-          submenu.classList.add('mobile-active');
-        }
+        // Optional: Hide overflow on the parent menu to prevent background scrolling
+        navMenu.style.overflow = 'hidden'; 
       }
     }
 
     // --- GO BACKWARD ---
     const backBtn = e.target.closest('.mobile-back-btn');
     if (backBtn) {
-      // Find the closest active submenu and slide it out
       const activeSubmenu = backBtn.closest('.mobile-active');
       if (activeSubmenu) {
         activeSubmenu.classList.remove('mobile-active');
+        
+        // Restore parent scroll if we are returning to the root menu
+        if (!activeSubmenu.parentElement.closest('.mobile-active')) {
+           navMenu.style.overflow = 'auto';
+        }
       }
     }
   });
 }
+document.addEventListener("DOMContentLoaded", () => {
+    // 1. Your existing logic to fetch/inject the navbar
+    // ... code to inject the nav ...
+
+    // 2. Then, run the "Active" state highlighter
+    const currentLocation = window.location.pathname;
+    const navLinks = document.querySelectorAll('nav a');
+
+    navLinks.forEach(link => {
+        // This compares the link's href to the current page URL
+        if (link.getAttribute('href') === currentLocation) {
+            link.classList.add('active');
+        }
+    });
+});
