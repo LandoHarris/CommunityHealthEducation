@@ -1,14 +1,10 @@
-/* =========================================
-   RESET & BASE
-========================================= */
+/* ==========================================================================
+   1. RESET, BASE & VARIABLES
+   ========================================================================== */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-
-html {
-  font-size: clamp(14px, 1.5vw, 18px);
 }
 
 :root {
@@ -20,10 +16,13 @@ html {
   --color-text-light: #666;
   --color-bg: #fff;
   --color-bg-alt: #f8faf8;
-
   --shadow: 0 2px 8px rgba(0,0,0,0.1);
   --radius: 8px;
   --max-width: 1100px;
+}
+
+html {
+  font-size: clamp(14px, 1.5vw, 18px);
 }
 
 body {
@@ -53,9 +52,9 @@ img {
   padding: 0 1.5rem;
 }
 
-/* =========================================
-   NAVBAR
-========================================= */
+/* ==========================================================================
+   2. NAVIGATION HEADER (DESKTOP BASE)
+   ========================================================================== */
 .navbar {
   background: var(--color-bg);
   box-shadow: var(--shadow);
@@ -82,10 +81,20 @@ img {
   flex-shrink: 0;
 }
 
+.logo-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ff0000;
+  border-radius: var(--radius);
+}
+
 .nav-logo img {
   height: 32px;
-  background-color: #ff0000;
-  transition: transform 0.2s;
+  width: auto;
+  display: block;
+  background-color: #ff0000; 
+  transition: transform 0.2s ease;
 }
 
 .nav-logo:hover img {
@@ -93,9 +102,9 @@ img {
 }
 
 .logo-text {
+  white-space: nowrap;
   font-weight: 600;
   font-size: 1rem;
-  white-space: nowrap;
 }
 
 .nav-menu {
@@ -109,34 +118,37 @@ img {
 
 .nav-menu li {
   flex: 1;
+  height: 100%;
   display: flex;
 }
 
 .nav-link {
-  flex: 1;
+  width: 100%;
+  position: relative; /* Fixed invalid display value */
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0 1rem;
   color: var(--color-text);
-  font-weight: 500;
   transition: background 0.2s, color 0.2s;
   white-space: nowrap;
+  font-weight: 500; /* Fixed missing value */
 }
 
 .nav-link:hover {
   background: var(--color-accent);
+  text-decoration: none;
 }
 
-.nav-link.active {
+.nav-link.active,
+.active { /* Unified navigation active state styles */
   color: var(--color-primary);
-  font-weight: 700;
+  font-weight: bold;
   background: var(--color-accent);
+  border-bottom: 2px solid var(--color-primary);
 }
 
-/* =========================================
-   DROPDOWN (DESKTOP)
-========================================= */
+/* --- DROPDOWNS & SUBMENUS (DESKTOP) --- */
 .dropdown {
   position: relative;
 }
@@ -160,19 +172,21 @@ img {
 
 .dropdown-menu li {
   list-style: none;
+  height: auto;
+  display: block;
 }
 
 .dropdown-menu a {
   display: block;
   padding: 0.75rem 1rem;
   color: var(--color-text);
+  text-decoration: none;
 }
 
 .dropdown-menu a:hover {
   background: var(--color-accent);
 }
 
-/* Submenu */
 .dropdown-submenu {
   position: relative;
 }
@@ -193,15 +207,13 @@ img {
   display: block;
 }
 
-/* =========================================
-   MOBILE NAVIGATION
-========================================= */
+/* --- MOBILE MENU TOGGLE BUTTON --- */
 .nav-toggle {
   display: none;
   background: none;
   border: none;
   cursor: pointer;
-  padding: 0.75rem;
+  padding: 0.5rem;
 }
 
 .hamburger {
@@ -239,107 +251,18 @@ img {
   transform: translateY(-0.55rem) rotate(-45deg);
 }
 
-/* Mobile Menu */
-@media (max-width: 768px) {
-  .nav-toggle {
-    display: block;
-  }
 
-  .nav-menu {
-    position: fixed;
-    top: 4.5rem;
-    left: 0;
-    width: 100vw;
-    height: calc(100vh - 4.5rem);
-    background: var(--color-bg);
-    flex-direction: column;
-    transform: translateX(-100%);
-    transition: transform 0.3s ease-in-out;
-    z-index: 999;
-    overflow-y: auto;
-  }
+/* ==========================================================================
+   3. GENERAL COMPONENTS & SECTIONS
+   ========================================================================== */
 
-  .nav-menu.active {
-    transform: translateX(0);
-  }
-
-  .nav-menu li {
-    width: 100%;
-    border-bottom: 1px solid var(--color-accent);
-  }
-
-  .nav-link,
-  .dropdown-menu a,
-  .submenu a {
-    font-size: 1.15rem;
-    padding: 1rem 1.5rem;
-    min-height: 48px;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .dropdown > a::after,
-  .dropdown-submenu > a::after {
-    content: '›';
-    font-size: 1.5rem;
-    color: var(--color-text-light);
-  }
-
-  /* Drill-down menus */
-  .dropdown-menu,
-  .submenu {
-    position: fixed;
-    top: 4.5rem;
-    left: 0;
-    width: 100vw;
-    height: calc(100vh - 4.5rem);
-    background: var(--color-bg);
-    transform: translateX(100vw);
-    transition: transform 0.3s ease-in-out;
-    overflow-y: auto;
-    display: flex !important;
-    flex-direction: column;
-  }
-
-  .dropdown-menu.mobile-active,
-  .submenu.mobile-active {
-    transform: translateX(0);
-  }
-
-  /* Back button */
-  .mobile-back-item {
-    background: var(--color-bg-alt);
-    border-bottom: 2px solid var(--color-accent);
-  }
-
-  .mobile-back-btn {
-    width: 100%;
-    padding: 1rem 1.5rem;
-    font-size: 1.15rem;
-    font-weight: 600;
-    color: var(--color-primary-dark);
-    background: none;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    gap: 0.5rem;
-  }
-}
-
-@media (min-width: 769px) {
-  .mobile-back-item {
-    display: none !important;
-  }
-}
-
-/* =========================================
-   BUTTONS
-========================================= */
+/* --- BUTTONS --- */
 .btn {
   display: inline-block;
   padding: 0.75rem 1.5rem;
   border-radius: var(--radius);
   font-weight: 600;
+  text-align: center;
   cursor: pointer;
   border: none;
   transition: background 0.2s, transform 0.1s;
@@ -347,6 +270,7 @@ img {
 
 .btn:hover {
   transform: translateY(-1px);
+  text-decoration: none;
 }
 
 .btn-primary {
@@ -368,11 +292,9 @@ img {
   background: var(--color-accent);
 }
 
-/* =========================================
-   HERO
-========================================= */
+/* --- HERO SECTION --- */
 .hero {
-  background: linear-gradient(135deg, var(--color-accent), #d4edda);
+  background: linear-gradient(135deg, var(--color-accent) 0%, #d4edda 100%);
   padding: 5rem 0;
   text-align: center;
 }
@@ -396,9 +318,7 @@ img {
   flex-wrap: wrap;
 }
 
-/* =========================================
-   FEATURES
-========================================= */
+/* --- FEATURES --- */
 .features {
   padding: 4rem 0;
 }
@@ -432,9 +352,7 @@ img {
   color: var(--color-primary-dark);
 }
 
-/* =========================================
-   CTA SECTION
-========================================= */
+/* --- CALL TO ACTION (CTA) --- */
 .cta-section {
   background: var(--color-primary);
   color: #fff;
@@ -461,9 +379,7 @@ img {
   color: var(--color-primary-dark);
 }
 
-/* =========================================
-   PAGE HEADER
-========================================= */
+/* --- PAGE HEADERS & STRUCTURE --- */
 .page-header {
   background: var(--color-accent);
   padding: 3rem 0;
@@ -479,15 +395,13 @@ img {
   color: var(--color-text-light);
 }
 
-/* =========================================
-   CONTENT SECTIONS
-========================================= */
 .content-section {
   padding: 3rem 0;
 }
 
 .content-section h2 {
-  margin: 2rem 0 1rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
   color: var(--color-primary-dark);
 }
 
@@ -495,47 +409,7 @@ img {
   margin-bottom: 1rem;
 }
 
-/* =========================================
-   TEAM GRID
-========================================= */
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 5rem;
-  margin-top: 5rem;
-  padding: 0 1rem;
-}
-
-.team-card {
-  padding: 80px 0 2rem;
-  background: var(--color-bg-alt);
-  border-radius: var(--radius);
-  text-align: center;
-  position: relative;
-  transition: transform 0.3s ease;
-}
-
-.profile-container {
-  position: absolute;
-  top: -2rem;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: center;
-}
-
-.profile-icon {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 4px solid var(--color-bg-alt);
-  box-shadow: var(--shadow);
-}
-
-/* =========================================
-   SERVICES
-========================================= */
+/* --- SERVICES --- */
 .service-list {
   display: flex;
   flex-direction: column;
@@ -554,9 +428,7 @@ img {
   font-size: 1.25rem;
 }
 
-/* =========================================
-   RESOURCES
-========================================= */
+/* --- RESOURCES --- */
 .resource-list {
   list-style: none;
   margin-bottom: 2rem;
@@ -567,15 +439,93 @@ img {
   border-bottom: 1px solid #eee;
 }
 
-/* =========================================
-   FEEDBACK FORM
-========================================= */
-.feedback-wrapper {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 0.5rem;
+/* --- TEAM GRID --- */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 5rem;
+  margin-top: 5rem; 
+  padding: 0 1rem;
+}
+
+.team-card {
+  padding-top: 80px; 
+  padding-bottom: 2rem;
+  position: relative;
+  background: var(--color-bg-alt);
+  border-radius: var(--radius);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.profile-container {
   display: flex;
   justify-content: center;
+  position: absolute; 
+  top: -2rem;         
+  left: 0;
+  right: 0;
+}
+
+.profile-icon {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid var(--color-bg-alt); 
+  box-shadow: var(--shadow);
+  display: block;
+}
+
+/* --- HISTORY & MISSION --- */
+.history-content {
+  max-width: 800px; 
+  margin: 0 auto;    
+  padding: 2rem;
+  background: var(--color-bg-alt);
+  border-radius: var(--radius);
+  border-left: 5px solid var(--color-primary); 
+}
+
+.history-content p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.mission-content {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.mission-statement {
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--color-text);
+  line-height: 1.4;
+  margin-top: 1rem;
+}
+
+.mission-content h2::before {
+  content: '🎯';
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+}
+
+
+/* ==========================================================================
+   4. FORMS & FEEDBACK
+   ========================================================================== */
+.feedback-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0 0.5rem;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .feedback-form {
@@ -585,6 +535,7 @@ img {
   width: 100%;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   text-align: center;
+  justify-content: center;
 }
 
 .feedback-form h2 {
@@ -607,14 +558,10 @@ img {
 }
 
 .form-group input,
-.form-group textarea,
-#ff-compose input[type="text"],
-#ff-compose input[type="email"],
-#ff-compose textarea,
-#ff-compose select {
+.form-group textarea {
   width: 100%;
   padding: 0.75rem;
-  border: 1px solid #ccc;
+  border: 1px solid #ddd;
   border-radius: var(--radius);
   font-size: 1rem;
 }
@@ -623,6 +570,23 @@ img {
 .form-group textarea:focus {
   outline: none;
   border-color: var(--color-primary);
+}
+
+/* --- ALTERNATE ID COMPOSE FORM --- */
+#ff-compose form {
+  margin-top: 1.5rem;
+}
+
+#ff-compose input[type="text"],
+#ff-compose input[type="email"],
+#ff-compose textarea,
+#ff-compose select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
 }
 
 #ff-compose button,
@@ -641,60 +605,136 @@ img {
   background-color: #163f26;
 }
 
-/* =========================================
-   HISTORY & MISSION
-========================================= */
-.history-content {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem;
-  background: var(--color-bg-alt);
-  border-radius: var(--radius);
-  border-left: 5px solid var(--color-primary);
-}
 
-.history-content p {
-  margin-bottom: 1.5rem;
-  font-size: 1.1rem;
-}
+/* ==========================================================================
+   5. RESPONSIVE MEDIA QUERIES
+   ========================================================================== */
 
-.mission-content {
-  max-width: 700px;
-  margin: 0 auto;
-  text-align: center;
-  padding: 2rem 0;
-}
-
-.mission-content h2::before {
-  content: '🎯';
-  display: block;
-  margin-bottom: 0.5rem;
-  font-size: 2rem;
-}
-
-.mission-statement {
-  font-size: 1.5rem;
-  font-weight: 500;
-  font-style: italic;
-  color: var(--color-text);
-  line-height: 1.4;
-  margin-top: 1rem;
-}
-
-/* =========================================
-   SMALL SCREENS
-========================================= */
-@media (max-width: 480px) {
-  .team-grid {
-    grid-template-columns: 1fr;
+/* --- DESKTOP RULES --- */
+@media (min-width: 769px) {
+  /* Hide drill-down back buttons injected by JS on desktop views */
+  .mobile-back-item {
+    display: none !important;
   }
 }
 
-/* =========================================
-   ACTIVE STATE
-========================================= */
-.active {
-  font-weight: bold;
-  border-bottom: 2px solid var(--color-primary);
-  color: var(--color-primary);
+/* --- TABLET & MOBILE RESPONSIVE NAVIGATION --- */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+    padding: 0.75rem; 
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 4.5rem; 
+    left: 0;
+    transform: translateX(-100%); 
+    width: 100vw; 
+    height: calc(100vh - 4.5rem); 
+    background: var(--color-bg);
+    flex-direction: column; 
+    margin: 0;
+    padding: 0;
+    transition: transform 0.3s ease-in-out;
+    z-index: 999;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .nav-menu.active {
+    transform: translateX(0);
+  }
+
+  .nav-menu li {
+    width: 100%;
+    display: block;
+    border-bottom: 1px solid var(--color-accent);
+  }
+
+  .nav-link,
+  .dropdown-menu a,
+  .submenu a {
+    font-size: 1.15rem; 
+    padding: 1rem 1.5rem;
+    min-height: 48px; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 0; 
+  }
+
+  .dropdown > a::after,
+  .dropdown-submenu > a::after {
+    content: '›';
+    font-size: 1.5rem;
+    line-height: 1;
+    color: var(--color-text-light);
+  }
+
+  /* Drill-down submenus */
+  .dropdown-menu,
+  .submenu {
+    position: fixed;
+    top: 4.5rem;
+    left: 0;
+    transform: translateX(100vw); 
+    width: 100vw;
+    height: calc(100vh - 4.5rem);
+    background: var(--color-bg);
+    box-shadow: none;
+    border-radius: 0;
+    display: flex !important; 
+    flex-direction: column;
+    z-index: 1001;
+    transition: transform 0.3s ease-in-out;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .dropdown-menu.mobile-active,
+  .submenu.mobile-active {
+    transform: translateX(0); 
+  }
+
+  /* Dynamic dynamic back button layout rules */
+  .mobile-back-item {
+    display: block;
+    background: var(--color-bg-alt);
+    border-bottom: 2px solid var(--color-accent) !important;
+  }
+
+  .mobile-back-btn {
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    padding: 1rem 1.5rem;
+    min-height: 48px; 
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--color-primary-dark);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  /* Adaptive Section Spacing */
+  .team-grid {
+    gap: 2rem; 
+    margin-top: 3rem;
+  }
+  
+  .hero {
+    padding: 3rem 0; 
+  }
+}
+
+/* --- SMALL MOBILE --- */
+@media (max-width: 480px) {
+  .team-grid {
+    grid-template-columns: 1fr; 
+    padding: 0 1rem;
+  }
 }
