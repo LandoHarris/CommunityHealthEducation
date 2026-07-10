@@ -1,3 +1,2 @@
 User-agent: *
 Disallow:
-Sitemap: https://localhealthed.org/sitemap.xml
