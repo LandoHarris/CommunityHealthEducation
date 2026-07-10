@@ -1,0 +1,13 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "LocalHealthEd.org",
+    "description": "",
+    "home_page_url": "https://localhealthed.org",
+    "feed_url": "https://localhealthed.org/feed.json",
+    "user_comment": "",
+    "author": {
+        "name": "Landon Harris"
+    },
+    "items": [
+    ]
+}
